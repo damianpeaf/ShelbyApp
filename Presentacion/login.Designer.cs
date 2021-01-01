@@ -30,14 +30,14 @@ namespace Presentacion
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -54,6 +54,17 @@ namespace Presentacion
             this.panel1.Size = new System.Drawing.Size(335, 69);
             this.panel1.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(92, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(157, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Inicio de sesión";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(77)))), ((int)(((byte)(91)))));
@@ -65,16 +76,16 @@ namespace Presentacion
             this.panel2.Size = new System.Drawing.Size(335, 69);
             this.panel2.TabIndex = 1;
             // 
-            // label1
+            // label4
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(92, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Inicio de sesión";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(89, 23);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(155, 16);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Sistema de inventario ";
             // 
             // textBox1
             // 
@@ -127,20 +138,10 @@ namespace Presentacion
             this.button1.Text = "Iniciar";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(89, 23);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(155, 16);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Sistema de inventario ";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Blue;
             this.label5.Location = new System.Drawing.Point(48, 303);
@@ -148,6 +149,7 @@ namespace Presentacion
             this.label5.Size = new System.Drawing.Size(238, 16);
             this.label5.TabIndex = 7;
             this.label5.Text = "¿Olvidaste tu contraseña? Da click aquí";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // login
             // 
