@@ -43,10 +43,6 @@ namespace Presentacion.App
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            AbrirForm2(new ejemplo1());
-        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -55,9 +51,19 @@ namespace Presentacion.App
             this.Hide();
         }
 
-        private void panelFuncion_Paint(object sender, PaintEventArgs e)
+        //boton e imagen usuarios
+        private void button1_Click_1(object sender, EventArgs e)
         {
+            AbrirForm2(new Usuarios());
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            AbrirForm2(new Usuarios());
+
+        }
+        //FIN boton e imagen usuarios
+
     }
 }
