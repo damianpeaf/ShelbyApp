@@ -31,6 +31,8 @@ namespace Presentacion.App
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnListarTodo = new System.Windows.Forms.Button();
+            this.btnListarLimpiar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnListarEliminar = new System.Windows.Forms.Button();
             this.btnListarActualizar = new System.Windows.Forms.Button();
@@ -57,7 +59,7 @@ namespace Presentacion.App
             this.label8 = new System.Windows.Forms.Label();
             this.txtCrearCorreo = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtCrearId = new System.Windows.Forms.TextBox();
+            this.txtCrearNombre = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtCrearContra = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -69,14 +71,10 @@ namespace Presentacion.App
             this.label17 = new System.Windows.Forms.Label();
             this.txtActualizarId = new System.Windows.Forms.TextBox();
             this.btnActualizar = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtActualizarConfi = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtActualizarCorreo = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtActualizarNombre = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtActualizarContra = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -119,6 +117,8 @@ namespace Presentacion.App
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnListarTodo);
+            this.tabPage1.Controls.Add(this.btnListarLimpiar);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -128,6 +128,36 @@ namespace Presentacion.App
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listar Usuarios";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btnListarTodo
+            // 
+            this.btnListarTodo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnListarTodo.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnListarTodo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListarTodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarTodo.ForeColor = System.Drawing.Color.White;
+            this.btnListarTodo.Location = new System.Drawing.Point(228, 327);
+            this.btnListarTodo.Name = "btnListarTodo";
+            this.btnListarTodo.Size = new System.Drawing.Size(100, 26);
+            this.btnListarTodo.TabIndex = 20;
+            this.btnListarTodo.Text = "Listar Todo";
+            this.btnListarTodo.UseVisualStyleBackColor = false;
+            this.btnListarTodo.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // btnListarLimpiar
+            // 
+            this.btnListarLimpiar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnListarLimpiar.BackColor = System.Drawing.Color.DarkOrchid;
+            this.btnListarLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListarLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarLimpiar.ForeColor = System.Drawing.Color.White;
+            this.btnListarLimpiar.Location = new System.Drawing.Point(334, 327);
+            this.btnListarLimpiar.Name = "btnListarLimpiar";
+            this.btnListarLimpiar.Size = new System.Drawing.Size(100, 26);
+            this.btnListarLimpiar.TabIndex = 19;
+            this.btnListarLimpiar.Text = "Limpiar";
+            this.btnListarLimpiar.UseVisualStyleBackColor = false;
+            this.btnListarLimpiar.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 
@@ -162,12 +192,13 @@ namespace Presentacion.App
             this.btnListarEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListarEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListarEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnListarEliminar.Location = new System.Drawing.Point(451, 113);
+            this.btnListarEliminar.Location = new System.Drawing.Point(454, 113);
             this.btnListarEliminar.Name = "btnListarEliminar";
             this.btnListarEliminar.Size = new System.Drawing.Size(100, 26);
             this.btnListarEliminar.TabIndex = 18;
             this.btnListarEliminar.Text = "Eliminar";
             this.btnListarEliminar.UseVisualStyleBackColor = false;
+            this.btnListarEliminar.Click += new System.EventHandler(this.btnListarEliminar_Click);
             // 
             // btnListarActualizar
             // 
@@ -176,12 +207,13 @@ namespace Presentacion.App
             this.btnListarActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListarActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListarActualizar.ForeColor = System.Drawing.Color.White;
-            this.btnListarActualizar.Location = new System.Drawing.Point(345, 113);
+            this.btnListarActualizar.Location = new System.Drawing.Point(348, 113);
             this.btnListarActualizar.Name = "btnListarActualizar";
             this.btnListarActualizar.Size = new System.Drawing.Size(100, 26);
             this.btnListarActualizar.TabIndex = 17;
             this.btnListarActualizar.Text = "Actualizar";
             this.btnListarActualizar.UseVisualStyleBackColor = false;
+            this.btnListarActualizar.Click += new System.EventHandler(this.btnListarActualizar_Click);
             // 
             // txtListarSeleccionadoCorreo
             // 
@@ -288,6 +320,7 @@ namespace Presentacion.App
             this.btntListarBuscar.TabIndex = 7;
             this.btntListarBuscar.Text = "Buscar";
             this.btntListarBuscar.UseVisualStyleBackColor = false;
+            this.btntListarBuscar.Click += new System.EventHandler(this.btntListarBuscar_Click);
             // 
             // label2
             // 
@@ -331,8 +364,10 @@ namespace Presentacion.App
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 0);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(636, 321);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // tabPage2
             // 
@@ -353,7 +388,7 @@ namespace Presentacion.App
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.txtCrearCorreo);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.txtCrearId);
+            this.groupBox2.Controls.Add(this.txtCrearNombre);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.txtCrearContra);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -377,6 +412,7 @@ namespace Presentacion.App
             this.btmCrear.TabIndex = 18;
             this.btmCrear.Text = "Crear Usuario";
             this.btmCrear.UseVisualStyleBackColor = false;
+            this.btmCrear.Click += new System.EventHandler(this.btmCrear_Click);
             // 
             // label11
             // 
@@ -430,13 +466,13 @@ namespace Presentacion.App
             this.label9.TabIndex = 13;
             this.label9.Text = "Nombre Usuario";
             // 
-            // txtCrearId
+            // txtCrearNombre
             // 
-            this.txtCrearId.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCrearId.Location = new System.Drawing.Point(200, 124);
-            this.txtCrearId.Name = "txtCrearId";
-            this.txtCrearId.Size = new System.Drawing.Size(298, 20);
-            this.txtCrearId.TabIndex = 12;
+            this.txtCrearNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCrearNombre.Location = new System.Drawing.Point(200, 124);
+            this.txtCrearNombre.Name = "txtCrearNombre";
+            this.txtCrearNombre.Size = new System.Drawing.Size(298, 20);
+            this.txtCrearNombre.TabIndex = 12;
             // 
             // label10
             // 
@@ -475,14 +511,10 @@ namespace Presentacion.App
             this.groupBox3.Controls.Add(this.label17);
             this.groupBox3.Controls.Add(this.txtActualizarId);
             this.groupBox3.Controls.Add(this.btnActualizar);
-            this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Controls.Add(this.txtActualizarConfi);
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.txtActualizarCorreo);
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.txtActualizarNombre);
-            this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.txtActualizarContra);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(3, 3);
             this.groupBox3.Name = "groupBox3";
@@ -536,6 +568,7 @@ namespace Presentacion.App
             this.btnActualizarBuscar.TabIndex = 21;
             this.btnActualizarBuscar.Text = "Buscar";
             this.btnActualizarBuscar.UseVisualStyleBackColor = false;
+            this.btnActualizarBuscar.Click += new System.EventHandler(this.btnActualizarBuscar_Click);
             // 
             // label17
             // 
@@ -565,32 +598,13 @@ namespace Presentacion.App
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.Color.White;
-            this.btnActualizar.Location = new System.Drawing.Point(198, 336);
+            this.btnActualizar.Location = new System.Drawing.Point(198, 264);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(298, 34);
             this.btnActualizar.TabIndex = 18;
             this.btnActualizar.Text = "Actualizar Usuario";
             this.btnActualizar.UseVisualStyleBackColor = false;
-            // 
-            // label12
-            // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(195, 291);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(135, 16);
-            this.label12.TabIndex = 17;
-            this.label12.Text = "Confirmar contraseña";
-            // 
-            // txtActualizarConfi
-            // 
-            this.txtActualizarConfi.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtActualizarConfi.Location = new System.Drawing.Point(198, 310);
-            this.txtActualizarConfi.Name = "txtActualizarConfi";
-            this.txtActualizarConfi.Size = new System.Drawing.Size(298, 20);
-            this.txtActualizarConfi.TabIndex = 16;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // label13
             // 
@@ -631,26 +645,6 @@ namespace Presentacion.App
             this.txtActualizarNombre.Name = "txtActualizarNombre";
             this.txtActualizarNombre.Size = new System.Drawing.Size(298, 20);
             this.txtActualizarNombre.TabIndex = 12;
-            // 
-            // label15
-            // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(195, 249);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(77, 16);
-            this.label15.TabIndex = 11;
-            this.label15.Text = "Contraseña";
-            // 
-            // txtActualizarContra
-            // 
-            this.txtActualizarContra.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtActualizarContra.Location = new System.Drawing.Point(198, 268);
-            this.txtActualizarContra.Name = "txtActualizarContra";
-            this.txtActualizarContra.Size = new System.Drawing.Size(298, 20);
-            this.txtActualizarContra.TabIndex = 10;
             // 
             // tabPage4
             // 
@@ -726,6 +720,7 @@ namespace Presentacion.App
             this.btnEliminarBuscar.TabIndex = 21;
             this.btnEliminarBuscar.Text = "Buscar";
             this.btnEliminarBuscar.UseVisualStyleBackColor = false;
+            this.btnEliminarBuscar.Click += new System.EventHandler(this.btnEliminarBuscar_Click);
             // 
             // label19
             // 
@@ -761,6 +756,7 @@ namespace Presentacion.App
             this.btnEliminar.TabIndex = 18;
             this.btnEliminar.Text = "Eliminar Usuario";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // label21
             // 
@@ -866,7 +862,7 @@ namespace Presentacion.App
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtCrearCorreo;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtCrearId;
+        private System.Windows.Forms.TextBox txtCrearNombre;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtCrearContra;
         private System.Windows.Forms.Button btmCrear;
@@ -878,14 +874,10 @@ namespace Presentacion.App
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtActualizarId;
         private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtActualizarConfi;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtActualizarCorreo;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtActualizarNombre;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txtActualizarContra;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label label18;
@@ -898,5 +890,7 @@ namespace Presentacion.App
         private System.Windows.Forms.TextBox txtEliminarCorreo;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox txtEliminarNombre;
+        private System.Windows.Forms.Button btnListarLimpiar;
+        private System.Windows.Forms.Button btnListarTodo;
     }
 }
