@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using Comun;
 
 namespace Datos
 {
@@ -24,11 +25,14 @@ namespace Datos
                 MySqlDataReader reader = command.ExecuteReader();
                 if (reader.HasRows)
                 {
+
                     while (reader.Read())
                     {
-                      
-
+                        info_usuario.idUsuario = reader.GetString(0);
+                        info_usuario.nombre = reader.GetString(1);
+                        info_usuario.email = reader.GetString(2);
                     }
+
                     return true;
                 }
                 else

@@ -37,7 +37,10 @@ namespace Presentacion
             if (validLogin == true)
             {
                 MessageBox.Show("Bienvenid@");
-              
+
+                App.Menu form = new App.Menu();
+                form.Show();
+                this.Hide();
 
             }
             else

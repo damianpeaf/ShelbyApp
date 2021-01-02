@@ -117,6 +117,10 @@ namespace Presentacion
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(512, 263);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(512, 263);
             this.Name = "RecuperarContra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Recuperar";

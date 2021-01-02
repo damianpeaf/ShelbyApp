@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App\ejemplo1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\ejemplo1.Designer.cs">
+      <DependentUpon>ejemplo1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +72,12 @@
     <Compile Include="RecuperarContra.Designer.cs">
       <DependentUpon>RecuperarContra.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="App\ejemplo1.resx">
+      <DependentUpon>ejemplo1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
@@ -71,6 +89,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RecuperarContra.resx">
       <DependentUpon>RecuperarContra.cs</DependentUpon>
@@ -89,10 +108,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Comun\Comun.csproj">
+      <Project>{138d9dce-cbbb-4196-aeec-708fe010efdb}</Project>
+      <Name>Comun</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Dominio\Dominio.csproj">
       <Project>{60fefad5-ceda-401b-a3e6-89796d35e810}</Project>
       <Name>Dominio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrarSesion.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
