@@ -44,6 +44,11 @@ namespace Dominio
             return user.eliminarUsuario(id);
         }
 
+        public bool actualizarDatosUsuario(string id, string nombre, string correo, string contrasena)
+        {
+            return user.actualizarDatosUsuario(id, nombre, correo, contrasena);
+        }
+
 
     }
 }

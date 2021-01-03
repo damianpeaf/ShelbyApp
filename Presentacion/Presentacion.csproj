@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App\ejemplo1.cs">
+    <Compile Include="App\Cuenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="App\ejemplo1.Designer.cs">
-      <DependentUpon>ejemplo1.cs</DependentUpon>
+    <Compile Include="App\Cuenta.Designer.cs">
+      <DependentUpon>Cuenta.cs</DependentUpon>
     </Compile>
     <Compile Include="App\Menu.cs">
       <SubType>Form</SubType>
@@ -78,8 +78,8 @@
     <Compile Include="RecuperarContra.Designer.cs">
       <DependentUpon>RecuperarContra.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="App\ejemplo1.resx">
-      <DependentUpon>ejemplo1.cs</DependentUpon>
+    <EmbeddedResource Include="App\Cuenta.resx">
+      <DependentUpon>Cuenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="App\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -131,6 +131,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrarSesion2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrarSesion3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

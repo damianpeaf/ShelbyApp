@@ -94,8 +94,8 @@ namespace Datos
             {
                 using (cn = new Conexion().IniciarConexion())
                 {
-                    String[] datosUsuario = new string[3];
-                    string comando = $"SELECT idUsuario, nombre, correo FROM usuario where idUsuario = {id}";
+                    String[] datosUsuario = new string[4];
+                    string comando = $"SELECT idUsuario, nombre, correo, contrasena FROM usuario where idUsuario = {id}";
 
                     MySqlCommand datos = new MySqlCommand(comando, cn);
 
@@ -110,6 +110,8 @@ namespace Datos
                             datosUsuario[0] = reader.GetString(0);
                             datosUsuario[1] = reader.GetString(1);
                             datosUsuario[2] = reader.GetString(2);
+                            datosUsuario[3] = reader.GetString(3);
+
 
                         }
                         return datosUsuario;
@@ -219,6 +221,77 @@ namespace Datos
                 cn.Close();
             }
         }
+
+        public bool actualizarDatosUsuario(string id, string nombre, string correo, string contrasena)
+        {
+            try
+            {
+                using (cn = new Conexion().IniciarConexion())
+                {
+
+                    bool modificado = false;
+                    if (!string.IsNullOrEmpty(nombre) || !string.IsNullOrEmpty(correo) || !string.IsNullOrEmpty(contrasena))
+                    {
+
+                        if (!string.IsNullOrEmpty(nombre))
+                        {
+
+                            MySqlCommand comando = new MySqlCommand($"UPDATE usuario SET nombre='{nombre}' WHERE idUsuario ={id}", cn);
+                            if (comando.ExecuteNonQuery() > 0)
+                            {
+                                modificado =  true;
+                            }
+                        }
+
+                        if (!string.IsNullOrEmpty(correo))
+                        {
+
+                            MySqlCommand comando = new MySqlCommand($"UPDATE usuario SET correo='{correo}' WHERE idUsuario ={id}", cn);
+                            if (comando.ExecuteNonQuery() > 0)
+                            {
+                                modificado = true;
+                            }
+                        }
+
+                        if (!string.IsNullOrEmpty(contrasena))
+                        {
+
+                            MySqlCommand comando = new MySqlCommand($"UPDATE usuario SET contrasena='{contrasena}' WHERE idUsuario ={id}", cn);
+                            if (comando.ExecuteNonQuery() > 0)
+                            {
+                                modificado = true;
+                            }
+                        }
+
+                        if (modificado)
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                }
+
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("" + ex);
+                return false;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
 
     }
 }

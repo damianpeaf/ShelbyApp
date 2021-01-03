@@ -63,7 +63,15 @@ namespace Presentacion.App
             AbrirForm2(new Usuarios());
 
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            AbrirForm2(new Cuenta());
+
+        }
+
         //FIN boton e imagen usuarios
+
 
     }
 }
