@@ -70,6 +70,11 @@ namespace Presentacion.App
 
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AbrirForm2(new Sucursales());
+        }
+
         //FIN boton e imagen usuarios
 
 
