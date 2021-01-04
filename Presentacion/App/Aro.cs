@@ -16,14 +16,19 @@ namespace Presentacion.App
         DAro aro = new DAro();
         DSucursal sucursal = new DSucursal();
 
-        public Aro()
+        public Aro(string IdSeleccionadaAlListar)
         {
             InitializeComponent();
             actualizarTabla();
             cargarSucursales();
 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            if (!string.IsNullOrEmpty(IdSeleccionadaAlListar))
+            {
 
+                DataSet ds = aro.buscarAro("", IdSeleccionadaAlListar, "", "", true);
+                dataGridView1.DataSource = ds.Tables[0];
+            }
         }
 
         void cargarSucursales()

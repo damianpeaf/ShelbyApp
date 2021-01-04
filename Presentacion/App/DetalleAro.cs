@@ -15,10 +15,13 @@ namespace Presentacion.App
     {
         DDetalleAro detalle = new DDetalleAro();
 
-        public DetalleAro()
+        Menu menuP;
+        public DetalleAro(Menu menu)
         {
             InitializeComponent();
             actualizarTabla();
+
+            menuP = menu;
 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
 
@@ -293,6 +296,13 @@ namespace Presentacion.App
                 MessageBox.Show("Los campos no pueden estar vacios");
 
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            menuP.AbrirForm2(new Aro(IdSeleccionadaAlListar));
+            this.Close();
         }
 
 

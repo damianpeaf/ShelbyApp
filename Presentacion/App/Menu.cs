@@ -82,19 +82,19 @@ namespace Presentacion.App
 
         private void button3_Click(object sender, EventArgs e)
         {
-            AbrirForm2(new DetalleAro());
+            AbrirForm2(new DetalleAro(this));
 
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            AbrirForm2(new DetalleAro());
+            AbrirForm2(new DetalleAro(this));
 
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            AbrirForm2(new Aro());
+            AbrirForm2(new Aro(null));
 
         }
 
