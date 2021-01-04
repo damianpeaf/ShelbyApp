@@ -176,9 +176,7 @@ namespace Datos
                 cn.Close();
             }
         }
-
-       
-
+               
         public bool eliminarSucursal(string id)
         {
             try
@@ -209,6 +207,38 @@ namespace Datos
             }
         }
 
-       
+        public DataTable CrearCombo()
+        {
+
+            try
+            {
+                using (cn = new Conexion().IniciarConexion())
+                {
+                    string sql = "SELECT idSucursal, nombre FROM sucursal";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, cn);
+
+                    MySqlDataAdapter mysqldt = new MySqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    mysqldt.Fill(dt);
+
+                    return dt;
+
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("" + ex);
+                return null;
+            }
+            finally
+            {
+                cn.Close();
+            }
+
+        }
+
+
+
     }
 }

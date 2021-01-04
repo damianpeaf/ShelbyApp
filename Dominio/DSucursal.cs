@@ -40,7 +40,13 @@ namespace Dominio
             return sucu.eliminarSucursal(id);
         }
 
-        
+        public DataTable CrearCombo()
+        {
+            return sucu.CrearCombo();
+        }
+
+
+
 
     }
 }

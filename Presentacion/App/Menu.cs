@@ -92,6 +92,12 @@ namespace Presentacion.App
 
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AbrirForm2(new Aro());
+
+        }
+
 
         //FIN boton e imagen usuarios
 

@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -51,6 +52,12 @@
     </Compile>
     <Compile Include="App\Cuenta.Designer.cs">
       <DependentUpon>Cuenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App\Aro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\Aro.Designer.cs">
+      <DependentUpon>Aro.cs</DependentUpon>
     </Compile>
     <Compile Include="App\Menu.cs">
       <SubType>Form</SubType>
@@ -103,6 +110,9 @@
     </Compile>
     <EmbeddedResource Include="App\Cuenta.resx">
       <DependentUpon>Cuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\Aro.resx">
+      <DependentUpon>Aro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="App\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
