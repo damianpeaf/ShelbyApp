@@ -58,6 +58,12 @@
     <Compile Include="App\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="App\Marcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\Marcas.Designer.cs">
+      <DependentUpon>Marcas.cs</DependentUpon>
+    </Compile>
     <Compile Include="App\Sucursales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="App\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\Marcas.resx">
+      <DependentUpon>Marcas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="App\Sucursales.resx">
       <DependentUpon>Sucursales.cs</DependentUpon>
