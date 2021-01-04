@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="DetalleAro.cs" />
     <Compile Include="Login y Recupera\Correo.cs" />
     <Compile Include="Login y Recupera\Login.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

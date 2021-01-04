@@ -33,7 +33,7 @@ create table detalleAro(
     medida int,
     pcd varchar(50),
     pcd2 varchar(50), 
-    diseño varchar(25)
+    diseno varchar(25)
     
 );
 

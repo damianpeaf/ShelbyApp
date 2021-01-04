@@ -75,6 +75,24 @@ namespace Presentacion.App
             AbrirForm2(new Sucursales());
         }
 
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            AbrirForm2(new Sucursales());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AbrirForm2(new DetalleAro());
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            AbrirForm2(new DetalleAro());
+
+        }
+
+
         //FIN boton e imagen usuarios
 
 

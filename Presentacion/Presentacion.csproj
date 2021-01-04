@@ -64,6 +64,12 @@
     <Compile Include="App\Sucursales.Designer.cs">
       <DependentUpon>Sucursales.cs</DependentUpon>
     </Compile>
+    <Compile Include="App\DetalleAro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\DetalleAro.Designer.cs">
+      <DependentUpon>DetalleAro.cs</DependentUpon>
+    </Compile>
     <Compile Include="App\Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="App\Sucursales.resx">
       <DependentUpon>Sucursales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\DetalleAro.resx">
+      <DependentUpon>DetalleAro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="App\Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>
@@ -158,6 +167,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sucursal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aro.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

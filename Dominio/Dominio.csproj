@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Dlogin.cs" />
     <Compile Include="DSucursal.cs" />
+    <Compile Include="DDetalleAro.cs" />
     <Compile Include="DUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

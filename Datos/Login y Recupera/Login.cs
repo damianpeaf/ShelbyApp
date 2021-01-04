@@ -13,32 +13,43 @@ namespace Datos
         MySqlConnection cn;
         public bool loginpagina(string user, string pass)
         {
-
-
-            using (cn = new Conexion().IniciarConexion())
-            using (var command = new MySqlCommand())
-            {
-                command.Connection = cn;
-                command.CommandText = "select *from usuario where correo=@user and contrasena=@pass";
-                command.Parameters.AddWithValue("@user", user);
-                command.Parameters.AddWithValue("@pass", pass);
-                MySqlDataReader reader = command.ExecuteReader();
-                if (reader.HasRows)
+            
+                using (cn = new Conexion().IniciarConexion())
+                using (var command = new MySqlCommand())
                 {
 
-                    while (reader.Read())
+                try
+                {
+                    command.Connection = cn;
+                    command.CommandText = "select *from usuario where correo=@user and contrasena=@pass";
+                    command.Parameters.AddWithValue("@user", user);
+                    command.Parameters.AddWithValue("@pass", pass);
+                    MySqlDataReader reader = command.ExecuteReader();
+                    if (reader.HasRows)
                     {
-                        info_usuario.idUsuario = reader.GetString(0);
-                        info_usuario.nombre = reader.GetString(1);
-                        info_usuario.email = reader.GetString(2);
-                    }
 
-                    return true;
+                        while (reader.Read())
+                        {
+                            info_usuario.idUsuario = reader.GetString(0);
+                            info_usuario.nombre = reader.GetString(1);
+                            info_usuario.email = reader.GetString(2);
+                        }
+
+                        return true;
+                    }
+                    else
+                        return false;
                 }
-                else
+                catch (Exception ex)
+                {
                     return false;
+                    Console.WriteLine("ERROR EN LA CONEXION A LA BD: ex");
+                }
             }
         }
+
+
+
         public string recuperarcontra(string correo)
         {
             using (cn = new Conexion().IniciarConexion())

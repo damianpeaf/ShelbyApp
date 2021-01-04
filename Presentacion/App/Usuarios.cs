@@ -19,6 +19,9 @@ namespace Presentacion.App
         {
             InitializeComponent();
             actualizarTabla();
+
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+
         }
 
         void actualizarTabla()
