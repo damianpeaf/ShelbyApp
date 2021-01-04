@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Comun;
 
 namespace Datos
 {
@@ -149,6 +150,27 @@ namespace Datos
                     MySqlCommand comando = new MySqlCommand($"INSERT INTO detalleAro VALUES(null,'{codigo}' , '{medida}', '{pcd}', '{pcd2}', '{diseno}')", cn);
                     if (comando.ExecuteNonQuery() > 0)
                     {
+
+                        //parte del inventario
+                        MySqlCommand cmd = new MySqlCommand("SELECT LAST_INSERT_ID() as ultimaId", cn);
+                        
+                        string ultimaId = "";
+                        string idUsuario = info_usuario.idUsuario;
+
+                        MySqlDataReader reader = cmd.ExecuteReader();
+
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                ultimaId = reader.GetString(0);
+                            }
+
+                            Aro aro = new Aro();
+
+                            aro.crearDisponibilidadDesdeAro(ultimaId, idUsuario);
+                        }
+
                         return true;
                     }
                     else

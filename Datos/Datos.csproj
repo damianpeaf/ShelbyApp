@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aro.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="DetalleAro.cs" />
     <Compile Include="Login y Recupera\Correo.cs" />
