@@ -34,7 +34,9 @@ namespace Presentacion.App
             this.btnListarTodo = new System.Windows.Forms.Button();
             this.btnListarLimpiar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtListarBuscarMarcas = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.txtListarSeleccionadoPcd = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.btnListarEliminar = new System.Windows.Forms.Button();
@@ -56,6 +58,8 @@ namespace Presentacion.App
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.txtCrearMarca = new System.Windows.Forms.ComboBox();
             this.btmCrear = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.txtCrearMedida = new System.Windows.Forms.TextBox();
@@ -64,6 +68,8 @@ namespace Presentacion.App
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.txtActualizarMarca = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
             this.txtActualizarMedida = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
@@ -91,12 +97,8 @@ namespace Presentacion.App
             this.label19 = new System.Windows.Forms.Label();
             this.txtEliminarId = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.txtListarBuscarMarcas = new System.Windows.Forms.ComboBox();
-            this.txtListarSeleccionadoPcd = new System.Windows.Forms.TextBox();
-            this.txtCrearMarca = new System.Windows.Forms.ComboBox();
-            this.txtActualizarMarca = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -199,6 +201,14 @@ namespace Presentacion.App
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Acciones";
             // 
+            // txtListarBuscarMarcas
+            // 
+            this.txtListarBuscarMarcas.FormattingEnabled = true;
+            this.txtListarBuscarMarcas.Location = new System.Drawing.Point(140, 34);
+            this.txtListarBuscarMarcas.Name = "txtListarBuscarMarcas";
+            this.txtListarBuscarMarcas.Size = new System.Drawing.Size(121, 21);
+            this.txtListarBuscarMarcas.TabIndex = 26;
+            // 
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -212,6 +222,15 @@ namespace Presentacion.App
             this.button1.TabIndex = 25;
             this.button1.Text = "Inventario";
             this.button1.UseVisualStyleBackColor = false;
+            // 
+            // txtListarSeleccionadoPcd
+            // 
+            this.txtListarSeleccionadoPcd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtListarSeleccionadoPcd.Location = new System.Drawing.Point(739, 77);
+            this.txtListarSeleccionadoPcd.Name = "txtListarSeleccionadoPcd";
+            this.txtListarSeleccionadoPcd.ReadOnly = true;
+            this.txtListarSeleccionadoPcd.Size = new System.Drawing.Size(100, 20);
+            this.txtListarSeleccionadoPcd.TabIndex = 22;
             // 
             // label15
             // 
@@ -433,6 +452,7 @@ namespace Presentacion.App
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.txtCrearMarca);
             this.groupBox2.Controls.Add(this.btmCrear);
@@ -448,6 +468,30 @@ namespace Presentacion.App
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Información Usuario";
+            // 
+            // button3
+            // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button3.BackColor = System.Drawing.Color.Fuchsia;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(620, 175);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(143, 44);
+            this.button3.TabIndex = 28;
+            this.button3.Text = "Agregar / Eliminar Marca";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // txtCrearMarca
+            // 
+            this.txtCrearMarca.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCrearMarca.FormattingEnabled = true;
+            this.txtCrearMarca.Location = new System.Drawing.Point(259, 250);
+            this.txtCrearMarca.Name = "txtCrearMarca";
+            this.txtCrearMarca.Size = new System.Drawing.Size(298, 21);
+            this.txtCrearMarca.TabIndex = 19;
             // 
             // btmCrear
             // 
@@ -529,6 +573,7 @@ namespace Presentacion.App
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.button5);
             this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Controls.Add(this.txtActualizarMarca);
             this.groupBox3.Controls.Add(this.label25);
@@ -547,6 +592,30 @@ namespace Presentacion.App
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Información Usuario";
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.BackColor = System.Drawing.Color.Fuchsia;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(640, 173);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(143, 44);
+            this.button2.TabIndex = 33;
+            this.button2.Text = "Agregar / Eliminar Marca";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // txtActualizarMarca
+            // 
+            this.txtActualizarMarca.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtActualizarMarca.FormattingEnabled = true;
+            this.txtActualizarMarca.Location = new System.Drawing.Point(283, 271);
+            this.txtActualizarMarca.Name = "txtActualizarMarca";
+            this.txtActualizarMarca.Size = new System.Drawing.Size(298, 21);
+            this.txtActualizarMarca.TabIndex = 32;
             // 
             // label25
             // 
@@ -856,70 +925,35 @@ namespace Presentacion.App
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
-            // txtListarBuscarMarcas
+            // button4
             // 
-            this.txtListarBuscarMarcas.FormattingEnabled = true;
-            this.txtListarBuscarMarcas.Location = new System.Drawing.Point(140, 34);
-            this.txtListarBuscarMarcas.Name = "txtListarBuscarMarcas";
-            this.txtListarBuscarMarcas.Size = new System.Drawing.Size(121, 21);
-            this.txtListarBuscarMarcas.TabIndex = 26;
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button4.BackColor = System.Drawing.Color.Lime;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(620, 230);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(143, 44);
+            this.button4.TabIndex = 29;
+            this.button4.Text = "Actualizar marcas";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
-            // txtListarSeleccionadoPcd
+            // button5
             // 
-            this.txtListarSeleccionadoPcd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtListarSeleccionadoPcd.Location = new System.Drawing.Point(739, 77);
-            this.txtListarSeleccionadoPcd.Name = "txtListarSeleccionadoPcd";
-            this.txtListarSeleccionadoPcd.ReadOnly = true;
-            this.txtListarSeleccionadoPcd.Size = new System.Drawing.Size(100, 20);
-            this.txtListarSeleccionadoPcd.TabIndex = 22;
-            // 
-            // txtCrearMarca
-            // 
-            this.txtCrearMarca.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCrearMarca.FormattingEnabled = true;
-            this.txtCrearMarca.Location = new System.Drawing.Point(259, 250);
-            this.txtCrearMarca.Name = "txtCrearMarca";
-            this.txtCrearMarca.Size = new System.Drawing.Size(298, 21);
-            this.txtCrearMarca.TabIndex = 19;
-            // 
-            // txtActualizarMarca
-            // 
-            this.txtActualizarMarca.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtActualizarMarca.FormattingEnabled = true;
-            this.txtActualizarMarca.Location = new System.Drawing.Point(283, 271);
-            this.txtActualizarMarca.Name = "txtActualizarMarca";
-            this.txtActualizarMarca.Size = new System.Drawing.Size(298, 21);
-            this.txtActualizarMarca.TabIndex = 32;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.BackColor = System.Drawing.Color.Fuchsia;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(599, 195);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(143, 44);
-            this.button3.TabIndex = 28;
-            this.button3.Text = "Agregar / Eliminar Marca";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackColor = System.Drawing.Color.Fuchsia;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(640, 196);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(143, 44);
-            this.button2.TabIndex = 33;
-            this.button2.Text = "Agregar / Eliminar Marca";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button5.BackColor = System.Drawing.Color.Lime;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(640, 229);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(143, 44);
+            this.button5.TabIndex = 34;
+            this.button5.Text = "Actualizar marcas";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // DetalleLlanta
             // 
@@ -1023,5 +1057,7 @@ namespace Presentacion.App
         private System.Windows.Forms.ComboBox txtActualizarMarca;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }

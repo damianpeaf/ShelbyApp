@@ -296,7 +296,9 @@ namespace Presentacion.App
         {
              Marcas form = new Marcas();
             form.Show();
-          
+            txtListarBuscarMarcas.Refresh();
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -308,8 +310,19 @@ namespace Presentacion.App
 
         private void DetalleLlanta_Load(object sender, EventArgs e)
         {
-            
-           
+            DataTable dt = detalle.ComboMarca();
+            txtListarBuscarMarcas.ValueMember = "idMarca";
+            txtListarBuscarMarcas.DisplayMember = "nombre";
+            txtListarBuscarMarcas.DataSource = dt;
+
+            txtCrearMarca.ValueMember = "idMarca";
+            txtCrearMarca.DisplayMember = "nombre";
+            txtCrearMarca.DataSource = dt;
+
+            txtActualizarMarca.ValueMember = "idMarca";
+            txtActualizarMarca.DisplayMember = "nombre";
+            txtActualizarMarca.DataSource = dt;
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -321,6 +334,38 @@ namespace Presentacion.App
         {
           
                 
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            DataTable dt = detalle.ComboMarca();
+            txtListarBuscarMarcas.ValueMember = "idMarca";
+            txtListarBuscarMarcas.DisplayMember = "nombre";
+            txtListarBuscarMarcas.DataSource = dt;
+
+            txtCrearMarca.ValueMember = "idMarca";
+            txtCrearMarca.DisplayMember = "nombre";
+            txtCrearMarca.DataSource = dt;
+
+            txtActualizarMarca.ValueMember = "idMarca";
+            txtActualizarMarca.DisplayMember = "nombre";
+            txtActualizarMarca.DataSource = dt;
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            DataTable dt = detalle.ComboMarca();
+            txtListarBuscarMarcas.ValueMember = "idMarca";
+            txtListarBuscarMarcas.DisplayMember = "nombre";
+            txtListarBuscarMarcas.DataSource = dt;
+
+            txtCrearMarca.ValueMember = "idMarca";
+            txtCrearMarca.DisplayMember = "nombre";
+            txtCrearMarca.DataSource = dt;
+
+            txtActualizarMarca.ValueMember = "idMarca";
+            txtActualizarMarca.DisplayMember = "nombre";
+            txtActualizarMarca.DataSource = dt;
         }
 
 
