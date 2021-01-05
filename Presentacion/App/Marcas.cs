@@ -188,7 +188,7 @@ namespace Presentacion.App
                 }
                 else
                 {
-                    MessageBox.Show("Hubo un error al eliminar la marca");
+                    MessageBox.Show("Hubo un error al eliminar la Marca");
 
                 }
 
@@ -198,6 +198,27 @@ namespace Presentacion.App
                 MessageBox.Show("Los campos no pueden estar vacios");
 
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Menu form = new Menu();
+            form.Show();
+            this.Close();
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            Menu form = new Menu();
+            form.Show();
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Menu form = new Menu();
+            form.Show();
+            this.Close();
         }
 
 

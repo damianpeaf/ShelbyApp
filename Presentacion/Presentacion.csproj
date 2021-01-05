@@ -52,6 +52,12 @@
     <Compile Include="App\Cuenta.Designer.cs">
       <DependentUpon>Cuenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="App\DetalleLlanta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\DetalleLlanta.Designer.cs">
+      <DependentUpon>DetalleLlanta.cs</DependentUpon>
+    </Compile>
     <Compile Include="App\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     </Compile>
     <EmbeddedResource Include="App\Cuenta.resx">
       <DependentUpon>Cuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\DetalleLlanta.resx">
+      <DependentUpon>DetalleLlanta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="App\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -179,6 +188,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\aro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\llanta.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
