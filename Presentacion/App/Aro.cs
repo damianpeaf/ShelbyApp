@@ -125,7 +125,6 @@ namespace Presentacion.App
         private void btnListarActualizar_Click(object sender, EventArgs e)
         {
 
-
             tabControl1.SelectedIndex = 1;
             String[] datosAro = aro.cargarDatosAro(IdSeleccionadaAlListar);
             if (datosAro != null)
@@ -157,6 +156,9 @@ namespace Presentacion.App
             {
                 MessageBox.Show("Registro no encontrado " + IdSeleccionadaAlListar);
             }
+
+            calcularTotal();
+
 
 
         }
@@ -238,6 +240,8 @@ namespace Presentacion.App
                 MessageBox.Show("Registro no encontrado " + IdSeleccionadaAlListar);
 
             }
+            calcularTotal();
+
         }
 
         int entrada=3;
