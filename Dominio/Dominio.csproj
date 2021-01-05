@@ -45,6 +45,7 @@
     <Compile Include="DAro.cs" />
     <Compile Include="Dlogin.cs" />
     <Compile Include="DMarca.cs" />
+    <Compile Include="DMovimiento.cs" />
     <Compile Include="DSucursal.cs" />
     <Compile Include="DDetalleAro.cs" />
     <Compile Include="DUsuario.cs" />

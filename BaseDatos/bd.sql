@@ -81,6 +81,12 @@ create table llanta(
 
 );
 
+create table tipoMovimiento(
+
+	idTipoMovimiento int primary key,
+    nombre varchar(65)
+
+);
 
 create table movimiento(
 
@@ -92,10 +98,12 @@ create table movimiento(
     idSucursal int,
     foreign key(idSucursal) references sucursal(idSucursal),
     cantidad int,
-	fecha date,
-    tipo bool
+	fecha datetime,
+    idTipoMovimiento int,
+    foreign key (idTipoMovimiento) references tipoMovimiento(idTipoMovimiento)
     
-    #true -> ingreso; false -> salida;
+    #2 -> ingreso; false -> 0;
 
 );
 
+insert into tipoMovimiento values (0, "Salida"), (1, "Entrada");

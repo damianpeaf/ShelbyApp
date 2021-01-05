@@ -16,6 +16,7 @@ namespace Presentacion.App
     {
         DAro aro = new DAro();
         DSucursal sucursal = new DSucursal();
+        DMovimiento movimiento = new DMovimiento();
 
         public Aro(string IdSeleccionadaAlListar)
         {
@@ -138,7 +139,7 @@ namespace Presentacion.App
                 string pcd = datosAro[6];
                 string pcd2 = datosAro[7];
                 string idAro = datosAro[8];
-
+                string idSucursal = datosAro[9];
 
                 txtASucursal.Text = sucursal;
                 txtAIdDetalle.Text = idDetalle;
@@ -149,6 +150,7 @@ namespace Presentacion.App
                 txtAPcd2.Text = pcd2;
                 txtADiseno.Text = diseno;
                 txtAIdAro.Text = idAro;
+                txtAIdSucursal.Text = idSucursal;
 
             }
             else
@@ -216,6 +218,7 @@ namespace Presentacion.App
                 string pcd = datosAro[6];
                 string pcd2 = datosAro[7];
                 string idAro = datosAro[8];
+                string idSucursal = datosAro[9];
 
 
                 txtASucursal.Text = sucursal;
@@ -227,6 +230,7 @@ namespace Presentacion.App
                 txtAPcd2.Text = pcd2;
                 txtADiseno.Text = diseno;
                 txtAIdAro.Text = idAro;
+                txtAIdSucursal.Text = idSucursal;
 
             }
             else
@@ -294,12 +298,17 @@ namespace Presentacion.App
 
             string idEspecifica = txtAIdAro.Text;
 
+            string idDetalleAro = txtAIdDetalle.Text;
+
+            string idSucursal = txtAIdSucursal.Text;
+
             string cantidadAnterior = txtACantidad.Text;
             string cantidadEntrante = txtAModificar.Text;
             string cantidadNueva = txtATotal.Text;
 
-            bool movimientoEntrada;
+            string idTipoMovimiento = tipoMovimiento.SelectedIndex.ToString();
 
+            //correcciones de formato de fecha
             string fecha = fechaMovimiento.Text;
             DateTime dateValue = DateTime.Parse(fecha);
             string formatForMySql = dateValue.ToString("yyyy-MM-dd HH:mm:ss");
@@ -307,14 +316,19 @@ namespace Presentacion.App
             string idUsuario = info_usuario.idUsuario;
 
             //validacion
-            if (noVacio(cantidadAnterior) && noVacio(cantidadEntrante) && noVacio(cantidadNueva) && (tipoMovimiento.SelectedIndex == 0 || tipoMovimiento.SelectedIndex == 1) && noVacio(fecha) && noVacio(idUsuario))
+            if (noVacio(idEspecifica) &&  noVacio(cantidadAnterior) && noVacio(cantidadEntrante) && noVacio(cantidadNueva) && (tipoMovimiento.SelectedIndex == 0 || tipoMovimiento.SelectedIndex == 1) && noVacio(fecha) && noVacio(idUsuario))
             {
                 if (int.Parse(cantidadNueva)>=0)
                 {
                     //todo bien capo
                     if (aro.actualizarInventario(idEspecifica,cantidadNueva, formatForMySql, idUsuario))
                     {
-                        MessageBox.Show("Actualizado correctamente");
+                        if (movimiento.crearMovimientoAro(idDetalleAro, idSucursal, cantidadEntrante, formatForMySql, idTipoMovimiento))
+                        {
+                            MessageBox.Show("Actualizado correctamente");
+
+                            actualizarTabla();
+                        }
                     }
                 }
                 else
