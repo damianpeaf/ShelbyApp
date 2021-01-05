@@ -68,8 +68,9 @@ namespace Presentacion.App
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.txtAIdAro = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.fechaMovimiento = new System.Windows.Forms.DateTimePicker();
             this.label28 = new System.Windows.Forms.Label();
@@ -101,8 +102,6 @@ namespace Presentacion.App
             this.label16 = new System.Windows.Forms.Label();
             this.txtABuscar = new System.Windows.Forms.TextBox();
             this.btnActualizarBuscar = new System.Windows.Forms.Button();
-            this.label32 = new System.Windows.Forms.Label();
-            this.txtAIdAro = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -587,9 +586,29 @@ namespace Presentacion.App
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Detalle del producto";
             // 
+            // label32
+            // 
+            this.label32.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.Black;
+            this.label32.Location = new System.Drawing.Point(60, 149);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(86, 16);
+            this.label32.TabIndex = 55;
+            this.label32.Text = "ID específica";
+            // 
+            // txtAIdAro
+            // 
+            this.txtAIdAro.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtAIdAro.Location = new System.Drawing.Point(63, 168);
+            this.txtAIdAro.Name = "txtAIdAro";
+            this.txtAIdAro.ReadOnly = true;
+            this.txtAIdAro.Size = new System.Drawing.Size(41, 20);
+            this.txtAIdAro.TabIndex = 54;
+            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label30);
             this.groupBox2.Controls.Add(this.label29);
             this.groupBox2.Controls.Add(this.fechaMovimiento);
             this.groupBox2.Controls.Add(this.label28);
@@ -609,18 +628,6 @@ namespace Presentacion.App
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos a moficar";
             // 
-            // label30
-            // 
-            this.label30.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.Color.Black;
-            this.label30.Location = new System.Drawing.Point(108, 187);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(143, 16);
-            this.label30.TabIndex = 72;
-            this.label30.Text = "Formato: Mes-Dia-Año";
-            // 
             // label29
             // 
             this.label29.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -636,7 +643,7 @@ namespace Presentacion.App
             // fechaMovimiento
             // 
             this.fechaMovimiento.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.fechaMovimiento.CustomFormat = "MM-dd-yyyy";
+            this.fechaMovimiento.CustomFormat = "dd-MM-yyyy HH:mm:ss";
             this.fechaMovimiento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.fechaMovimiento.Location = new System.Drawing.Point(110, 164);
             this.fechaMovimiento.Name = "fechaMovimiento";
@@ -744,6 +751,7 @@ namespace Presentacion.App
             this.btnActualizar.TabIndex = 61;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // label11
             // 
@@ -961,27 +969,6 @@ namespace Presentacion.App
             this.btnActualizarBuscar.UseVisualStyleBackColor = false;
             this.btnActualizarBuscar.Click += new System.EventHandler(this.btnActualizarBuscar_Click);
             // 
-            // label32
-            // 
-            this.label32.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.Color.Black;
-            this.label32.Location = new System.Drawing.Point(60, 149);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(86, 16);
-            this.label32.TabIndex = 55;
-            this.label32.Text = "ID específica";
-            // 
-            // txtAIdAro
-            // 
-            this.txtAIdAro.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtAIdAro.Location = new System.Drawing.Point(63, 168);
-            this.txtAIdAro.Name = "txtAIdAro";
-            this.txtAIdAro.ReadOnly = true;
-            this.txtAIdAro.Size = new System.Drawing.Size(41, 20);
-            this.txtAIdAro.TabIndex = 54;
-            // 
             // Aro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1078,7 +1065,6 @@ namespace Presentacion.App
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtACantidad;
         private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.TextBox txtIdAro;
         private System.Windows.Forms.Label label32;

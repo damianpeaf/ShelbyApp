@@ -11,7 +11,7 @@ namespace Datos
     public class Conexion
     {
 
-        private MySqlConnection conexion = new MySqlConnection("Server=127.0.0.1;Uid=root;pwd=;database=tallerShelby");
+        private MySqlConnection conexion = new MySqlConnection("Server=127.0.0.1;Uid=root;pwd=;database=tallerShelby;AllowZeroDatetime=True");
 
         public MySqlConnection IniciarConexion()
         {

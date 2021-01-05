@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dominio;
+using Comun;
 
 namespace Presentacion.App
 {
@@ -269,9 +270,65 @@ namespace Presentacion.App
             
         }
 
+        bool noVacio(string str)
+        {
+            if (string.IsNullOrEmpty(str))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
         private void txtAModificar_TextChanged(object sender, EventArgs e)
         {
             calcularTotal();
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            //actualizar aro
+            //insertar movimiento
+
+            string idEspecifica = txtAIdAro.Text;
+
+            string cantidadAnterior = txtACantidad.Text;
+            string cantidadEntrante = txtAModificar.Text;
+            string cantidadNueva = txtATotal.Text;
+
+            bool movimientoEntrada;
+
+            string fecha = fechaMovimiento.Text;
+            DateTime dateValue = DateTime.Parse(fecha);
+            string formatForMySql = dateValue.ToString("yyyy-MM-dd HH:mm:ss");
+
+            string idUsuario = info_usuario.idUsuario;
+
+            //validacion
+            if (noVacio(cantidadAnterior) && noVacio(cantidadEntrante) && noVacio(cantidadNueva) && (tipoMovimiento.SelectedIndex == 0 || tipoMovimiento.SelectedIndex == 1) && noVacio(fecha) && noVacio(idUsuario))
+            {
+                if (int.Parse(cantidadNueva)>=0)
+                {
+                    //todo bien capo
+                    if (aro.actualizarInventario(idEspecifica,cantidadNueva, formatForMySql, idUsuario))
+                    {
+                        MessageBox.Show("Actualizado correctamente");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("no es posible tener stock negativo");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Se deben completar todos los campos");
+            }
+
+            
+
         }
 
 

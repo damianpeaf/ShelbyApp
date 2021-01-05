@@ -28,5 +28,9 @@ namespace Dominio
             return aro.cargarDatosAro(id);
         }
 
+        public bool actualizarInventario(string idEspecifico, string cantidad, string fecha, string idUsuario)
+        {
+            return aro.actualizarInventario(idEspecifico, cantidad, fecha, idUsuario);
+        }
     }
 }
