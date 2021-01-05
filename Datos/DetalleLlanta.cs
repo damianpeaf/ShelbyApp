@@ -22,7 +22,7 @@ namespace Datos
             {
                 using (cn = new Conexion().IniciarConexion())
                 {
-                    string comando = "SELECT * FROM detalleLlanta";
+                    string comando = "SELECT D.idDetalleLlanta, D.codigo, D.medida, M.nombre FROM detalleLlanta D inner join marca M on D.idMarca = M.idMarca";
 
                     MySqlCommand datos = new MySqlCommand(comando, cn);
 
@@ -53,7 +53,7 @@ namespace Datos
             {
                 using (cn = new Conexion().IniciarConexion())
                 {
-                    string comando = $"SELECT * FROM detalleLlanta where idDetalleLlanta like '{id}'";
+                    string comando = $"SELECT D.idDetalleLlanta, D.codigo, D.medida, M.nombre FROM detalleLlanta D inner join marca M on D.idMarca = M.idMarca where idDetalleLlanta like '{id}'";
 
                     if (!string.IsNullOrEmpty(codigo))
                     {
@@ -101,7 +101,7 @@ namespace Datos
                 using (cn = new Conexion().IniciarConexion())
                 {
                     String[] datosDetalle = new string[6];
-                    string comando = $"SELECT * FROM detalleLlanta where idDetalleLlanta = {id}";
+                    string comando = $"SELECT D.idDetalleLlanta, D.codigo, D.medida, M.nombre FROM detalleLlanta D inner join marca M on D.idMarca = M.idMarca where idDetalleLlanta = {id}";
 
                     MySqlCommand datos = new MySqlCommand(comando, cn);
 
