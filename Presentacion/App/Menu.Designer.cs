@@ -51,7 +51,6 @@ namespace Presentacion.App
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -62,8 +61,6 @@ namespace Presentacion.App
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(59)))));
-            this.panel3.Controls.Add(this.pictureBox6);
-            this.panel3.Controls.Add(this.button4);
             this.panel3.Controls.Add(this.pictureBox5);
             this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.pictureBox4);

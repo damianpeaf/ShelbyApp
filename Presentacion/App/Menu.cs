@@ -98,11 +98,6 @@ namespace Presentacion.App
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            AbrirForm2(new DetalleLlanta());
-        }
-
 
         //FIN boton e imagen usuarios
 
