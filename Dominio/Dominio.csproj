@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DDetalleLlanta.cs" />
     <Compile Include="DAro.cs" />
     <Compile Include="Dlogin.cs" />
     <Compile Include="DMarca.cs" />

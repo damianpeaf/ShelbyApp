@@ -53,6 +53,12 @@
     <Compile Include="App\Cuenta.Designer.cs">
       <DependentUpon>Cuenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="App\DetalleLlanta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\DetalleLlanta.Designer.cs">
+      <DependentUpon>DetalleLlanta.cs</DependentUpon>
+    </Compile>
     <Compile Include="App\Aro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </Compile>
     <EmbeddedResource Include="App\Cuenta.resx">
       <DependentUpon>Cuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\DetalleLlanta.resx">
+      <DependentUpon>DetalleLlanta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="App\Aro.resx">
       <DependentUpon>Aro.cs</DependentUpon>
@@ -189,6 +198,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\aro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\llanta.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\inventario1.png" />
