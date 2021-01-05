@@ -98,6 +98,29 @@ namespace Presentacion.App
 
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            AbrirForm2(new Aro(null));
+
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            AbrirForm2(new Aro(null));
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            AbrirForm2(new DetalleLlanta());
+
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            AbrirForm2(new DetalleLlanta());
+        }
+
 
         //FIN boton e imagen usuarios
 
