@@ -99,6 +99,8 @@ namespace Datos
 
                     MySqlCommand datos = new MySqlCommand(comando, cn);
 
+                    Console.WriteLine(comando);
+
                     MySqlDataReader reader = datos.ExecuteReader();
 
                     if (reader.HasRows)

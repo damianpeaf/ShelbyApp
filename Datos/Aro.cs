@@ -103,7 +103,7 @@ namespace Datos
             {
                 using (cn = new Conexion().IniciarConexion())
                 {
-                    string comando = "SELECT S.nombre as 'Sucursal',  D.idDetalleAro as 'ID aro', D.codigo as 'Codigo', A.cantidad as 'Stock',D.diseno, D.medida, D.pcd, D.pcd2, U.nombre as 'Firma', A.fechaModificacion as 'Ultima modificacion'  FROM aro A inner join sucursal S on A.idSucursal = S.idSucursal inner join detalleAro D on D.idDetalleAro = A.idDetalleAro inner join usuario U on A.usuarioModificacion = U.idUsuario";
+                    string comando = "SELECT S.nombre as 'Sucursal',  D.idDetalleAro as 'ID aro', D.codigo as 'Codigo', A.cantidad as 'Stock',D.diseno, D.medida, D.pcd, D.pcd2, U.nombre as 'Firma', A.fechaModificacion as 'Ultima modificacion', A.idAro as 'ID específica'  FROM aro A inner join sucursal S on A.idSucursal = S.idSucursal inner join detalleAro D on D.idDetalleAro = A.idDetalleAro inner join usuario U on A.usuarioModificacion = U.idUsuario";
 
                     MySqlCommand datos = new MySqlCommand(comando, cn);
 
@@ -133,7 +133,7 @@ namespace Datos
             {
                 using (cn = new Conexion().IniciarConexion())
                 {
-                    string comando = $"SELECT S.nombre as 'Sucursal',  D.idDetalleAro as 'ID aro', D.codigo as 'Codigo', A.cantidad as 'Stock',D.diseno, D.medida, D.pcd, D.pcd2, U.nombre as 'Firma', A.fechaModificacion as 'Ultima modificacion'  FROM aro A inner join sucursal S on A.idSucursal = S.idSucursal inner join detalleAro D on D.idDetalleAro = A.idDetalleAro inner join usuario U on A.usuarioModificacion = U.idUsuario ";
+                    string comando = $"SELECT S.nombre as 'Sucursal',  D.idDetalleAro as 'ID aro', D.codigo as 'Codigo', A.cantidad as 'Stock',D.diseno, D.medida, D.pcd, D.pcd2, U.nombre as 'Firma', A.fechaModificacion as 'Ultima modificacion', A.idAro as 'ID específica'  FROM aro A inner join sucursal S on A.idSucursal = S.idSucursal inner join detalleAro D on D.idDetalleAro = A.idDetalleAro inner join usuario U on A.usuarioModificacion = U.idUsuario ";
 
                     if (todas)
                     {
@@ -198,5 +198,54 @@ namespace Datos
 
         }
 
+        public String[] cargarDatosAro(string id)
+        {
+            try
+            {
+                using (cn = new Conexion().IniciarConexion())
+                {
+                    String[] datosUsuario = new string[9];
+                    string comando = $"SELECT S.nombre,  D.idDetalleAro, D.codigo, A.cantidad, D.diseno, D.medida, D.pcd, D.pcd2, A.idAro  FROM aro A inner join sucursal S on A.idSucursal = S.idSucursal inner join detalleAro D on D.idDetalleAro = A.idDetalleAro inner join usuario U on A.usuarioModificacion = U.idUsuario WHERE idAro = {id}";
+
+                    MySqlCommand datos = new MySqlCommand(comando, cn);
+
+                    MySqlDataReader reader = datos.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+
+                        while (reader.Read())
+                        {
+
+                            datosUsuario[0] = reader.GetString(0);
+                            datosUsuario[1] = reader.GetString(1);
+                            datosUsuario[2] = reader.GetString(2);
+                            datosUsuario[3] = reader.GetString(3);
+                            datosUsuario[4] = reader.GetString(4);
+                            datosUsuario[5] = reader.GetString(5);
+                            datosUsuario[6] = reader.GetString(6);
+                            datosUsuario[7] = reader.GetString(7);
+                            datosUsuario[8] = reader.GetString(8);
+
+
+                        }
+                        return datosUsuario;
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("" + ex);
+                return null;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
     }
 }

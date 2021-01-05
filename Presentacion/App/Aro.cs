@@ -68,7 +68,7 @@ namespace Presentacion.App
 
             }
 
-            DataSet ds = aro.buscarAro(idSucursal,idDetalle, codigoDetalle, disenoDetalle, todas);
+            DataSet ds = aro.buscarAro(idSucursal, idDetalle, codigoDetalle, disenoDetalle, todas);
             dataGridView1.DataSource = ds.Tables[0];
 
         }
@@ -102,6 +102,8 @@ namespace Presentacion.App
                 string medida = dataGridView1.Rows[n].Cells[5].Value.ToString();
                 string pcd = dataGridView1.Rows[n].Cells[6].Value.ToString();
                 string pcd2 = dataGridView1.Rows[n].Cells[7].Value.ToString();
+                string idAro = dataGridView1.Rows[n].Cells[10].Value.ToString();
+
 
                 txtSeleccionadoSucursal.Text = sucursal;
                 txtSeleccionadoId.Text = idDetalle;
@@ -112,7 +114,8 @@ namespace Presentacion.App
                 txtSeleccionadoPcd2.Text = pcd2;
                 txtSeleccionadoDiseno.Text = diseno;
 
-                IdSeleccionadaAlListar = idDetalle;
+                txtIdAro.Text = idAro;
+                IdSeleccionadaAlListar = idAro;
 
             }
         }
@@ -120,25 +123,38 @@ namespace Presentacion.App
         private void btnListarActualizar_Click(object sender, EventArgs e)
         {
 
-            /*
-            tabControl1.SelectedIndex = 2;
-            String[] datosDetalle = detalle.cargarDatosDetalle(IdSeleccionadaAlListar);
-            if (datosDetalle != null)
+
+            tabControl1.SelectedIndex = 1;
+            String[] datosAro = aro.cargarDatosAro(IdSeleccionadaAlListar);
+            if (datosAro != null)
             {
-                txtActualizarId.Text = datosDetalle[0];
-                txtActualizarCodigo.Text = datosDetalle[1];
-                txtActualizarMedida.Text = datosDetalle[2];
-                txtActualizarPcd.Text = datosDetalle[3];
-                txtActualizarPcd2.Text = datosDetalle[4];
-                txtActualizarDiseno.Text = datosDetalle[5];
+                string sucursal = datosAro[0];
+                string idDetalle = datosAro[1];
+                string codigo = datosAro[2];
+                string cantidad = datosAro[3];
+                string diseno = datosAro[4];
+                string medida = datosAro[5];
+                string pcd = datosAro[6];
+                string pcd2 = datosAro[7];
+                string idAro = datosAro[8];
+
+
+                txtASucursal.Text = sucursal;
+                txtAIdDetalle.Text = idDetalle;
+                txtACodigo.Text = codigo;
+                txtACantidad.Text = cantidad;
+                txtAMedida.Text = medida;
+                txtAPcd.Text = pcd;
+                txtAPcd2.Text = pcd2;
+                txtADiseno.Text = diseno;
+                txtAIdAro.Text = idAro;
 
             }
             else
             {
-                MessageBox.Show("Registro no encontrado");
+                MessageBox.Show("Registro no encontrado " + IdSeleccionadaAlListar);
             }
 
-            */
 
         }
 
@@ -150,71 +166,6 @@ namespace Presentacion.App
         /*-----------------------------------------------------------------------*/
         /* PARTE DE Actualizar*/
         /*-----------------------------------------------------------------------*/
-
-        private void btnActualizarBuscar_Click_1(object sender, EventArgs e)
-
-
-        {
-
-            /*
-
-            String[] datosDetalle = detalle.cargarDatosDetalle(txtActualizarBuscarId.Text);
-            if (datosDetalle != null)
-            {
-                txtActualizarId.Text = datosDetalle[0];
-                txtActualizarCodigo.Text = datosDetalle[1];
-                txtActualizarMedida.Text = datosDetalle[2];
-                txtActualizarPcd.Text = datosDetalle[3];
-                txtActualizarPcd2.Text = datosDetalle[4];
-                txtActualizarDiseno.Text = datosDetalle[5];
-            }
-            else
-            {
-                MessageBox.Show("Registro no encontrado");
-            }
-
-            */
-
-        }
-
-        private void btnActualizar_Click_1(object sender, EventArgs e)
-
-        {
-            string id = txtActualizarId.Text;
-            string codigo = txtActualizarCodigo.Text;
-            string medida = txtActualizarMedida.Text;
-            string pcd = txtActualizarPcd.Text;
-            string pcd2 = txtActualizarPcd2.Text;
-            string diseno = txtActualizarDiseno.Text;
-
-            if (string.IsNullOrEmpty(pcd2))
-            {
-                pcd = "NA";
-            }
-
-            //validacion
-            if (!string.IsNullOrEmpty(codigo) && !string.IsNullOrEmpty(medida) && !string.IsNullOrEmpty(pcd) && !string.IsNullOrEmpty(pcd2) && !string.IsNullOrEmpty(diseno))
-            {
-                /*
-
-                    if (detalle.actualizarDetalle(id,codigo, medida, pcd, pcd2,diseno))
-                    {
-                        MessageBox.Show("Detalle actualizado");
-                        actualizarTabla();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Hubo un error al actualizar detalle");
-
-                    }
-                */
-                }
-                else
-                {
-                    MessageBox.Show("Los campos no pueden estar vacios");
-
-                }
-            }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -229,6 +180,100 @@ namespace Presentacion.App
             }
         }
 
+        private void textBox10_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Para obligar a que sólo se introduzcan números
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+              if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                //el resto de teclas pulsadas se desactivan
+                e.Handled = true;
+            }
+        }
+
+        private void btnActualizarBuscar_Click(object sender, EventArgs e)
+        {
+
+            tabControl1.SelectedIndex = 1;
+            String[] datosAro = aro.cargarDatosAro(txtABuscar.Text);
+            if (datosAro != null)
+            {
+                string sucursal = datosAro[0];
+                string idDetalle = datosAro[1];
+                string codigo = datosAro[2];
+                string cantidad = datosAro[3];
+                string diseno = datosAro[4];
+                string medida = datosAro[5];
+                string pcd = datosAro[6];
+                string pcd2 = datosAro[7];
+                string idAro = datosAro[8];
+
+
+                txtASucursal.Text = sucursal;
+                txtAIdDetalle.Text = idDetalle;
+                txtACodigo.Text = codigo;
+                txtACantidad.Text = cantidad;
+                txtAMedida.Text = medida;
+                txtAPcd.Text = pcd;
+                txtAPcd2.Text = pcd2;
+                txtADiseno.Text = diseno;
+                txtAIdAro.Text = idAro;
+
+            }
+            else
+            {
+                MessageBox.Show("Registro no encontrado " + IdSeleccionadaAlListar);
+
+            }
+        }
+
+        int entrada=3;
+
+        void calcularTotal()
+        {
+            if (entrada == 0 || entrada == 1)
+            {
+                if (!string.IsNullOrEmpty(txtAModificar.Text) && !string.IsNullOrEmpty(txtACantidad.Text))
+                {
+
+                    int total = 0;
+
+                    if (entrada==1)
+                    {
+                        total = int.Parse(txtAModificar.Text) + int.Parse(txtACantidad.Text);
+                    }
+                    else if(entrada == 0)
+                    {
+                        total = int.Parse(txtACantidad.Text) - int.Parse(txtAModificar.Text);
+                    }
+
+                    txtATotal.Text = total.ToString();
+                }
+            }
+        
+        }
+
+        private void tipoMovimiento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            entrada = tipoMovimiento.SelectedIndex;
+            calcularTotal();
+
+            
+        }
+
+        private void txtAModificar_TextChanged(object sender, EventArgs e)
+        {
+            calcularTotal();
+        }
+
 
         /*-----------------------------------------------------------------------*/
         /* FIN PARTE DE Actualizar*/
@@ -236,4 +281,4 @@ namespace Presentacion.App
 
 
     }
-        }
+}

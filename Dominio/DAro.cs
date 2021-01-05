@@ -23,7 +23,10 @@ namespace Dominio
             return aro.buscarAro(idSucursal, idDetalle, codigo, diseno, todas);
         }
 
-
+        public String[] cargarDatosAro(string id)
+        {
+            return aro.cargarDatosAro(id);
+        }
 
     }
 }
