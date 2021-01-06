@@ -359,7 +359,7 @@
                         </Border>
                         <BackgroundColor>=Switch(
 	me.value &gt;= 10, "LightGreen", 
-    me.value &gt;= 1, "CornflowerBlue", 
+    me.value &gt; 1, "CornflowerBlue", 
     me.value = 1, "Khaki", 
     me.value &lt;= 0, "RosyBrown"
     )</BackgroundColor>
