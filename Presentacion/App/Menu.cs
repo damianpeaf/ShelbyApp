@@ -121,6 +121,11 @@ namespace Presentacion.App
             AbrirForm2(new DetalleLlanta());
         }
 
+        private void button8_Click(object sender, EventArgs e)
+        {
+            AbrirForm2(new Movimientos());
+        }
+
 
         //FIN boton e imagen usuarios
 
