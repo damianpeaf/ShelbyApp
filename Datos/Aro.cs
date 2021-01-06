@@ -146,7 +146,7 @@ namespace Datos
 
                         if (!string.IsNullOrEmpty(codigo))
                         {
-                            comando += $"and D.codigo like '%{codigo}%'";
+                            comando += $"and D.codigo like '{codigo}'";
                         }
 
                         if (!string.IsNullOrEmpty(diseno))
@@ -165,7 +165,7 @@ namespace Datos
 
                         if (!string.IsNullOrEmpty(codigo))
                         {
-                            comando += $"and D.codigo like '%{codigo}%'";
+                            comando += $"and D.codigo like '{codigo}'";
                         }
 
                         if (!string.IsNullOrEmpty(diseno))
