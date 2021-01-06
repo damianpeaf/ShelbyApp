@@ -30,6 +30,14 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -47,9 +55,11 @@
     <Compile Include="Dlogin.cs" />
     <Compile Include="DMarca.cs" />
     <Compile Include="DMovimiento.cs" />
+    <Compile Include="DReporteAro.cs" />
     <Compile Include="DSucursal.cs" />
     <Compile Include="DDetalleAro.cs" />
     <Compile Include="DUsuario.cs" />
+    <Compile Include="InventarioAroLista.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

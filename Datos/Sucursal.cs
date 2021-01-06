@@ -45,6 +45,43 @@ namespace Datos
 
         }
 
+        public string buscarNombreSucursal(string id)
+        {
+            try
+            {
+                using (cn = new Conexion().IniciarConexion())
+                {
+                    string comando = $"SELECT nombre FROM sucursal where idSucursal like '{id}'";
+
+                    MySqlCommand datos = new MySqlCommand(comando, cn);
+
+                    MySqlDataReader reader = datos.ExecuteReader();
+                    string nombreSucursal ="";
+
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            nombreSucursal = reader.GetString(0);
+                        }
+                    }
+
+                    return nombreSucursal;
+
+
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("" + ex);
+                return null;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
         public DataSet buscarSucursal(string id, string nombre)
         {
 

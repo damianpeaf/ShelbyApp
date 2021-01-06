@@ -68,6 +68,8 @@ namespace Presentacion.App
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.txtAIdSucursal = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
             this.txtAIdAro = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -102,8 +104,6 @@ namespace Presentacion.App
             this.label16 = new System.Windows.Forms.Label();
             this.txtABuscar = new System.Windows.Forms.TextBox();
             this.btnActualizarBuscar = new System.Windows.Forms.Button();
-            this.label30 = new System.Windows.Forms.Label();
-            this.txtAIdSucursal = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -590,6 +590,27 @@ namespace Presentacion.App
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Detalle del producto";
             // 
+            // label30
+            // 
+            this.label30.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.Black;
+            this.label30.Location = new System.Drawing.Point(341, 226);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(76, 16);
+            this.label30.TabIndex = 57;
+            this.label30.Text = "ID Sucursal";
+            // 
+            // txtAIdSucursal
+            // 
+            this.txtAIdSucursal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtAIdSucursal.Location = new System.Drawing.Point(344, 242);
+            this.txtAIdSucursal.Name = "txtAIdSucursal";
+            this.txtAIdSucursal.ReadOnly = true;
+            this.txtAIdSucursal.Size = new System.Drawing.Size(95, 20);
+            this.txtAIdSucursal.TabIndex = 56;
+            // 
             // label32
             // 
             this.label32.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -972,27 +993,6 @@ namespace Presentacion.App
             this.btnActualizarBuscar.Text = "Buscar";
             this.btnActualizarBuscar.UseVisualStyleBackColor = false;
             this.btnActualizarBuscar.Click += new System.EventHandler(this.btnActualizarBuscar_Click);
-            // 
-            // label30
-            // 
-            this.label30.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.Color.Black;
-            this.label30.Location = new System.Drawing.Point(341, 226);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(76, 16);
-            this.label30.TabIndex = 57;
-            this.label30.Text = "ID Sucursal";
-            // 
-            // txtAIdSucursal
-            // 
-            this.txtAIdSucursal.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtAIdSucursal.Location = new System.Drawing.Point(344, 242);
-            this.txtAIdSucursal.Name = "txtAIdSucursal";
-            this.txtAIdSucursal.ReadOnly = true;
-            this.txtAIdSucursal.Size = new System.Drawing.Size(95, 20);
-            this.txtAIdSucursal.TabIndex = 56;
             // 
             // Aro
             // 

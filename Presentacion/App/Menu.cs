@@ -131,6 +131,12 @@ namespace Presentacion.App
             AbrirForm2(new Llantas(null));
         }
 
+        private void button9_Click(object sender, EventArgs e)
+        {
+            AbrirForm2(new Reportes());
+
+        }
+
 
         //FIN boton e imagen usuarios
 
