@@ -111,6 +111,17 @@ namespace Presentacion.App
             }
         }
 
+        private void btnListarTodo_Click(object sender, EventArgs e)
+        {
+            actualizarTabla();
+        }
+
+        private void btnListarLimpiar_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = "";
+            dataGridView1.Columns.Clear();
+        }
+
         /*-----------------------------------------------------------------------*/
         /*PARTE DE LISTAR*/
         /*-----------------------------------------------------------------------*/

@@ -100,6 +100,7 @@ namespace Presentacion.App
             this.btnListarTodo.TabIndex = 20;
             this.btnListarTodo.Text = "Listar Todo";
             this.btnListarTodo.UseVisualStyleBackColor = false;
+            this.btnListarTodo.Click += new System.EventHandler(this.btnListarTodo_Click);
             // 
             // btnListarLimpiar
             // 
@@ -114,6 +115,7 @@ namespace Presentacion.App
             this.btnListarLimpiar.TabIndex = 19;
             this.btnListarLimpiar.Text = "Limpiar";
             this.btnListarLimpiar.UseVisualStyleBackColor = false;
+            this.btnListarLimpiar.Click += new System.EventHandler(this.btnListarLimpiar_Click);
             // 
             // groupBox1
             // 
