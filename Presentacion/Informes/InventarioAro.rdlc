@@ -341,7 +341,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!stock.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontFamily>Arial Black</FontFamily>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -355,12 +357,19 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>=Switch(
+	me.value &gt;= 10, "LightGreen", 
+    me.value &gt;= 1, "CornflowerBlue", 
+    me.value = 1, "Khaki", 
+    me.value &lt;= 0, "RosyBrown"
+    )</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -483,7 +492,7 @@
         <Top>0.8387cm</Top>
         <Left>0.43591cm</Left>
         <Height>1.2cm</Height>
-        <Width>19.66201cm</Width>
+        <Width>19.662cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
