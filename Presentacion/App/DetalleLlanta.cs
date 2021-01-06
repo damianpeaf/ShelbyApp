@@ -14,12 +14,14 @@ namespace Presentacion.App
     public partial class DetalleLlanta : Form
     {
         DDetalleLlanta detalle = new DDetalleLlanta();
+        Menu menuP;
 
-        public DetalleLlanta()
+        public DetalleLlanta(Menu menu)
         {
             InitializeComponent();
             actualizarTabla();
             cargarMarcas();
+            menuP = menu;
 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
 
@@ -296,7 +298,7 @@ namespace Presentacion.App
         {
              Marcas form = new Marcas();
             form.Show();
-            txtListarBuscarMarcas.Refresh();
+          
 
 
         }
@@ -305,7 +307,7 @@ namespace Presentacion.App
         {
             Marcas form = new Marcas();
             form.Show();
-            this.Hide();
+          
         }
 
         private void DetalleLlanta_Load(object sender, EventArgs e)
@@ -366,6 +368,12 @@ namespace Presentacion.App
             txtActualizarMarca.ValueMember = "idMarca";
             txtActualizarMarca.DisplayMember = "nombre";
             txtActualizarMarca.DataSource = dt;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            menuP.AbrirForm2(new Llantas(IdSeleccionadaAlListar));
+            this.Close();
         }
 
 

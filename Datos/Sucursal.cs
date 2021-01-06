@@ -156,6 +156,10 @@ namespace Datos
                             Aro aro = new Aro();
 
                             aro.crearDisponibilidadDesdeSucursal(ultimaId, idUsuario);
+
+                            Llanta lla = new Llanta();
+
+                            lla.crearDisponibilidadDesdeLlanta(ultimaId, idUsuario);
                         }
                         return true;
                     }

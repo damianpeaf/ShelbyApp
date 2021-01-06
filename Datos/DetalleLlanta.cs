@@ -165,9 +165,9 @@ namespace Datos
                                 ultimaId = reader.GetString(0);
                             }
 
-                            Aro aro = new Aro();
+                            Llanta lla = new Llanta();
 
-                            aro.crearDisponibilidadDesdeAro(ultimaId, idUsuario);
+                            lla.crearDisponibilidadDesdeLlanta(ultimaId, idUsuario);
                         }
 
                         return true;

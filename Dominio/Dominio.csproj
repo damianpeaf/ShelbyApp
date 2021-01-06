@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="DDetalleLlanta.cs" />
     <Compile Include="DAro.cs" />
+    <Compile Include="DLlanta.cs" />
     <Compile Include="Dlogin.cs" />
     <Compile Include="DMarca.cs" />
     <Compile Include="DMovimiento.cs" />

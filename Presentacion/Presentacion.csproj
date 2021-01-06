@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App\Llantas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\Llantas.Designer.cs">
+      <DependentUpon>Llantas.cs</DependentUpon>
+    </Compile>
     <Compile Include="App\Movimientos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     <Compile Include="RecuperarContra.Designer.cs">
       <DependentUpon>RecuperarContra.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="App\Llantas.resx">
+      <DependentUpon>Llantas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="App\Movimientos.resx">
       <DependentUpon>Movimientos.cs</DependentUpon>
     </EmbeddedResource>

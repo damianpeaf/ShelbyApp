@@ -112,18 +112,23 @@ namespace Presentacion.App
 
         private void button6_Click(object sender, EventArgs e)
         {
-            AbrirForm2(new DetalleLlanta());
+            AbrirForm2(new DetalleLlanta(this));
 
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            AbrirForm2(new DetalleLlanta());
+            AbrirForm2(new DetalleLlanta(this));
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             AbrirForm2(new Movimientos());
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            AbrirForm2(new Llantas(null));
         }
 
 

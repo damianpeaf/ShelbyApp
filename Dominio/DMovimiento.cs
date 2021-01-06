@@ -16,6 +16,10 @@ namespace Dominio
         {
             return movimiento.crearMovimientoAro(idDetalleAro, idSucursal, cantidad, fecha, idTipoMovimiento);
         }
+        public bool crearMovimientoLlanta(string idDetalleLlanta, string idSucursal, string cantidad, string fecha, string idTipoMovimiento)
+        {
+            return movimiento.crearMovimientoLlanta(idDetalleLlanta, idSucursal, cantidad, fecha, idTipoMovimiento);
+        }
 
         public DataSet buscarMovimiento(string idSucursal, string idDetalle, string codigo, string diseno, bool todas, bool rango, string fechaDesde, string fechaHasta, bool ambos, string idTipoMovimiento)
         {

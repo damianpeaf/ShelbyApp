@@ -41,6 +41,34 @@ namespace Datos
                 }
 
         }
+        public bool crearMovimientoLlanta(string idDetalleLlanta, string idSucursal, string cantidad, string fecha, string idTipoMovimiento)
+        {
+            try
+            {
+                using (cn = new Conexion().IniciarConexion())
+                {
+                    MySqlCommand comando = new MySqlCommand($"INSERT INTO movimiento VALUES(null,{idDetalleLlanta},null, {idSucursal}, {cantidad}, '{fecha}', {idTipoMovimiento})", cn);
+                    if (comando.ExecuteNonQuery() > 0)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("" + ex);
+                return false;
+            }
+            finally
+            {
+                cn.Close();
+            }
+
+        }
 
         private string comandoGeneral = $"SELECT S.nombre as 'Nombre Sucursal', D.idDetalleAro, D.Codigo, M.cantidad, T.nombre as 'Tipo de movimiento',  DATE_FORMAT(M.fecha , '%d/%m/%Y %H:%i') as 'Fecha del movimiento'FROM movimiento M inner join detalleAro D on M.idDetalleAro = D.idDetalleAro inner join sucursal S on M.idSucursal = S.idSucursal inner join tipoMovimiento T on M.idTipoMovimiento = T.idTipoMovimiento ";
 
