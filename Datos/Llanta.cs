@@ -103,7 +103,7 @@ namespace Datos
             {
                 using (cn = new Conexion().IniciarConexion())
                 {
-                    string comando = "SELECT S.nombre as 'Sucursal',  D.idDetalleLlanta as 'ID Llanta', D.codigo as 'Codigo', A.cantidad as 'Stock', D.medida,  U.nombre as 'Firma',DATE_FORMAT(A.fechaModificacion, '%d/%m/%Y %H:%i')  as 'Ultima modificacion', A.idLlanta as 'ID específica'  FROM llanta A inner join sucursal S on A.idSucursal = S.idSucursal inner join detalleLlanta D on D.idDetalleLlanta = A.idDetalleLlanta inner join usuario U on A.usuarioModificacion = U.idUsuario";
+                     string  comando = "SELECT S.nombre as 'Sucursal',  D.idDetalleLlanta as 'ID Llanta', D.codigo as 'Codigo', A.cantidad as 'Stock',D.IdMarca, D.medida,  U.nombre as 'Firma',DATE_FORMAT(A.fechaModificacion, '%d/%m/%Y %H:%i')  as 'Ultima modificacion',  A.idLlanta as 'ID específica'  FROM llanta A inner join sucursal S on A.idSucursal = S.idSucursal inner join detalleLlanta D on D.idDetalleLlanta = A.idDetalleLlanta inner join usuario U on A.usuarioModificacion = U.idUsuario";
 
                     MySqlCommand datos = new MySqlCommand(comando, cn);
 
@@ -133,7 +133,7 @@ namespace Datos
             {
                 using (cn = new Conexion().IniciarConexion())
                 {
-                    string comando = $"SELECT S.nombre as 'Sucursal',  D.idDetalleLlanta as 'ID llanta', D.codigo as 'Codigo', A.cantidad as 'Stock', D.medida, U.nombre as 'Firma', DATE_FORMAT(A.fechaModificacion, '%d/%m/%Y %H:%i') as 'Ultima modificacion', A.idLlanta as 'ID específica'  FROM llanta A inner join sucursal S on A.idSucursal = S.idSucursal inner join detalleLlanta D on D.idDetalleLlanta = A.idDetalleLlanta inner join usuario U on A.usuarioModificacion = U.idUsuario ";
+                    string comando = $"SELECT S.nombre as 'Sucursal',  D.idDetalleLlanta as 'ID llanta', D.codigo as 'Codigo', A.cantidad as 'Stock',D.IdMarca, D.medida, U.nombre as 'Firma', DATE_FORMAT(A.fechaModificacion, '%d/%m/%Y %H:%i') as 'Ultima modificacion', A.idLlanta as 'ID específica'  FROM llanta A inner join sucursal S on A.idSucursal = S.idSucursal inner join detalleLlanta D on D.idDetalleLlanta = A.idDetalleLlanta inner join usuario U on A.usuarioModificacion = U.idUsuario ";
 
                     if (todas)
                     {
@@ -199,7 +199,7 @@ namespace Datos
                 using (cn = new Conexion().IniciarConexion())
                 {
                     String[] datosUsuario = new string[10];
-                    string comando = $"SELECT S.nombre,  D.idDetalleLlanta, D.codigo, A.cantidad,  D.medida,  A.idLlanta, S.idSucursal  FROM llanta A inner join sucursal S on A.idSucursal = S.idSucursal inner join detalleLlanta D on D.idDetalleLlanta = A.idDetalleLlanta inner join usuario U on A.usuarioModificacion = U.idUsuario WHERE idLlanta = {id}";
+                    string comando = $"SELECT S.nombre,  D.idDetalleLlanta, D.codigo, A.cantidad, D.IdMarca,  D.medida,  A.idLlanta, S.idSucursal  FROM llanta A inner join sucursal S on A.idSucursal = S.idSucursal inner join detalleLlanta D on D.idDetalleLlanta = A.idDetalleLlanta inner join usuario U on A.usuarioModificacion = U.idUsuario WHERE idLlanta = {id}";
 
                     MySqlCommand datos = new MySqlCommand(comando, cn);
 
@@ -218,7 +218,8 @@ namespace Datos
                             datosUsuario[4] = reader.GetString(4);
                             datosUsuario[5] = reader.GetString(5);
                             datosUsuario[6] = reader.GetString(6);
-                           
+                            datosUsuario[7] = reader.GetString(7);
+
 
                         }
                         return datosUsuario;
