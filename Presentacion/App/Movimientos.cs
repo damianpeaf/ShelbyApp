@@ -22,9 +22,11 @@ namespace Presentacion.App
             InitializeComponent();
             actualizarTabla();
             cargarSucursales();
+            actualizarTablaLlantas();
 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            
+            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+
         }
 
         void cargarSucursales()
@@ -34,12 +36,21 @@ namespace Presentacion.App
             txtBuscarSucursal.ValueMember = "idSucursal";
             txtBuscarSucursal.DisplayMember = "nombre";
             txtBuscarSucursal.DataSource = dt;
+
+            txtBuscarSucursal1.ValueMember = "idSucursal";
+            txtBuscarSucursal1.DisplayMember = "nombre";
+            txtBuscarSucursal1.DataSource = dt;
         }
 
         void actualizarTabla()
         {
            DataSet ds = movimiento.listarTodos();
            dataGridView1.DataSource = ds.Tables[0];
+        }
+        void actualizarTablaLlantas()
+        {
+            DataSet ds = movimiento.listarTodos1();
+            dataGridView2.DataSource = ds.Tables[0];
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -120,6 +131,85 @@ namespace Presentacion.App
         {
             dataGridView1.DataSource = "";
             dataGridView1.Columns.Clear();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string idSucursal = txtBuscarSucursal1.SelectedValue.ToString();
+            string idDetalle = txtId1.Text;
+            string codigoDetalle = txtCodigo1.Text;
+           
+
+            DateTime dateValue = DateTime.Parse(txtFechaHasta1.Text);
+            string fechaHasta = dateValue.ToString("yyyy-MM-dd HH:mm:ss");
+
+            DateTime dateValue2 = DateTime.Parse(txtFechaDesde1.Text);
+            string fechaDesde = dateValue2.ToString("yyyy-MM-dd HH:mm:ss");
+
+            string idTipoMovimiento = tipoMovimiento1.SelectedIndex.ToString();
+
+            bool todas = checkBox6.Checked;
+            bool rango = checkBox5.Checked;
+            bool ambos = checkBox4.Checked;
+
+            DataSet ds = movimiento.buscarMovimiento1(idSucursal, idDetalle, codigoDetalle, todas, rango, fechaDesde, fechaHasta, ambos, idTipoMovimiento);
+            dataGridView2.DataSource = ds.Tables[0];
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            actualizarTablaLlantas();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            dataGridView2.DataSource = "";
+            dataGridView2.Columns.Clear();
+        }
+
+        private void checkBox6_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox6.Checked == true)
+            {
+                txtBuscarSucursal1.Enabled = false;
+            }
+            else
+            {
+                txtBuscarSucursal1.Enabled = true;
+
+            }
+        }
+
+        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox5.Checked == true)
+            {
+                txtFechaHasta1.Enabled = true;
+                txtFechaDesde1.Enabled = true;
+            }
+            else
+            {
+                txtFechaDesde1.Enabled = false;
+                txtFechaHasta1.Enabled = false;
+            }
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox4.Checked == true)
+            {
+                tipoMovimiento1.Enabled = false;
+            }
+            else
+            {
+                tipoMovimiento1.Enabled = true;
+
+            }
+        }
+
+        private void txtBuscarSucursal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         /*-----------------------------------------------------------------------*/

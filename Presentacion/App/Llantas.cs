@@ -99,10 +99,11 @@ namespace Presentacion.App
                 string idDetalle = dataGridView1.Rows[n].Cells[1].Value.ToString();
                 string codigo = dataGridView1.Rows[n].Cells[2].Value.ToString();
                 string cantidad = dataGridView1.Rows[n].Cells[3].Value.ToString();
-              
-                string medida = dataGridView1.Rows[n].Cells[4].Value.ToString();
+                string idMarca = dataGridView1.Rows[n].Cells[4].Value.ToString();
+
+                string medida = dataGridView1.Rows[n].Cells[5].Value.ToString();
              
-                string idLlanta = dataGridView1.Rows[n].Cells[7].Value.ToString();
+                string idLlanta = dataGridView1.Rows[n].Cells[8].Value.ToString();
 
 
                 txtSeleccionadoSucursal.Text = sucursal;
@@ -111,6 +112,7 @@ namespace Presentacion.App
                 txtSeleccionadoCantidad.Text = cantidad;
                 txtSeleccionadoMedida.Text = medida;
                 txtIdLlantas.Text = idLlanta;
+                txtSeleccionadoMarca.Text = idMarca;
                 IdSeleccionadaAlListar = idLlanta;
 
             }
@@ -127,9 +129,10 @@ namespace Presentacion.App
                 string idDetalle = datosLlantas[1];
                 string codigo = datosLlantas[2];
                 string cantidad = datosLlantas[3];
-                string medida = datosLlantas[4];
-                string idLlanta = datosLlantas[5];
-                string idSucursal = datosLlantas[6];
+                string idmarca = datosLlantas[4];
+                string medida = datosLlantas[5];
+                string idLlanta = datosLlantas[6];
+                string idSucursal = datosLlantas[7];
 
                 txtASucursal.Text = sucursal;
                 txtAIdDetalle.Text = idDetalle;
@@ -138,6 +141,7 @@ namespace Presentacion.App
                 txtAMedida.Text = medida;
                 txtAIdLlantas.Text = idLlanta;
                 txtAIdSucursal.Text = idSucursal;
+                txtAMarca.Text = idmarca;
 
             }
             else
@@ -203,10 +207,10 @@ namespace Presentacion.App
                 string idDetalle = datosLlantas[1];
                 string codigo = datosLlantas[2];
                 string cantidad = datosLlantas[3];
-                string medida = datosLlantas[4];
-                string idLlanta = datosLlantas[5];
-                string idSucursal = datosLlantas[6];
-
+                string idmarca = datosLlantas[4];
+                string medida = datosLlantas[5];
+                string idLlanta = datosLlantas[6];
+                string idSucursal = datosLlantas[7];
 
                 txtASucursal.Text = sucursal;
                 txtAIdDetalle.Text = idDetalle;
@@ -215,6 +219,7 @@ namespace Presentacion.App
                 txtAMedida.Text = medida;
                 txtAIdLlantas.Text = idLlanta;
                 txtAIdSucursal.Text = idSucursal;
+                txtAMarca.Text = idmarca;
 
             }
             else

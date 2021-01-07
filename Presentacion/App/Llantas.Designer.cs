@@ -90,6 +90,10 @@ namespace Presentacion.App
             this.label16 = new System.Windows.Forms.Label();
             this.txtABuscar = new System.Windows.Forms.TextBox();
             this.btnActualizarBuscar = new System.Windows.Forms.Button();
+            this.txtSeleccionadoMarca = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtAMarca = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -157,6 +161,8 @@ namespace Presentacion.App
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.txtSeleccionadoMarca);
             this.groupBox1.Controls.Add(this.label31);
             this.groupBox1.Controls.Add(this.txtIdLlantas);
             this.groupBox1.Controls.Add(this.checkBox1);
@@ -311,7 +317,7 @@ namespace Presentacion.App
             // txtSeleccionadoMedida
             // 
             this.txtSeleccionadoMedida.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSeleccionadoMedida.Location = new System.Drawing.Point(623, 152);
+            this.txtSeleccionadoMedida.Location = new System.Drawing.Point(573, 152);
             this.txtSeleccionadoMedida.Name = "txtSeleccionadoMedida";
             this.txtSeleccionadoMedida.ReadOnly = true;
             this.txtSeleccionadoMedida.Size = new System.Drawing.Size(84, 20);
@@ -332,7 +338,7 @@ namespace Presentacion.App
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(620, 136);
+            this.label7.Location = new System.Drawing.Point(570, 136);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(54, 16);
             this.label7.TabIndex = 14;
@@ -457,6 +463,8 @@ namespace Presentacion.App
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Controls.Add(this.txtAMarca);
             this.groupBox3.Controls.Add(this.label30);
             this.groupBox3.Controls.Add(this.txtAIdSucursal);
             this.groupBox3.Controls.Add(this.label32);
@@ -487,7 +495,7 @@ namespace Presentacion.App
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.Black;
-            this.label30.Location = new System.Drawing.Point(232, 226);
+            this.label30.Location = new System.Drawing.Point(313, 226);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(76, 16);
             this.label30.TabIndex = 57;
@@ -496,7 +504,7 @@ namespace Presentacion.App
             // txtAIdSucursal
             // 
             this.txtAIdSucursal.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtAIdSucursal.Location = new System.Drawing.Point(235, 242);
+            this.txtAIdSucursal.Location = new System.Drawing.Point(316, 242);
             this.txtAIdSucursal.Name = "txtAIdSucursal";
             this.txtAIdSucursal.ReadOnly = true;
             this.txtAIdSucursal.Size = new System.Drawing.Size(95, 20);
@@ -822,6 +830,48 @@ namespace Presentacion.App
             this.btnActualizarBuscar.UseVisualStyleBackColor = false;
             this.btnActualizarBuscar.Click += new System.EventHandler(this.btnActualizarBuscar_Click);
             // 
+            // txtSeleccionadoMarca
+            // 
+            this.txtSeleccionadoMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSeleccionadoMarca.Location = new System.Drawing.Point(690, 152);
+            this.txtSeleccionadoMarca.Name = "txtSeleccionadoMarca";
+            this.txtSeleccionadoMarca.ReadOnly = true;
+            this.txtSeleccionadoMarca.Size = new System.Drawing.Size(84, 20);
+            this.txtSeleccionadoMarca.TabIndex = 37;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(687, 136);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(46, 16);
+            this.label12.TabIndex = 38;
+            this.label12.Text = "Marca";
+            // 
+            // label15
+            // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.Location = new System.Drawing.Point(221, 226);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(46, 16);
+            this.label15.TabIndex = 59;
+            this.label15.Text = "Marca";
+            // 
+            // txtAMarca
+            // 
+            this.txtAMarca.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtAMarca.Location = new System.Drawing.Point(224, 242);
+            this.txtAMarca.Name = "txtAMarca";
+            this.txtAMarca.ReadOnly = true;
+            this.txtAMarca.Size = new System.Drawing.Size(84, 20);
+            this.txtAMarca.TabIndex = 58;
+            // 
             // Llantas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -910,5 +960,9 @@ namespace Presentacion.App
         private System.Windows.Forms.TextBox txtAIdLlantas;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TextBox txtAIdSucursal;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtSeleccionadoMarca;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtAMarca;
     }
 }
