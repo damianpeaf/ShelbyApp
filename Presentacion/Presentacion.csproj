@@ -193,6 +193,7 @@
       <DependentUpon>Usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Informes\InventarioAro.rdlc" />
+    <EmbeddedResource Include="Informes\InventarioLlanta.rdlc" />
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
@@ -206,7 +207,9 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Dominio.DReporteAro.datasource" />
+    <None Include="Properties\DataSources\Dominio.DReporteLlanta.datasource" />
     <None Include="Properties\DataSources\Dominio.InventarioAroLista.datasource" />
+    <None Include="Properties\DataSources\Dominio.InventarioLlantaLista.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -56,10 +56,12 @@
     <Compile Include="DMarca.cs" />
     <Compile Include="DMovimiento.cs" />
     <Compile Include="DReporteAro.cs" />
+    <Compile Include="DReporteLlanta.cs" />
     <Compile Include="DSucursal.cs" />
     <Compile Include="DDetalleAro.cs" />
     <Compile Include="DUsuario.cs" />
     <Compile Include="InventarioAroLista.cs" />
+    <Compile Include="InventarioLlantaLista.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

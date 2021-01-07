@@ -30,11 +30,15 @@ namespace Presentacion.App
             txtBuscarSucursal.ValueMember = "idSucursal";
             txtBuscarSucursal.DisplayMember = "nombre";
             txtBuscarSucursal.DataSource = dt;
+            txtBuscarSucursal1.ValueMember = "idSucursal";
+            txtBuscarSucursal1.DisplayMember = "nombre";
+            txtBuscarSucursal1.DataSource = dt;
         }
 
         private void Reportes_Load(object sender, EventArgs e)
         {
 
+            this.reportViewer2.RefreshReport();
             this.reportViewer1.RefreshReport();
         }
 
@@ -47,6 +51,17 @@ namespace Presentacion.App
             InventarioAroListaBindingSource.DataSource = reporte.listaAros;
 
             this.reportViewer1.RefreshReport();
+
+        }
+        private void generarReporte1(string idSucursal, string idDetalle, string codigo, bool todas)
+        {
+            DReporteLlanta reporte = new DReporteLlanta();
+            reporte.crearReporteInventario(idSucursal, idDetalle, codigo, todas);
+
+            DReporteLlantaBindingSource.DataSource = reporte;
+            InventarioLlantaListaBindingSource.DataSource = reporte.listaLlantas;
+
+            this.reportViewer2.RefreshReport();
 
         }
 
@@ -77,6 +92,30 @@ namespace Presentacion.App
                 txtBuscarSucursal.Enabled = true;
 
             }
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked == true)
+            {
+                txtBuscarSucursal1.Enabled = false;
+            }
+            else
+            {
+                txtBuscarSucursal1.Enabled = true;
+
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string idSucursal = txtBuscarSucursal1.SelectedValue.ToString();
+            string idDetalle = txtBuscarId1.Text;
+            string codigoDetalle = txtBuscarCodigo1.Text;
+
+            bool todas = checkBox2.Checked;
+
+            generarReporte1(idSucursal, idDetalle, codigoDetalle, todas);
         }
     }
 }
