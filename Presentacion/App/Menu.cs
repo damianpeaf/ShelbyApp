@@ -137,6 +137,17 @@ namespace Presentacion.App
 
         }
 
+        private void button10_Click(object sender, EventArgs e)
+        {
+            AbrirForm2(new Reportes2());
+
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            AbrirForm2(new Reportes2());
+        }
+
 
         //FIN boton e imagen usuarios
 

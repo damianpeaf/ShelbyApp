@@ -87,8 +87,8 @@ namespace Presentacion.App
             string idTipoMovimiento = tipoMovimiento.SelectedIndex.ToString();
 
             bool todas = checkBox1.Checked;
-            bool rango = checkBox2.Checked;
-            bool ambos = checkBox3.Checked;
+            bool rango = checkBox3.Checked;
+            bool ambos = checkBox4.Checked;
 
             DataSet ds = movimiento.buscarMovimiento(idSucursal, idDetalle, codigoDetalle, disenoDetalle, todas, rango, fechaDesde, fechaHasta, ambos, idTipoMovimiento);
             dataGridView1.DataSource = ds.Tables[0];

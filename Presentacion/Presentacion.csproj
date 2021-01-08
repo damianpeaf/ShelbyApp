@@ -121,6 +121,12 @@
     <Compile Include="App\Reportes.Designer.cs">
       <DependentUpon>Reportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="App\Reportes2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\Reportes2.Designer.cs">
+      <DependentUpon>Reportes2.cs</DependentUpon>
+    </Compile>
     <Compile Include="App\Sucursales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +189,9 @@
     <EmbeddedResource Include="App\Reportes.resx">
       <DependentUpon>Reportes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="App\Reportes2.resx">
+      <DependentUpon>Reportes2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="App\Sucursales.resx">
       <DependentUpon>Sucursales.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,6 +203,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Informes\InventarioAro.rdlc" />
     <EmbeddedResource Include="Informes\InventarioLlanta.rdlc" />
+    <EmbeddedResource Include="Informes\MovimientosAros.rdlc" />
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +220,7 @@
     <None Include="Properties\DataSources\Dominio.DReporteLlanta.datasource" />
     <None Include="Properties\DataSources\Dominio.InventarioAroLista.datasource" />
     <None Include="Properties\DataSources\Dominio.InventarioLlantaLista.datasource" />
+    <None Include="Properties\DataSources\Dominio.MovimientoAroLista.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
