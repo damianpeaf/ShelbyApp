@@ -64,7 +64,10 @@
     <Compile Include="DUsuario.cs" />
     <Compile Include="InventarioAroLista.cs" />
     <Compile Include="InventarioLlantaLista.cs" />
+    <Compile Include="LlantasMasEntradas.cs" />
+    <Compile Include="LlantasMasSalidas.cs" />
     <Compile Include="MovimientoAroLista.cs" />
+    <Compile Include="MovimientoLlantaLista.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
