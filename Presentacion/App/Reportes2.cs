@@ -85,6 +85,8 @@ namespace Presentacion.App
 
             DReporteAroBindingSource.DataSource = reporte;
             MovimientoAroListaBindingSource.DataSource = reporte.listaMovimientos;
+            ArosMasEntradasBindingSource.DataSource = reporte.listaArosMasEntradas;
+            ArosMasSalidasBindingSource.DataSource = reporte.listaArosMasSalidas;
 
             this.reportViewer1.RefreshReport();
 

@@ -203,7 +203,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Informes\InventarioAro.rdlc" />
     <EmbeddedResource Include="Informes\InventarioLlanta.rdlc" />
-    <EmbeddedResource Include="Informes\MovimientosAros.rdlc" />
+    <EmbeddedResource Include="Informes\MovimientosAros2.rdlc" />
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +216,8 @@
       <DependentUpon>RecuperarContra.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Dominio.ArosMasEntradas.datasource" />
+    <None Include="Properties\DataSources\Dominio.ArosMasSalidas.datasource" />
     <None Include="Properties\DataSources\Dominio.DReporteAro.datasource" />
     <None Include="Properties\DataSources\Dominio.DReporteLlanta.datasource" />
     <None Include="Properties\DataSources\Dominio.InventarioAroLista.datasource" />

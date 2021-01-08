@@ -32,6 +32,10 @@ namespace Dominio
         public string fechaInicio { get; set; }
         public string fechaFinal { get; set; }
 
+        public List<ArosMasEntradas> listaArosMasEntradas { get; set; }
+        public List<ArosMasSalidas> listaArosMasSalidas { get; set; }
+
+
 
         //metodo inventario
         public void crearReporteInventario(string idSucursal, string idDetalle, string codigo, bool todas)
@@ -141,6 +145,9 @@ namespace Dominio
             DataTable dt = aro.buscarMovimiento(idSucursal, idDetalle, codigo, null, todas, rango, fechaDesde, fechaHasta, ambos, idTipoMovimiento).Tables[0];
 
             listaMovimientos = new List<MovimientoAroLista>();
+            listaArosMasEntradas = new List<ArosMasEntradas>();
+            listaArosMasSalidas = new List<ArosMasSalidas>();
+
             int totEntradas = 0;
             int totSalidas = 0;
 
@@ -166,12 +173,29 @@ namespace Dominio
                 {
                     totSalidas++;
                     cantidadSaliente += Convert.ToInt32(filas[3]);
+
+                    var filaSalida = new ArosMasSalidas()
+                    {
+                        cantidadSaliente = Convert.ToInt32(filas[3]),
+                        codigoSaliente = filas[2].ToString()
+                    };
+
+                    listaArosMasSalidas.Add(filaSalida);
+
+
                 }
                 else if(filas[4].ToString() == "Entrada")
                 {
                     totEntradas++;
                     cantidadEntrante += Convert.ToInt32(filas[3]);
 
+                    var filaEntrada = new ArosMasEntradas()
+                    {
+                        cantidadEntrante = Convert.ToInt32(filas[3]),
+                        codigoEntrante = filas[2].ToString()
+                    };
+
+                    listaArosMasEntradas.Add(filaEntrada);
                 }
 
                 listaMovimientos.Add(filaLista);

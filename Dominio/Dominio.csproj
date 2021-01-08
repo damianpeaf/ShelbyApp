@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArosMasEntradas.cs" />
+    <Compile Include="ArosMasSalidas.cs" />
     <Compile Include="DDetalleLlanta.cs" />
     <Compile Include="DAro.cs" />
     <Compile Include="DLlanta.cs" />
