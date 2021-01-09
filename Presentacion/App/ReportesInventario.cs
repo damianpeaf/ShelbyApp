@@ -11,12 +11,12 @@ using Dominio;
 
 namespace Presentacion.App
 {
-    public partial class Reportes : Form
+    public partial class ReportesInventario : Form
     {
         DSucursal sucursal = new DSucursal();
 
 
-        public Reportes()
+        public ReportesInventario()
         {
             InitializeComponent();
             cargarSucursales();

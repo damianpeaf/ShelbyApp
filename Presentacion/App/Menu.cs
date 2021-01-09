@@ -133,19 +133,24 @@ namespace Presentacion.App
 
         private void button9_Click(object sender, EventArgs e)
         {
-            AbrirForm2(new Reportes());
+            AbrirForm2(new ReportesInventario());
 
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            AbrirForm2(new Reportes2());
+            AbrirForm2(new ReportesMovimientos());
 
         }
 
         private void pictureBox12_Click(object sender, EventArgs e)
         {
-            AbrirForm2(new Reportes2());
+            AbrirForm2(new ReportesMovimientos());
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            AbrirForm2(new ReportesInventario());
         }
 
 

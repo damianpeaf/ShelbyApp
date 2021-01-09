@@ -1,7 +1,7 @@
 ﻿
 namespace Presentacion.App
 {
-    partial class Reportes
+    partial class ReportesInventario
     {
         /// <summary>
         /// Required designer variable.
