@@ -169,10 +169,10 @@
     <Compile Include="App\Usuarios.Designer.cs">
       <DependentUpon>Usuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="login.cs">
+    <Compile Include="Inicio\login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="login.Designer.cs">
+    <Compile Include="Inicio\login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -182,10 +182,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="RecuperarContra.cs">
+    <Compile Include="Inicio\RecuperarContra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RecuperarContra.Designer.cs">
+    <Compile Include="Inicio\RecuperarContra.Designer.cs">
       <DependentUpon>RecuperarContra.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
@@ -242,7 +242,7 @@
     <EmbeddedResource Include="Informes\MovimientoLlantas.rdlc" />
     <EmbeddedResource Include="Informes\MovimientosAros2.rdlc" />
     <EmbeddedResource Include="Informes\Report1.rdlc" />
-    <EmbeddedResource Include="login.resx">
+    <EmbeddedResource Include="Inicio\login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -250,7 +250,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RecuperarContra.resx">
+    <EmbeddedResource Include="Inicio\RecuperarContra.resx">
       <DependentUpon>RecuperarContra.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

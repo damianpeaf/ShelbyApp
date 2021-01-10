@@ -49,25 +49,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArosMasEntradas.cs" />
-    <Compile Include="ArosMasSalidas.cs" />
-    <Compile Include="DDetalleLlanta.cs" />
-    <Compile Include="DAro.cs" />
-    <Compile Include="DLlanta.cs" />
+    <Compile Include="ListasReportes\ArosMasEntradas.cs" />
+    <Compile Include="ListasReportes\ArosMasSalidas.cs" />
+    <Compile Include="Llantas\DDetalleLlanta.cs" />
+    <Compile Include="Aros\DAro.cs" />
+    <Compile Include="Llantas\DLlanta.cs" />
     <Compile Include="Dlogin.cs" />
-    <Compile Include="DMarca.cs" />
+    <Compile Include="Llantas\DMarca.cs" />
     <Compile Include="DMovimiento.cs" />
-    <Compile Include="DReporteAro.cs" />
-    <Compile Include="DReporteLlanta.cs" />
+    <Compile Include="Reportes\DReporteAro.cs" />
+    <Compile Include="Reportes\DReporteLlanta.cs" />
     <Compile Include="DSucursal.cs" />
-    <Compile Include="DDetalleAro.cs" />
+    <Compile Include="Aros\DDetalleAro.cs" />
     <Compile Include="DUsuario.cs" />
-    <Compile Include="InventarioAroLista.cs" />
-    <Compile Include="InventarioLlantaLista.cs" />
-    <Compile Include="LlantasMasEntradas.cs" />
-    <Compile Include="LlantasMasSalidas.cs" />
-    <Compile Include="MovimientoAroLista.cs" />
-    <Compile Include="MovimientoLlantaLista.cs" />
+    <Compile Include="ListasReportes\InventarioAroLista.cs" />
+    <Compile Include="ListasReportes\InventarioLlantaLista.cs" />
+    <Compile Include="ListasReportes\LlantasMasEntradas.cs" />
+    <Compile Include="ListasReportes\LlantasMasSalidas.cs" />
+    <Compile Include="ListasReportes\MovimientoAroLista.cs" />
+    <Compile Include="ListasReportes\MovimientoLlantaLista.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
