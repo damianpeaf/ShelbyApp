@@ -93,9 +93,9 @@ namespace Presentacion.App
 
         }
 
-        private void btntListarBuscar_Click(object sender, EventArgs e)
-        {
 
+        private void btntListarBuscar_Click_1(object sender, EventArgs e)
+        {
             string idSucursal = txtBuscarSucursal.SelectedValue.ToString();
             string idDetalle = txtId.Text;
             string codigoDetalle = txtCodigo.Text;
@@ -114,12 +114,5 @@ namespace Presentacion.App
 
             generarReporte(idSucursal, idDetalle, codigoDetalle, todas, rango, fechaDesde, fechaHasta, ambos, idTipoMovimiento);
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
     }
 }

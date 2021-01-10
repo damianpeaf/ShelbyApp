@@ -73,6 +73,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App\InventariosForms\InventarioLlantas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\InventariosForms\InventarioLlantas.Designer.cs">
+      <DependentUpon>InventarioLlantas.cs</DependentUpon>
+    </Compile>
     <Compile Include="App\Llantas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,11 +121,11 @@
     <Compile Include="App\Marcas.Designer.cs">
       <DependentUpon>Marcas.cs</DependentUpon>
     </Compile>
-    <Compile Include="App\ReportesInventario.cs">
+    <Compile Include="App\InventariosForms\InventarioAros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="App\ReportesInventario.Designer.cs">
-      <DependentUpon>ReportesInventario.cs</DependentUpon>
+    <Compile Include="App\InventariosForms\InventarioAros.Designer.cs">
+      <DependentUpon>InventarioAros.cs</DependentUpon>
     </Compile>
     <Compile Include="App\MovimientosForms\MovimientosLlanta.cs">
       <SubType>Form</SubType>
@@ -132,6 +138,12 @@
     </Compile>
     <Compile Include="App\MovimientosForms\MovimientosAro.Designer.cs">
       <DependentUpon>MovimientosAro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App\ReportesInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\ReportesInventario.Designer.cs">
+      <DependentUpon>ReportesInventario.cs</DependentUpon>
     </Compile>
     <Compile Include="App\ReportesMovimientos.cs">
       <SubType>Form</SubType>
@@ -177,6 +189,9 @@
       <DependentUpon>RecuperarContra.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="App\InventariosForms\InventarioLlantas.resx">
+      <DependentUpon>InventarioLlantas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="App\Llantas.resx">
       <DependentUpon>Llantas.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,14 +213,17 @@
     <EmbeddedResource Include="App\Marcas.resx">
       <DependentUpon>Marcas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="App\ReportesInventario.resx">
-      <DependentUpon>ReportesInventario.cs</DependentUpon>
+    <EmbeddedResource Include="App\InventariosForms\InventarioAros.resx">
+      <DependentUpon>InventarioAros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="App\MovimientosForms\MovimientosLlanta.resx">
       <DependentUpon>MovimientosLlanta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="App\MovimientosForms\MovimientosAro.resx">
       <DependentUpon>MovimientosAro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\ReportesInventario.resx">
+      <DependentUpon>ReportesInventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="App\ReportesMovimientos.resx">
       <DependentUpon>ReportesMovimientos.cs</DependentUpon>

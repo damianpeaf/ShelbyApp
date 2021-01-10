@@ -333,8 +333,9 @@ namespace Presentacion.App
             this.btntListarBuscar.TabIndex = 42;
             this.btntListarBuscar.Text = "Generar reporte";
             this.btntListarBuscar.UseVisualStyleBackColor = false;
+            this.btntListarBuscar.Click += new System.EventHandler(this.btntListarBuscar_Click_1);
             // 
-            // Reportes2
+            // MovimientosAro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -342,7 +343,7 @@ namespace Presentacion.App
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Reportes2";
+            this.Name = "MovimientosAro";
             this.Text = "Reportes2";
             this.Load += new System.EventHandler(this.Reportes2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DReporteAroBindingSource)).EndInit();
