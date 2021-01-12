@@ -38,47 +38,6 @@ namespace Presentacion.App
             this.reportViewer1.RefreshReport();
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox1.Checked == true)
-            {
-                txtBuscarSucursal.Enabled = false;
-            }
-            else
-            {
-                txtBuscarSucursal.Enabled = true;
-
-            }
-        }
-
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox3.Checked == true)
-            {
-                txtFechaHasta.Enabled = true;
-                txtFechaDesde.Enabled = true;
-            }
-            else
-            {
-                txtFechaDesde.Enabled = false;
-                txtFechaHasta.Enabled = false;
-            }
-        }
-
-        private void checkBox4_CheckedChanged(object sender, EventArgs e)
-        {
-
-            if (checkBox4.Checked == true)
-            {
-                tipoMovimiento.Enabled = false;
-            }
-            else
-            {
-                tipoMovimiento.Enabled = true;
-
-            }
-        }
-
         private void generarReporte(string idSucursal, string idDetalle, string codigo, bool todas, bool rango, string fechaDesde, string fechaHasta, bool ambos, string idTipoMovimiento)
         {
             DReporteAro reporte = new DReporteAro();
@@ -117,12 +76,42 @@ namespace Presentacion.App
 
         private void checkBox4_CheckedChanged_1(object sender, EventArgs e)
         {
+            if (checkBox4.Checked == true)
+            {
+                tipoMovimiento.Enabled = false;
+            }
+            else
+            {
+                tipoMovimiento.Enabled = true;
 
+            }
         }
 
         private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
         {
+            if (checkBox1.Checked == true)
+            {
+                txtBuscarSucursal.Enabled = false;
+            }
+            else
+            {
+                txtBuscarSucursal.Enabled = true;
 
+            }
+        }
+
+        private void checkBox3_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (checkBox3.Checked == true)
+            {
+                txtFechaHasta.Enabled = true;
+                txtFechaDesde.Enabled = true;
+            }
+            else
+            {
+                txtFechaDesde.Enabled = false;
+                txtFechaHasta.Enabled = false;
+            }
         }
     }
 }

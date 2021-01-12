@@ -51,7 +51,18 @@ namespace Presentacion.App
 
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void btntListarBuscar_Click_1(object sender, EventArgs e)
+        {
+            string idSucursal = txtBuscarSucursal.SelectedValue.ToString();
+            string idDetalle = txtBuscarId.Text;
+            string codigoDetalle = txtBuscarCodigo.Text;
+
+            bool todas = checkBox1.Checked;
+
+            generarReporte(idSucursal, idDetalle, codigoDetalle, todas);
+        }
+
+        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
         {
             if (checkBox1.Checked == true)
             {
@@ -62,17 +73,6 @@ namespace Presentacion.App
                 txtBuscarSucursal.Enabled = true;
 
             }
-        }
-
-        private void btntListarBuscar_Click_1(object sender, EventArgs e)
-        {
-            string idSucursal = txtBuscarSucursal.SelectedValue.ToString();
-            string idDetalle = txtBuscarId.Text;
-            string codigoDetalle = txtBuscarCodigo.Text;
-
-            bool todas = checkBox1.Checked;
-
-            generarReporte(idSucursal, idDetalle, codigoDetalle, todas);
         }
     }
 }

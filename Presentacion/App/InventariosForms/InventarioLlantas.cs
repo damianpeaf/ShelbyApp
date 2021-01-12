@@ -52,26 +52,6 @@ namespace Presentacion.App
 
         }
 
-
-        private void txtBuscarSucursal_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox2.Checked == true)
-            {
-                txtBuscarSucursal1.Enabled = false;
-            }
-            else
-            {
-                txtBuscarSucursal1.Enabled = true;
-
-            }
-        }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
 
@@ -82,6 +62,19 @@ namespace Presentacion.App
             bool todas = checkBox2.Checked;
 
             generarReporte1(idSucursal, idDetalle, codigoDetalle, todas);
+        }
+
+        private void checkBox2_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked == true)
+            {
+                txtBuscarSucursal1.Enabled = false;
+            }
+            else
+            {
+                txtBuscarSucursal1.Enabled = true;
+
+            }
         }
     }
 }

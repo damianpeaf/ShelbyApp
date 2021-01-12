@@ -30,12 +30,12 @@ namespace Presentacion.App
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.DReporteAroBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.InventarioAroListaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.DReporteLlantaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.InventarioLlantaListaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DReporteAroBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.InventarioAroListaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -46,20 +46,12 @@ namespace Presentacion.App
             this.txtBuscarCodigo1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtBuscarId1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.DReporteAroBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.InventarioAroListaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DReporteLlantaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InventarioLlantaListaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DReporteAroBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventarioAroListaBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // DReporteAroBindingSource
-            // 
-            this.DReporteAroBindingSource.DataSource = typeof(Dominio.DReporteAro);
-            // 
-            // InventarioAroListaBindingSource
-            // 
-            this.InventarioAroListaBindingSource.DataSource = typeof(Dominio.InventarioAroLista);
             // 
             // DReporteLlantaBindingSource
             // 
@@ -69,15 +61,23 @@ namespace Presentacion.App
             // 
             this.InventarioLlantaListaBindingSource.DataSource = typeof(Dominio.InventarioLlantaLista);
             // 
+            // DReporteAroBindingSource
+            // 
+            this.DReporteAroBindingSource.DataSource = typeof(Dominio.DReporteAro);
+            // 
+            // InventarioAroListaBindingSource
+            // 
+            this.InventarioAroListaBindingSource.DataSource = typeof(Dominio.InventarioAroLista);
+            // 
             // reportViewer2
             // 
             this.reportViewer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource3.Name = "DataSet1";
-            reportDataSource3.Value = this.DReporteLlantaBindingSource;
-            reportDataSource4.Name = "DataSet2";
-            reportDataSource4.Value = this.InventarioLlantaListaBindingSource;
-            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource3);
-            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource4);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.DReporteLlantaBindingSource;
+            reportDataSource2.Name = "DataSet2";
+            reportDataSource2.Value = this.InventarioLlantaListaBindingSource;
+            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer2.LocalReport.ReportEmbeddedResource = "Presentacion.Informes.InventarioLlanta.rdlc";
             this.reportViewer2.Location = new System.Drawing.Point(0, 136);
             this.reportViewer2.Name = "reportViewer2";
@@ -126,6 +126,7 @@ namespace Presentacion.App
             this.checkBox2.TabIndex = 41;
             this.checkBox2.Text = "Buscar en todas las Sucursales";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged_1);
             // 
             // label4
             // 
@@ -193,10 +194,10 @@ namespace Presentacion.App
             this.Name = "InventarioLlantas";
             this.Text = "Reportes";
             this.Load += new System.EventHandler(this.Reportes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DReporteAroBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.InventarioAroListaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DReporteLlantaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InventarioLlantaListaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DReporteAroBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InventarioAroListaBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);

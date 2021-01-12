@@ -126,6 +126,7 @@ namespace Presentacion.App
             this.checkBox1.TabIndex = 41;
             this.checkBox1.Text = "Buscar en todas las Sucursales";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
             // 
             // label3
             // 

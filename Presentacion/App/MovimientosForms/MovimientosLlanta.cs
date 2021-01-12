@@ -82,11 +82,11 @@ namespace Presentacion.App
         {
             if (checkBox2.Checked == true)
             {
-                tipoMovimiento2.Enabled = false;
+                comboBox1.Enabled = false;
             }
             else
             {
-                tipoMovimiento2.Enabled = true;
+                comboBox1.Enabled = true;
 
             }
         }
@@ -109,7 +109,7 @@ namespace Presentacion.App
             DateTime dateValue2 = DateTime.Parse(txtFechaDesde2.Text);
             string fechaDesde = dateValue2.ToString("yyyy-MM-dd HH:mm:ss");
 
-            string idTipoMovimiento = tipoMovimiento2.SelectedIndex.ToString();
+            string idTipoMovimiento = comboBox1.SelectedIndex.ToString();
 
             bool todas = checkBox6.Checked;
             bool rango = checkBox5.Checked;
