@@ -44,6 +44,10 @@ namespace Dominio
         {
             return sucu.CrearCombo();
         }
+        public bool actualizarSucursal(string id, string nombre)
+        {
+            return sucu.actualizarSucursal(id, nombre);
+        }
 
 
 

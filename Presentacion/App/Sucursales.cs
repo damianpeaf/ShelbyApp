@@ -211,6 +211,67 @@ namespace Presentacion.App
             }
         }
 
+        private void btnActuBuscar_Click(object sender, EventArgs e)
+        {
+            String[] datosSucursal = sucursal.cargarDatosSucursal(txtActBuscarId.Text);
+            if (datosSucursal != null)
+            {
+                txtAID.Text = datosSucursal[0];
+                txtASucursal.Text = datosSucursal[1];
+
+            }
+            else
+            {
+                MessageBox.Show("Registro no encontrado");
+            }
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 3;
+            String[] datoSucursal = sucursal.cargarDatosSucursal(IdSeleccionadaAlListar);
+            if (datoSucursal != null)
+            {
+                txtAID.Text = datoSucursal[0];
+                txtASucursal.Text = datoSucursal[1];
+
+            }
+            else
+            {
+                MessageBox.Show("Registro no encontrado");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string id = txtAID.Text;
+            string nombre = txtASucursal.Text;
+         
+
+          
+
+            //validacion
+            if (!string.IsNullOrEmpty(nombre) )
+            {
+                if (sucursal.actualizarSucursal(id, nombre))
+                {
+                    MessageBox.Show("Sucursal actualizada");
+                    actualizarTabla();
+                }
+                else
+                {
+                    MessageBox.Show("Hubo un error al actualizar la sucursal");
+
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Los campos no pueden estar vacios");
+
+            }
+        }
+
 
         /*-----------------------------------------------------------------------*/
         /* FIN PARTE DE Eliminar*/

@@ -290,6 +290,35 @@ namespace Datos
             }
 
         }
+        public bool actualizarSucursal(string id, string nombre)
+        {
+            try
+            {
+                using (cn = new Conexion().IniciarConexion())
+                {
+                    MySqlCommand comando = new MySqlCommand($"UPDATE sucursal SET nombre='{nombre}' WHERE idSucursal ={id}", cn);
+
+                    if (comando.ExecuteNonQuery() > 0)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("" + ex);
+                return false;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
 
 
 

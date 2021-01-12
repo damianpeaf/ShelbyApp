@@ -114,5 +114,15 @@ namespace Presentacion.App
 
             generarReporte(idSucursal, idDetalle, codigoDetalle, todas, rango, fechaDesde, fechaHasta, ambos, idTipoMovimiento);
         }
+
+        private void checkBox4_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

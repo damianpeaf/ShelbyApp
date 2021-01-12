@@ -30,10 +30,10 @@ namespace Presentacion.App
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource7 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource8 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.DReporteAroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.MovimientoAroListaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ArosMasEntradasBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -86,18 +86,18 @@ namespace Presentacion.App
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.DReporteAroBindingSource;
-            reportDataSource2.Name = "DataSet2";
-            reportDataSource2.Value = this.MovimientoAroListaBindingSource;
-            reportDataSource3.Name = "DataSet3";
-            reportDataSource3.Value = this.ArosMasEntradasBindingSource;
-            reportDataSource4.Name = "DataSet4";
-            reportDataSource4.Value = this.ArosMasSalidasBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
+            reportDataSource5.Name = "DataSet1";
+            reportDataSource5.Value = this.DReporteAroBindingSource;
+            reportDataSource6.Name = "DataSet2";
+            reportDataSource6.Value = this.MovimientoAroListaBindingSource;
+            reportDataSource7.Name = "DataSet3";
+            reportDataSource7.Value = this.ArosMasEntradasBindingSource;
+            reportDataSource8.Name = "DataSet4";
+            reportDataSource8.Value = this.ArosMasSalidasBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource5);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource6);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource7);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource8);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Presentacion.Informes.MovimientosAros2.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 136);
             this.reportViewer1.Name = "reportViewer1";
@@ -169,6 +169,7 @@ namespace Presentacion.App
             this.checkBox4.TabIndex = 68;
             this.checkBox4.Text = "Ambos";
             this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged_1);
             // 
             // checkBox3
             // 
@@ -251,6 +252,7 @@ namespace Presentacion.App
             this.checkBox1.TabIndex = 53;
             this.checkBox1.Text = "Buscar en todas las Sucursales";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
             // 
             // label3
             // 

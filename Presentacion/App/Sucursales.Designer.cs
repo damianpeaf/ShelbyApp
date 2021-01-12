@@ -42,46 +42,61 @@ namespace Presentacion.App
             this.label16 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.txtEliminarNombre = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.txtEliminarId = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.btnEliminarBuscar = new System.Windows.Forms.Button();
-            this.txtEliminarBuscarId = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
+            this.txtEliminarBuscarId = new System.Windows.Forms.TextBox();
+            this.btnEliminarBuscar = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtEliminarId = new System.Windows.Forms.TextBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.label22 = new System.Windows.Forms.Label();
+            this.txtEliminarNombre = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtListarBuscarId = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtListarBuscarNombre = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btntListarBuscar = new System.Windows.Forms.Button();
-            this.txtListarSeleccionadoId = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtListarSeleccionadoNombre = new System.Windows.Forms.TextBox();
-            this.btnListarEliminar = new System.Windows.Forms.Button();
-            this.btnListarLimpiar = new System.Windows.Forms.Button();
-            this.btnListarTodo = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.txtCrearNombre = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.btmCrear = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btmCrear = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtCrearNombre = new System.Windows.Forms.TextBox();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnListarTodo = new System.Windows.Forms.Button();
+            this.btnListarLimpiar = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnListarEliminar = new System.Windows.Forms.Button();
+            this.txtListarSeleccionadoNombre = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtListarSeleccionadoId = new System.Windows.Forms.TextBox();
+            this.btntListarBuscar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtListarBuscarNombre = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtListarBuscarId = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtActBuscarId = new System.Windows.Forms.TextBox();
+            this.btnActuBuscar = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtAID = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtASucursal = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabPage4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtActualizarNombre
@@ -224,26 +239,73 @@ namespace Presentacion.App
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Información Sucursal";
             // 
-            // txtEliminarNombre
+            // groupBox6
             // 
-            this.txtEliminarNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtEliminarNombre.Location = new System.Drawing.Point(198, 201);
-            this.txtEliminarNombre.Name = "txtEliminarNombre";
-            this.txtEliminarNombre.ReadOnly = true;
-            this.txtEliminarNombre.Size = new System.Drawing.Size(298, 20);
-            this.txtEliminarNombre.TabIndex = 12;
+            this.groupBox6.Controls.Add(this.label18);
+            this.groupBox6.Controls.Add(this.txtEliminarBuscarId);
+            this.groupBox6.Controls.Add(this.btnEliminarBuscar);
+            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox6.Location = new System.Drawing.Point(3, 16);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(666, 87);
+            this.groupBox6.TabIndex = 25;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Cargar Datos";
             // 
-            // label22
+            // label18
             // 
-            this.label22.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.Black;
-            this.label22.Location = new System.Drawing.Point(195, 182);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(112, 16);
-            this.label22.TabIndex = 13;
-            this.label22.Text = "Nombre Sucursal";
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.Black;
+            this.label18.Location = new System.Drawing.Point(20, 28);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(76, 16);
+            this.label18.TabIndex = 20;
+            this.label18.Text = "ID Sucursal";
+            // 
+            // txtEliminarBuscarId
+            // 
+            this.txtEliminarBuscarId.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtEliminarBuscarId.Location = new System.Drawing.Point(23, 47);
+            this.txtEliminarBuscarId.Name = "txtEliminarBuscarId";
+            this.txtEliminarBuscarId.Size = new System.Drawing.Size(100, 20);
+            this.txtEliminarBuscarId.TabIndex = 19;
+            // 
+            // btnEliminarBuscar
+            // 
+            this.btnEliminarBuscar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnEliminarBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarBuscar.Location = new System.Drawing.Point(129, 43);
+            this.btnEliminarBuscar.Name = "btnEliminarBuscar";
+            this.btnEliminarBuscar.Size = new System.Drawing.Size(100, 26);
+            this.btnEliminarBuscar.TabIndex = 21;
+            this.btnEliminarBuscar.Text = "Buscar";
+            this.btnEliminarBuscar.UseVisualStyleBackColor = false;
+            this.btnEliminarBuscar.Click += new System.EventHandler(this.btnEliminarBuscar_Click);
+            // 
+            // label19
+            // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Black;
+            this.label19.Location = new System.Drawing.Point(195, 139);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(76, 16);
+            this.label19.TabIndex = 23;
+            this.label19.Text = "ID Sucursal";
+            // 
+            // txtEliminarId
+            // 
+            this.txtEliminarId.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtEliminarId.Location = new System.Drawing.Point(198, 158);
+            this.txtEliminarId.Name = "txtEliminarId";
+            this.txtEliminarId.ReadOnly = true;
+            this.txtEliminarId.Size = new System.Drawing.Size(298, 20);
+            this.txtEliminarId.TabIndex = 22;
             // 
             // btnEliminar
             // 
@@ -260,73 +322,26 @@ namespace Presentacion.App
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // txtEliminarId
+            // label22
             // 
-            this.txtEliminarId.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtEliminarId.Location = new System.Drawing.Point(198, 158);
-            this.txtEliminarId.Name = "txtEliminarId";
-            this.txtEliminarId.ReadOnly = true;
-            this.txtEliminarId.Size = new System.Drawing.Size(298, 20);
-            this.txtEliminarId.TabIndex = 22;
+            this.label22.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.Black;
+            this.label22.Location = new System.Drawing.Point(195, 182);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(112, 16);
+            this.label22.TabIndex = 13;
+            this.label22.Text = "Nombre Sucursal";
             // 
-            // label19
+            // txtEliminarNombre
             // 
-            this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(195, 139);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(76, 16);
-            this.label19.TabIndex = 23;
-            this.label19.Text = "ID Sucursal";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.label18);
-            this.groupBox6.Controls.Add(this.txtEliminarBuscarId);
-            this.groupBox6.Controls.Add(this.btnEliminarBuscar);
-            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox6.Location = new System.Drawing.Point(3, 16);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(666, 87);
-            this.groupBox6.TabIndex = 25;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Cargar Datos";
-            // 
-            // btnEliminarBuscar
-            // 
-            this.btnEliminarBuscar.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnEliminarBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarBuscar.Location = new System.Drawing.Point(129, 43);
-            this.btnEliminarBuscar.Name = "btnEliminarBuscar";
-            this.btnEliminarBuscar.Size = new System.Drawing.Size(100, 26);
-            this.btnEliminarBuscar.TabIndex = 21;
-            this.btnEliminarBuscar.Text = "Buscar";
-            this.btnEliminarBuscar.UseVisualStyleBackColor = false;
-            this.btnEliminarBuscar.Click += new System.EventHandler(this.btnEliminarBuscar_Click);
-            // 
-            // txtEliminarBuscarId
-            // 
-            this.txtEliminarBuscarId.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtEliminarBuscarId.Location = new System.Drawing.Point(23, 47);
-            this.txtEliminarBuscarId.Name = "txtEliminarBuscarId";
-            this.txtEliminarBuscarId.Size = new System.Drawing.Size(100, 20);
-            this.txtEliminarBuscarId.TabIndex = 19;
-            // 
-            // label18
-            // 
-            this.label18.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(20, 28);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(76, 16);
-            this.label18.TabIndex = 20;
-            this.label18.Text = "ID Sucursal";
+            this.txtEliminarNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtEliminarNombre.Location = new System.Drawing.Point(198, 201);
+            this.txtEliminarNombre.Name = "txtEliminarNombre";
+            this.txtEliminarNombre.ReadOnly = true;
+            this.txtEliminarNombre.Size = new System.Drawing.Size(298, 20);
+            this.txtEliminarNombre.TabIndex = 12;
             // 
             // tabPage2
             // 
@@ -338,6 +353,54 @@ namespace Presentacion.App
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Crear Sucursal";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btmCrear);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.txtCrearNombre);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Location = new System.Drawing.Point(3, 3);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(672, 514);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Información Sucursal";
+            // 
+            // btmCrear
+            // 
+            this.btmCrear.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btmCrear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(196)))), ((int)(((byte)(116)))));
+            this.btmCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btmCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btmCrear.ForeColor = System.Drawing.Color.White;
+            this.btmCrear.Location = new System.Drawing.Point(200, 230);
+            this.btmCrear.Name = "btmCrear";
+            this.btmCrear.Size = new System.Drawing.Size(298, 34);
+            this.btmCrear.TabIndex = 18;
+            this.btmCrear.Text = "Crear Sucursal";
+            this.btmCrear.UseVisualStyleBackColor = false;
+            this.btmCrear.Click += new System.EventHandler(this.btmCrear_Click);
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(197, 172);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(112, 16);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Nombre Sucursal";
+            // 
+            // txtCrearNombre
+            // 
+            this.txtCrearNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCrearNombre.Location = new System.Drawing.Point(200, 191);
+            this.txtCrearNombre.Name = "txtCrearNombre";
+            this.txtCrearNombre.Size = new System.Drawing.Size(298, 20);
+            this.txtCrearNombre.TabIndex = 12;
             // 
             // tabPage1
             // 
@@ -353,19 +416,39 @@ namespace Presentacion.App
             this.tabPage1.Text = "Listar Sucursales";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // btnListarTodo
             // 
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(636, 321);
-            this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.btnListarTodo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnListarTodo.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnListarTodo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListarTodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarTodo.ForeColor = System.Drawing.Color.White;
+            this.btnListarTodo.Location = new System.Drawing.Point(228, 327);
+            this.btnListarTodo.Name = "btnListarTodo";
+            this.btnListarTodo.Size = new System.Drawing.Size(100, 26);
+            this.btnListarTodo.TabIndex = 20;
+            this.btnListarTodo.Text = "Listar Todo";
+            this.btnListarTodo.UseVisualStyleBackColor = false;
+            this.btnListarTodo.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // btnListarLimpiar
+            // 
+            this.btnListarLimpiar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnListarLimpiar.BackColor = System.Drawing.Color.DarkOrchid;
+            this.btnListarLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListarLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarLimpiar.ForeColor = System.Drawing.Color.White;
+            this.btnListarLimpiar.Location = new System.Drawing.Point(334, 327);
+            this.btnListarLimpiar.Name = "btnListarLimpiar";
+            this.btnListarLimpiar.Size = new System.Drawing.Size(100, 26);
+            this.btnListarLimpiar.TabIndex = 19;
+            this.btnListarLimpiar.Text = "Limpiar";
+            this.btnListarLimpiar.UseVisualStyleBackColor = false;
+            this.btnListarLimpiar.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btnListarEliminar);
             this.groupBox1.Controls.Add(this.txtListarSeleccionadoNombre);
             this.groupBox1.Controls.Add(this.label6);
@@ -385,41 +468,74 @@ namespace Presentacion.App
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Acciones";
             // 
-            // txtListarBuscarId
+            // btnListarEliminar
             // 
-            this.txtListarBuscarId.Location = new System.Drawing.Point(9, 35);
-            this.txtListarBuscarId.Name = "txtListarBuscarId";
-            this.txtListarBuscarId.Size = new System.Drawing.Size(125, 20);
-            this.txtListarBuscarId.TabIndex = 0;
+            this.btnListarEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnListarEliminar.BackColor = System.Drawing.Color.Red;
+            this.btnListarEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListarEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnListarEliminar.Location = new System.Drawing.Point(532, 115);
+            this.btnListarEliminar.Name = "btnListarEliminar";
+            this.btnListarEliminar.Size = new System.Drawing.Size(100, 26);
+            this.btnListarEliminar.TabIndex = 18;
+            this.btnListarEliminar.Text = "Eliminar";
+            this.btnListarEliminar.UseVisualStyleBackColor = false;
+            this.btnListarEliminar.Click += new System.EventHandler(this.btnListarEliminar_Click);
             // 
-            // label1
+            // txtListarSeleccionadoNombre
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(6, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "ID Sucursal";
+            this.txtListarSeleccionadoNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtListarSeleccionadoNombre.Location = new System.Drawing.Point(485, 77);
+            this.txtListarSeleccionadoNombre.Name = "txtListarSeleccionadoNombre";
+            this.txtListarSeleccionadoNombre.ReadOnly = true;
+            this.txtListarSeleccionadoNombre.Size = new System.Drawing.Size(150, 20);
+            this.txtListarSeleccionadoNombre.TabIndex = 15;
             // 
-            // txtListarBuscarNombre
+            // label6
             // 
-            this.txtListarBuscarNombre.Location = new System.Drawing.Point(9, 77);
-            this.txtListarBuscarNombre.Name = "txtListarBuscarNombre";
-            this.txtListarBuscarNombre.Size = new System.Drawing.Size(125, 20);
-            this.txtListarBuscarNombre.TabIndex = 3;
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(485, 61);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(112, 16);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Nombre Sucursal";
             // 
-            // label2
+            // label5
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(6, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 16);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Nombre Sucursal";
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(408, 61);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(76, 16);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "ID Sucursal";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(450, 16);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(147, 16);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Sucursal Seleccionada";
+            // 
+            // txtListarSeleccionadoId
+            // 
+            this.txtListarSeleccionadoId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtListarSeleccionadoId.Location = new System.Drawing.Point(411, 77);
+            this.txtListarSeleccionadoId.Name = "txtListarSeleccionadoId";
+            this.txtListarSeleccionadoId.ReadOnly = true;
+            this.txtListarSeleccionadoId.Size = new System.Drawing.Size(68, 20);
+            this.txtListarSeleccionadoId.TabIndex = 10;
             // 
             // btntListarBuscar
             // 
@@ -435,110 +551,59 @@ namespace Presentacion.App
             this.btntListarBuscar.UseVisualStyleBackColor = false;
             this.btntListarBuscar.Click += new System.EventHandler(this.btntListarBuscar_Click);
             // 
-            // txtListarSeleccionadoId
+            // label2
             // 
-            this.txtListarSeleccionadoId.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtListarSeleccionadoId.Location = new System.Drawing.Point(411, 77);
-            this.txtListarSeleccionadoId.Name = "txtListarSeleccionadoId";
-            this.txtListarSeleccionadoId.ReadOnly = true;
-            this.txtListarSeleccionadoId.Size = new System.Drawing.Size(68, 20);
-            this.txtListarSeleccionadoId.TabIndex = 10;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(6, 58);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(112, 16);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Nombre Sucursal";
             // 
-            // label4
+            // txtListarBuscarNombre
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(450, 16);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(147, 16);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Sucursal Seleccionada";
+            this.txtListarBuscarNombre.Location = new System.Drawing.Point(9, 77);
+            this.txtListarBuscarNombre.Name = "txtListarBuscarNombre";
+            this.txtListarBuscarNombre.Size = new System.Drawing.Size(125, 20);
+            this.txtListarBuscarNombre.TabIndex = 3;
             // 
-            // label5
+            // label1
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(408, 61);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 16);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "ID Sucursal";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(6, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 16);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "ID Sucursal";
             // 
-            // label6
+            // txtListarBuscarId
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(485, 61);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(112, 16);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Nombre Sucursal";
+            this.txtListarBuscarId.Location = new System.Drawing.Point(9, 35);
+            this.txtListarBuscarId.Name = "txtListarBuscarId";
+            this.txtListarBuscarId.Size = new System.Drawing.Size(125, 20);
+            this.txtListarBuscarId.TabIndex = 0;
             // 
-            // txtListarSeleccionadoNombre
+            // dataGridView1
             // 
-            this.txtListarSeleccionadoNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtListarSeleccionadoNombre.Location = new System.Drawing.Point(485, 77);
-            this.txtListarSeleccionadoNombre.Name = "txtListarSeleccionadoNombre";
-            this.txtListarSeleccionadoNombre.ReadOnly = true;
-            this.txtListarSeleccionadoNombre.Size = new System.Drawing.Size(150, 20);
-            this.txtListarSeleccionadoNombre.TabIndex = 15;
-            // 
-            // btnListarEliminar
-            // 
-            this.btnListarEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnListarEliminar.BackColor = System.Drawing.Color.Red;
-            this.btnListarEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListarEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnListarEliminar.Location = new System.Drawing.Point(476, 115);
-            this.btnListarEliminar.Name = "btnListarEliminar";
-            this.btnListarEliminar.Size = new System.Drawing.Size(100, 26);
-            this.btnListarEliminar.TabIndex = 18;
-            this.btnListarEliminar.Text = "Eliminar";
-            this.btnListarEliminar.UseVisualStyleBackColor = false;
-            this.btnListarEliminar.Click += new System.EventHandler(this.btnListarEliminar_Click);
-            // 
-            // btnListarLimpiar
-            // 
-            this.btnListarLimpiar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnListarLimpiar.BackColor = System.Drawing.Color.DarkOrchid;
-            this.btnListarLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListarLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnListarLimpiar.Location = new System.Drawing.Point(334, 327);
-            this.btnListarLimpiar.Name = "btnListarLimpiar";
-            this.btnListarLimpiar.Size = new System.Drawing.Size(100, 26);
-            this.btnListarLimpiar.TabIndex = 19;
-            this.btnListarLimpiar.Text = "Limpiar";
-            this.btnListarLimpiar.UseVisualStyleBackColor = false;
-            this.btnListarLimpiar.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnListarTodo
-            // 
-            this.btnListarTodo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnListarTodo.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnListarTodo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListarTodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarTodo.ForeColor = System.Drawing.Color.White;
-            this.btnListarTodo.Location = new System.Drawing.Point(228, 327);
-            this.btnListarTodo.Name = "btnListarTodo";
-            this.btnListarTodo.Size = new System.Drawing.Size(100, 26);
-            this.btnListarTodo.TabIndex = 20;
-            this.btnListarTodo.Text = "Listar Todo";
-            this.btnListarTodo.UseVisualStyleBackColor = false;
-            this.btnListarTodo.Click += new System.EventHandler(this.button1_Click_1);
+            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(636, 321);
+            this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -546,53 +611,150 @@ namespace Presentacion.App
             this.tabControl1.Size = new System.Drawing.Size(686, 546);
             this.tabControl1.TabIndex = 2;
             // 
-            // txtCrearNombre
+            // tabPage3
             // 
-            this.txtCrearNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCrearNombre.Location = new System.Drawing.Point(200, 191);
-            this.txtCrearNombre.Name = "txtCrearNombre";
-            this.txtCrearNombre.Size = new System.Drawing.Size(298, 20);
-            this.txtCrearNombre.TabIndex = 12;
+            this.tabPage3.Controls.Add(this.groupBox3);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(678, 520);
+            this.tabPage3.TabIndex = 4;
+            this.tabPage3.Text = "Actualizar Sucursal";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // label9
+            // groupBox3
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(197, 172);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(112, 16);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Nombre Sucursal";
+            this.groupBox3.Controls.Add(this.txtASucursal);
+            this.groupBox3.Controls.Add(this.groupBox7);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.txtAID);
+            this.groupBox3.Controls.Add(this.button2);
+            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.Location = new System.Drawing.Point(3, 3);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(672, 514);
+            this.groupBox3.TabIndex = 3;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Información Sucursal";
             // 
-            // btmCrear
+            // groupBox7
             // 
-            this.btmCrear.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btmCrear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(196)))), ((int)(((byte)(116)))));
-            this.btmCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btmCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btmCrear.ForeColor = System.Drawing.Color.White;
-            this.btmCrear.Location = new System.Drawing.Point(200, 230);
-            this.btmCrear.Name = "btmCrear";
-            this.btmCrear.Size = new System.Drawing.Size(298, 34);
-            this.btmCrear.TabIndex = 18;
-            this.btmCrear.Text = "Crear Sucursal";
-            this.btmCrear.UseVisualStyleBackColor = false;
-            this.btmCrear.Click += new System.EventHandler(this.btmCrear_Click);
+            this.groupBox7.Controls.Add(this.label3);
+            this.groupBox7.Controls.Add(this.txtActBuscarId);
+            this.groupBox7.Controls.Add(this.btnActuBuscar);
+            this.groupBox7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox7.Location = new System.Drawing.Point(3, 16);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(666, 87);
+            this.groupBox7.TabIndex = 25;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Cargar Datos";
             // 
-            // groupBox2
+            // label3
             // 
-            this.groupBox2.Controls.Add(this.btmCrear);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.txtCrearNombre);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(3, 3);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(672, 514);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Información Sucursal";
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(20, 28);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 16);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "ID Sucursal";
+            // 
+            // txtActBuscarId
+            // 
+            this.txtActBuscarId.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtActBuscarId.Location = new System.Drawing.Point(23, 47);
+            this.txtActBuscarId.Name = "txtActBuscarId";
+            this.txtActBuscarId.Size = new System.Drawing.Size(100, 20);
+            this.txtActBuscarId.TabIndex = 19;
+            // 
+            // btnActuBuscar
+            // 
+            this.btnActuBuscar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnActuBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActuBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActuBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnActuBuscar.Location = new System.Drawing.Point(129, 43);
+            this.btnActuBuscar.Name = "btnActuBuscar";
+            this.btnActuBuscar.Size = new System.Drawing.Size(100, 26);
+            this.btnActuBuscar.TabIndex = 21;
+            this.btnActuBuscar.Text = "Buscar";
+            this.btnActuBuscar.UseVisualStyleBackColor = false;
+            this.btnActuBuscar.Click += new System.EventHandler(this.btnActuBuscar_Click);
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(195, 139);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(76, 16);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "ID Sucursal";
+            // 
+            // txtAID
+            // 
+            this.txtAID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtAID.Location = new System.Drawing.Point(198, 158);
+            this.txtAID.Name = "txtAID";
+            this.txtAID.ReadOnly = true;
+            this.txtAID.Size = new System.Drawing.Size(298, 20);
+            this.txtAID.TabIndex = 22;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button2.BackColor = System.Drawing.Color.Gold;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(198, 240);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(298, 34);
+            this.button2.TabIndex = 18;
+            this.button2.Text = "Actualizar Sucursal";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(195, 182);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(112, 16);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Nombre Sucursal";
+            // 
+            // txtASucursal
+            // 
+            this.txtASucursal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtASucursal.Location = new System.Drawing.Point(198, 201);
+            this.txtASucursal.Name = "txtASucursal";
+            this.txtASucursal.Size = new System.Drawing.Size(298, 20);
+            this.txtASucursal.TabIndex = 26;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.Gold;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(426, 115);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 26);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Actualizar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // Sucursales
             // 
@@ -609,13 +771,18 @@ namespace Presentacion.App
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -665,5 +832,17 @@ namespace Presentacion.App
         private System.Windows.Forms.TextBox txtListarBuscarId;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox txtASucursal;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtActBuscarId;
+        private System.Windows.Forms.Button btnActuBuscar;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtAID;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button1;
     }
 }
