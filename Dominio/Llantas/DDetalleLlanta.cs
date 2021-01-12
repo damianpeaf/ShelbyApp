@@ -28,9 +28,9 @@ namespace Dominio
 
         }
 
-        public bool crearDetalle(string codigo, string medida, string idMarca)
+        public bool crearDetalle(string codigo, string medida, string idMarca, string stockInicial)
         {
-            return detalle.crearDetalle(codigo, medida, idMarca);
+            return detalle.crearDetalle(codigo, medida, idMarca, stockInicial);
         }
 
         public bool actualizarDetalle(string id, string codigo, string medida, string idMarca)

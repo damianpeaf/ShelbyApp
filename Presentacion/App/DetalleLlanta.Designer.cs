@@ -99,6 +99,8 @@ namespace Presentacion.App
             this.label19 = new System.Windows.Forms.Label();
             this.txtEliminarId = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.label31 = new System.Windows.Forms.Label();
+            this.txtCrearStockInicial = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -453,6 +455,8 @@ namespace Presentacion.App
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label31);
+            this.groupBox2.Controls.Add(this.txtCrearStockInicial);
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.txtCrearMarca);
@@ -516,7 +520,7 @@ namespace Presentacion.App
             this.btmCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btmCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btmCrear.ForeColor = System.Drawing.Color.White;
-            this.btmCrear.Location = new System.Drawing.Point(259, 286);
+            this.btmCrear.Location = new System.Drawing.Point(259, 327);
             this.btmCrear.Name = "btmCrear";
             this.btmCrear.Size = new System.Drawing.Size(298, 34);
             this.btmCrear.TabIndex = 18;
@@ -956,6 +960,28 @@ namespace Presentacion.App
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
+            // label31
+            // 
+            this.label31.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.Black;
+            this.label31.Location = new System.Drawing.Point(256, 274);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(79, 16);
+            this.label31.TabIndex = 31;
+            this.label31.Text = "Stock inicial";
+            // 
+            // txtCrearStockInicial
+            // 
+            this.txtCrearStockInicial.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCrearStockInicial.Location = new System.Drawing.Point(259, 293);
+            this.txtCrearStockInicial.Name = "txtCrearStockInicial";
+            this.txtCrearStockInicial.Size = new System.Drawing.Size(298, 20);
+            this.txtCrearStockInicial.TabIndex = 30;
+            this.txtCrearStockInicial.Text = "1";
+            this.txtCrearStockInicial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCrearStockInicial_KeyPress);
+            // 
             // DetalleLlanta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1060,5 +1086,7 @@ namespace Presentacion.App
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TextBox txtCrearStockInicial;
     }
 }

@@ -13,10 +13,12 @@ namespace Datos
         MySqlConnection cn;
         DataSet ds;
 
-        public bool crearDisponibilidadDesdeAro(string idDetalle, string idUsuario)
+        public bool crearDisponibilidadDesdeAro(string idDetalle, string idUsuario, string stockInicial)
         {
             try
             {
+                string cantidad = stockInicial;
+
                 using (cn = new Conexion().IniciarConexion())
                 {
                     MySqlCommand cmd1 = new MySqlCommand($"SELECT idSucursal FROM sucursal", cn);
@@ -29,10 +31,21 @@ namespace Datos
                         {
                             cn = new Conexion().IniciarConexion();
 
+                            //stock inicial por cada tienda
+                            
+
                             string idSucursal = reader1.GetString(0);
-                            string sql = $"INSERT INTO aro (idAro, idDetalleAro, cantidad, usuarioModificacion, idSucursal) VALUES (null, {idDetalle}, 0, {idUsuario}, {idSucursal})";
+                            string sql = $"INSERT INTO aro (idAro, idDetalleAro, cantidad, usuarioModificacion, idSucursal) VALUES (null, {idDetalle}, {cantidad}, {idUsuario}, {idSucursal})";
                             MySqlCommand cmd = new MySqlCommand(sql, cn);
                             cmd.ExecuteNonQuery();
+
+                            Movimiento movimiento = new Movimiento();
+                            
+                            DateTime dateValue = DateTime.Now;
+                            string fecha = dateValue.ToString("yyyy-MM-dd HH:mm:ss");
+
+                            movimiento.crearMovimientoAro(idDetalle, idSucursal, cantidad, fecha, "1");
+
                         }
                         return true;
                     }
@@ -71,8 +84,10 @@ namespace Datos
                         {
                             cn = new Conexion().IniciarConexion();
 
+                            string cantidad = "0";
+
                             string idDetalle = reader1.GetString(0);
-                            string sql = $"INSERT INTO aro (idAro, idDetalleAro, cantidad, usuarioModificacion, idSucursal) VALUES (null, {idDetalle}, 0, {idUsuario}, {idSucursal})";
+                            string sql = $"INSERT INTO aro (idAro, idDetalleAro, cantidad, usuarioModificacion, idSucursal) VALUES (null, {idDetalle}, {cantidad}, {idUsuario}, {idSucursal})";
                             MySqlCommand cmd = new MySqlCommand(sql, cn);
                             cmd.ExecuteNonQuery();
                         }

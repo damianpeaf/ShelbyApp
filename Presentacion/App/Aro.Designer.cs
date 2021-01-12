@@ -695,6 +695,7 @@ namespace Presentacion.App
             this.txtAModificar.Size = new System.Drawing.Size(99, 20);
             this.txtAModificar.TabIndex = 68;
             this.txtAModificar.TextChanged += new System.EventHandler(this.txtAModificar_TextChanged);
+            this.txtAModificar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAModificar_KeyPress);
             // 
             // label27
             // 

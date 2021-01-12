@@ -196,7 +196,7 @@ namespace Datos
 
                             Llanta lla = new Llanta();
 
-                            lla.crearDisponibilidadDesdeLlanta(ultimaId, idUsuario);
+                            lla.crearDisponibilidadDesdeSucursal(ultimaId, idUsuario);
                         }
                         return true;
                     }
@@ -224,9 +224,21 @@ namespace Datos
             {
                 using (cn = new Conexion().IniciarConexion())
                 {
-                    MySqlCommand comando = new MySqlCommand($"DELETE FROM sucursal WHERE idSucursal ={id}", cn);
+                    //inventario llanta
+                    MySqlCommand comando1 = new MySqlCommand($"DELETE FROM llanta WHERE idSucursal ={id}", cn);
+                    comando1.ExecuteNonQuery();
 
-                    if (comando.ExecuteNonQuery() > 0)
+                    //inventario aro
+                    MySqlCommand comando2 = new MySqlCommand($"DELETE FROM aro WHERE idSucursal ={id}", cn);
+                    comando2.ExecuteNonQuery();
+
+                    //inventario movimiento
+                    MySqlCommand comando3 = new MySqlCommand($"DELETE FROM movimiento WHERE idSucursal ={id}", cn);
+                    comando3.ExecuteNonQuery();
+
+                    MySqlCommand comandoFinal = new MySqlCommand($"DELETE FROM sucursal WHERE idSucursal ={id}", cn);
+
+                    if (comandoFinal.ExecuteNonQuery() > 0)
                     {
                         return true;
                     }

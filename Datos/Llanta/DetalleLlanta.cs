@@ -57,17 +57,17 @@ namespace Datos
 
                     if (!string.IsNullOrEmpty(codigo))
                     {
-                        comando += $"or codigo like '%{codigo}%'";
+                        comando += $"or D.codigo like '%{codigo}%'";
                     }
 
                     if (!string.IsNullOrEmpty(medida))
                     {
-                        comando += $"or medida like '%{medida}%'";
+                        comando += $"or D.medida like '%{medida}%'";
                     }
 
                     if (!string.IsNullOrEmpty(idMarca))
                     {
-                        comando += $"or idMarca like '%{idMarca}%'";
+                        comando += $"or D.idMarca like '%{idMarca}%'";
                     }
 
                     Console.WriteLine(comando);
@@ -140,7 +140,7 @@ namespace Datos
             }
         }
 
-        public bool crearDetalle(string codigo, string medida, string idMarca)
+        public bool crearDetalle(string codigo, string medida, string idMarca, string stockInicial)
         {
             try
             {
@@ -167,7 +167,7 @@ namespace Datos
 
                             Llanta lla = new Llanta();
 
-                            lla.crearDisponibilidadDesdeLlanta(ultimaId, idUsuario);
+                            lla.crearDisponibilidadDesdeLlanta(ultimaId, idUsuario, stockInicial);
                         }
 
                         return true;
@@ -226,9 +226,17 @@ namespace Datos
             {
                 using (cn = new Conexion().IniciarConexion())
                 {
-                    MySqlCommand comando = new MySqlCommand($"DELETE FROM detalleLlanta WHERE idDetalleLlanta ={id}", cn);
+                    //inventario llanta
+                    MySqlCommand comando1 = new MySqlCommand($"DELETE FROM llanta WHERE idDetalleLlanta ={id}", cn);
+                    comando1.ExecuteNonQuery();
 
-                    if (comando.ExecuteNonQuery() > 0)
+                    //inventario movimiento
+                    MySqlCommand comando3 = new MySqlCommand($"DELETE FROM movimiento WHERE idDetalleLlanta ={id}", cn);
+                    comando3.ExecuteNonQuery();
+
+                    MySqlCommand comandoFinal = new MySqlCommand($"DELETE FROM detalleLlanta WHERE idDetalleLlanta ={id}", cn);
+
+                    if (comandoFinal.ExecuteNonQuery() > 0)
                     {
                         return true;
                     }

@@ -145,18 +145,16 @@ namespace Presentacion.App
             string pcd = txtCrearPcd.Text;
             string pcd2 = txtCrearPcd2.Text;
             string diseno = txtCrearDiseno.Text;
-
+            string stockInicial = txtCrearStockInicial.Text;
             if (string.IsNullOrEmpty(pcd2))
             {
                 pcd2 = "NA";
             }
 
             //validacion
-            if (!string.IsNullOrEmpty(codigo) && !string.IsNullOrEmpty(medida) && !string.IsNullOrEmpty(pcd) && !string.IsNullOrEmpty(pcd2) && !string.IsNullOrEmpty(diseno))
+            if (!string.IsNullOrEmpty(codigo) && !string.IsNullOrEmpty(medida) && !string.IsNullOrEmpty(pcd) && !string.IsNullOrEmpty(pcd2) && !string.IsNullOrEmpty(diseno) && !string.IsNullOrEmpty(stockInicial))
             {
-
-
-                if (detalle.crearDetalle(codigo, medida, pcd, pcd2, diseno))
+                if (detalle.crearDetalle(codigo, medida, pcd, pcd2, diseno, stockInicial))
                 {
                     MessageBox.Show("Detalle creado");
                     actualizarTabla();
@@ -279,15 +277,27 @@ namespace Presentacion.App
             //validacion
             if (!string.IsNullOrEmpty(id))
             {
-                if (detalle.eliminarDetalle(id))
+                DialogResult result = MessageBox.Show("Este detalle de aro esta relacionada con ciertos movimientos y productos, ¿Realemente quieres eliminarla? ", "Confirmación", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Detalle eliminado");
-                    actualizarTabla();
+                    if (detalle.eliminarDetalle(id))
+                    {
+                        MessageBox.Show("Detalle eliminado");
+                        actualizarTabla();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Hubo un error al eliminar detalle");
+
+                    }
+                }
+                else if (result == DialogResult.No)
+                {
+                    MessageBox.Show("Detalle NO eliminada");
                 }
                 else
                 {
-                    MessageBox.Show("Hubo un error al eliminar detalle");
-
+                    MessageBox.Show("Hubo un error");
                 }
 
             }
@@ -303,6 +313,30 @@ namespace Presentacion.App
 
             menuP.AbrirForm2(new Aro(IdSeleccionadaAlListar));
             this.Close();
+        }
+
+        private void label31_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCrearStockInicial_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Para obligar a que sólo se introduzcan números
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+              if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                //el resto de teclas pulsadas se desactivan
+                e.Handled = true;
+            }
         }
 
 

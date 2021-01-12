@@ -141,7 +141,7 @@ namespace Datos
             }
         }
 
-        public bool crearDetalle(string codigo, string medida, string pcd, string pcd2, string diseno)
+        public bool crearDetalle(string codigo, string medida, string pcd, string pcd2, string diseno, string stockInicial)
         {
             try
             {
@@ -168,7 +168,7 @@ namespace Datos
 
                             Aro aro = new Aro();
 
-                            aro.crearDisponibilidadDesdeAro(ultimaId, idUsuario);
+                            aro.crearDisponibilidadDesdeAro(ultimaId, idUsuario, stockInicial);
                         }
 
                         return true;
@@ -227,9 +227,18 @@ namespace Datos
             {
                 using (cn = new Conexion().IniciarConexion())
                 {
-                    MySqlCommand comando = new MySqlCommand($"DELETE FROM detalleAro WHERE idDetalleAro ={id}", cn);
 
-                    if (comando.ExecuteNonQuery() > 0)
+                    //inventario llanta
+                    MySqlCommand comando1 = new MySqlCommand($"DELETE FROM aro WHERE idDetalleAro ={id}", cn);
+                    comando1.ExecuteNonQuery();
+
+                    //inventario movimiento
+                    MySqlCommand comando3 = new MySqlCommand($"DELETE FROM movimiento WHERE idDetalleAro ={id}", cn);
+                    comando3.ExecuteNonQuery();
+
+                    MySqlCommand comandoFinal = new MySqlCommand($"DELETE FROM detalleAro WHERE idDetalleAro ={id}", cn);
+
+                    if (comandoFinal.ExecuteNonQuery() > 0)
                     {
                         return true;
                     }

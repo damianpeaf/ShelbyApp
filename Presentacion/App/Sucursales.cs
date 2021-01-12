@@ -181,17 +181,28 @@ namespace Presentacion.App
             //validacion
             if (!string.IsNullOrEmpty(id))
             {
-                if (sucursal.eliminarSucursal(id))
+                DialogResult result = MessageBox.Show("Esta sucursal esta relacionada con ciertos movimientos y productos, ¿Realemente quieres eliminarla? ", "Confirmación", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Sucursal eliminada");
-                    actualizarTabla();
+                    if (sucursal.eliminarSucursal(id))
+                    {
+                        MessageBox.Show("Sucursal eliminada");
+                        actualizarTabla();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Hubo un error al eliminar");
+                    }
+                }
+                else if (result == DialogResult.No)
+                {
+                    MessageBox.Show("Sucursal NO eliminada");
                 }
                 else
                 {
-                    MessageBox.Show("Hubo un error al eliminar la sucursal");
-
+                    MessageBox.Show("Hubo un error");
                 }
-
+                                
             }
             else
             {

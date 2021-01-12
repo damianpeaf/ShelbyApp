@@ -46,7 +46,10 @@ namespace Presentacion.App
             string marcaDetalle = txtListarBuscarMarcas.SelectedValue.ToString();
 
             DataSet ds = detalle.buscarDetalle(idDetalle, codigoDetalle, medidaDetalle, marcaDetalle);
-            dataGridView1.DataSource = ds.Tables[0];
+            if (ds!= null)
+            {
+                dataGridView1.DataSource = ds.Tables[0];
+            }
 
         }
 
@@ -140,16 +143,17 @@ namespace Presentacion.App
             string codigo = txtCrearCodigo.Text;
             string medida = txtCrearMedida.Text;
             string marca = txtCrearMarca.SelectedValue.ToString();
+            string stockInicial = txtCrearStockInicial.Text;
         
 
             
 
             //validacion
-            if (!string.IsNullOrEmpty(codigo) && !string.IsNullOrEmpty(medida) && !string.IsNullOrEmpty(marca))
+            if (!string.IsNullOrEmpty(codigo) && !string.IsNullOrEmpty(medida) && !string.IsNullOrEmpty(marca) && !string.IsNullOrEmpty(stockInicial))
             {
 
 
-                if (detalle.crearDetalle(codigo, medida, marca))
+                if (detalle.crearDetalle(codigo, medida, marca, stockInicial))
                 {
                     MessageBox.Show("Detalle creado");
                     actualizarTabla();
@@ -264,16 +268,28 @@ namespace Presentacion.App
             //validacion
             if (!string.IsNullOrEmpty(id))
             {
-                if (detalle.eliminarDetalle(id))
+                DialogResult result = MessageBox.Show("Este detalle de llanta esta relacionada con ciertos movimientos y productos, ¿Realemente quieres eliminarla? ", "Confirmación", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Detalle eliminado");
-                    actualizarTabla();
+                    if (detalle.eliminarDetalle(id))
+                    {
+                        MessageBox.Show("Detalle eliminado");
+                        actualizarTabla();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Hubo un error al eliminar detalle");
+
+                    }
+                }
+                else if (result == DialogResult.No)
+                {
+                    MessageBox.Show("Detalle NO eliminada");
                 }
                 else
                 {
-                    MessageBox.Show("Hubo un error al eliminar detalle");
-
-                }
+                    MessageBox.Show("Hubo un error");
+                }             
 
             }
             else
@@ -374,6 +390,25 @@ namespace Presentacion.App
         {
             menuP.AbrirForm2(new Llantas(IdSeleccionadaAlListar));
             this.Close();
+        }
+
+        private void txtCrearStockInicial_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Para obligar a que sólo se introduzcan números
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+              if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                //el resto de teclas pulsadas se desactivan
+                e.Handled = true;
+            }
         }
 
 

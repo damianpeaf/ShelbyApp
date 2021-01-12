@@ -13,8 +13,10 @@ namespace Datos
         MySqlConnection cn;
         DataSet ds;
 
-        public bool crearDisponibilidadDesdeLlanta(string idDetalle, string idUsuario)
+        public bool crearDisponibilidadDesdeLlanta(string idDetalle, string idUsuario, string stockInicial)
         {
+            string cantidad = stockInicial;
+
             try
             {
                 using (cn = new Conexion().IniciarConexion())
@@ -30,9 +32,16 @@ namespace Datos
                             cn = new Conexion().IniciarConexion();
 
                             string idSucursal = reader1.GetString(0);
-                            string sql = $"INSERT INTO llanta (idLlanta, idDetalleLlanta, cantidad, usuarioModificacion, idSucursal) VALUES (null, {idDetalle}, 0, {idUsuario}, {idSucursal})";
+                            string sql = $"INSERT INTO llanta (idLlanta, idDetalleLlanta, cantidad, usuarioModificacion, idSucursal) VALUES (null, {idDetalle}, {cantidad}, {idUsuario}, {idSucursal})";
                             MySqlCommand cmd = new MySqlCommand(sql, cn);
                             cmd.ExecuteNonQuery();
+
+                            Movimiento movimiento = new Movimiento();
+
+                            DateTime dateValue = DateTime.Now;
+                            string fecha = dateValue.ToString("yyyy-MM-dd HH:mm:ss");
+
+                            movimiento.crearMovimientoLlanta(idDetalle, idSucursal, cantidad, fecha, "1");
                         }
                         return true;
                     }
