@@ -322,6 +322,13 @@
     <None Include="Resources\inventario1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\aro1.png" />
+    <None Include="Resources\inventario11.png" />
+    <None Include="Resources\inventario2.png" />
+    <None Include="Resources\inventarioReporte.png" />
+    <None Include="Resources\llanta1.png" />
+    <None Include="Resources\movimientos.png" />
+    <None Include="Resources\movmientosReporte.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
