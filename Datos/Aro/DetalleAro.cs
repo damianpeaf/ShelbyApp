@@ -69,6 +69,7 @@ namespace Datos
                     {
                         comando += $"or diseno like '%{diseno}%'";
                     }
+                   
 
                     Console.WriteLine(comando);
 
@@ -100,7 +101,7 @@ namespace Datos
             {
                 using (cn = new Conexion().IniciarConexion())
                 {
-                    String[] datosDetalle = new string[6];
+                    String[] datosDetalle = new string[8];
                     string comando = $"SELECT * FROM detalleAro where idDetalleAro = {id}";
 
                     MySqlCommand datos = new MySqlCommand(comando, cn);
@@ -119,6 +120,8 @@ namespace Datos
                             datosDetalle[3] = reader.GetString(3);
                             datosDetalle[4] = reader.GetString(4);
                             datosDetalle[5] = reader.GetString(5);
+                            datosDetalle[6] = reader.GetString(6);
+                            datosDetalle[7] = reader.GetString(7);
 
 
                         }
@@ -141,13 +144,13 @@ namespace Datos
             }
         }
 
-        public bool crearDetalle(string codigo, string medida, string pcd, string pcd2, string diseno, string stockInicial)
+        public bool crearDetalle(string codigo, string medida, string pcd, string pcd2, string diseno, string costo, string precio, string stockInicial)
         {
             try
             {
                 using (cn = new Conexion().IniciarConexion())
                 {
-                    MySqlCommand comando = new MySqlCommand($"INSERT INTO detalleAro VALUES(null,'{codigo}' , '{medida}', '{pcd}', '{pcd2}', '{diseno}')", cn);
+                    MySqlCommand comando = new MySqlCommand($"INSERT INTO detalleAro VALUES(null,'{codigo}' , '{medida}', '{pcd}', '{pcd2}', '{diseno}','{costo}','{precio}' )", cn);
                     if (comando.ExecuteNonQuery() > 0)
                     {
 
@@ -191,13 +194,13 @@ namespace Datos
             }
         }
 
-        public bool actualizarDetalle(string id, string codigo, string medida, string pcd, string pcd2, string diseno)
+        public bool actualizarDetalle(string id, string codigo, string medida, string pcd, string pcd2, string diseno, string costo, string precio )
         {
             try
             {
                 using (cn = new Conexion().IniciarConexion())
                 {
-                    MySqlCommand comando = new MySqlCommand($"UPDATE detalleAro SET codigo='{codigo}', medida='{medida}', pcd='{pcd}', pcd2='{pcd2}', diseno='{diseno}' WHERE idDetalleAro ={id}", cn);
+                    MySqlCommand comando = new MySqlCommand($"UPDATE detalleAro SET codigo='{codigo}', medida='{medida}', pcd='{pcd}', pcd2='{pcd2}', diseno='{diseno}', costo='{costo}', precio='{precio}' WHERE idDetalleAro ={id}", cn);
 
                     if (comando.ExecuteNonQuery() > 0)
                     {

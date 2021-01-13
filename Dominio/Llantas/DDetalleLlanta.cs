@@ -28,14 +28,14 @@ namespace Dominio
 
         }
 
-        public bool crearDetalle(string codigo, string medida, string idMarca, string stockInicial)
+        public bool crearDetalle(string codigo, string medida, string idMarca, string stockInicial, string costo, string precio)
         {
-            return detalle.crearDetalle(codigo, medida, idMarca, stockInicial);
+            return detalle.crearDetalle(codigo, medida, idMarca, stockInicial, costo, precio);
         }
 
-        public bool actualizarDetalle(string id, string codigo, string medida, string idMarca)
+        public bool actualizarDetalle(string id, string codigo, string medida, string idMarca, string costo, string precio)
         {
-            return detalle.actualizarDetalle(id, codigo, medida, idMarca);
+            return detalle.actualizarDetalle(id, codigo, medida, idMarca, costo, precio);
         }
 
         public bool eliminarDetalle(string id)

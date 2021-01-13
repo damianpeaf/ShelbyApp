@@ -143,6 +143,8 @@ namespace Presentacion.App
             string codigo = txtCrearCodigo.Text;
             string medida = txtCrearMedida.Text;
             string marca = txtCrearMarca.SelectedValue.ToString();
+            string costo = txtCrearCosto.Text;
+            string precio = txtCrearPrecio.Text;
             string stockInicial = txtCrearStockInicial.Text;
         
 
@@ -153,7 +155,7 @@ namespace Presentacion.App
             {
 
 
-                if (detalle.crearDetalle(codigo, medida, marca, stockInicial))
+                if (detalle.crearDetalle(codigo, medida, marca,costo, precio, stockInicial))
                 {
                     MessageBox.Show("Detalle creado");
                     actualizarTabla();
@@ -212,12 +214,14 @@ namespace Presentacion.App
             string codigo = txtActualizarCodigo.Text;
             string medida = txtActualizarMedida.Text;
             string marca = txtCrearMarca.SelectedValue.ToString();
+            string costo = txtActualizarCosto.Text;
+            string precio = txtActualizarPrecio.Text;
 
 
             //validacion
-            if (!string.IsNullOrEmpty(codigo) && !string.IsNullOrEmpty(medida) && !string.IsNullOrEmpty(marca))
+            if (!string.IsNullOrEmpty(codigo) && !string.IsNullOrEmpty(medida) && !string.IsNullOrEmpty(marca) && !string.IsNullOrEmpty(costo) && !string.IsNullOrEmpty(precio))
             {
-                if (detalle.actualizarDetalle(id,codigo, medida, marca))
+                if (detalle.actualizarDetalle(id,codigo, medida, marca, costo, precio))
                 {
                     MessageBox.Show("Detalle actualizado");
                     actualizarTabla();

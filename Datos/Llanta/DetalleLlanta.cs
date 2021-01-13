@@ -140,13 +140,13 @@ namespace Datos
             }
         }
 
-        public bool crearDetalle(string codigo, string medida, string idMarca, string stockInicial)
+        public bool crearDetalle(string codigo, string medida, string idMarca,string costo, string precio, string stockInicial)
         {
             try
             {
                 using (cn = new Conexion().IniciarConexion())
                 {
-                    MySqlCommand comando = new MySqlCommand($"INSERT INTO detalleLlanta VALUES(null,'{codigo}' , '{medida}', '{idMarca}')", cn);
+                    MySqlCommand comando = new MySqlCommand($"INSERT INTO detalleLlanta VALUES(null,'{codigo}' , '{medida}', '{idMarca}','{costo}','{precio}' )", cn);
                     if (comando.ExecuteNonQuery() > 0)
                     {
 
@@ -190,13 +190,13 @@ namespace Datos
             }
         }
 
-        public bool actualizarDetalle(string id, string codigo, string medida, string idMarca)
+        public bool actualizarDetalle(string id, string codigo, string medida, string idMarca, string costo, string precio)
         {
             try
             {
                 using (cn = new Conexion().IniciarConexion())
                 {
-                    MySqlCommand comando = new MySqlCommand($"UPDATE detalleLlanta SET codigo='{codigo}', medida='{medida}', IdMarca='{idMarca}' WHERE idDetalleLlanta ={id}", cn);
+                    MySqlCommand comando = new MySqlCommand($"UPDATE detalleLlanta SET codigo='{codigo}', medida='{medida}', IdMarca='{idMarca}', costo='{costo}', precio='{precio}' WHERE idDetalleLlanta ={id}", cn);
 
                     if (comando.ExecuteNonQuery() > 0)
                     {

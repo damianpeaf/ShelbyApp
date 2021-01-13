@@ -76,6 +76,8 @@ namespace Presentacion.App
                 string pcd = dataGridView1.Rows[n].Cells[3].Value.ToString();
                 string pcd2 = dataGridView1.Rows[n].Cells[4].Value.ToString();
                 string diseno = dataGridView1.Rows[n].Cells[5].Value.ToString();
+                string costo = dataGridView1.Rows[n].Cells[6].Value.ToString();
+                string precio = dataGridView1.Rows[n].Cells[7].Value.ToString();
 
 
                 txtListarSeleccionadoId.Text = id;
@@ -84,6 +86,8 @@ namespace Presentacion.App
                 txtListarSeleccionadoPcd.Text = pcd;
                 txtListarSeleccionadoPcd2.Text = pcd2;
                 txtListarSeleccionadoDiseno.Text = diseno;
+                txtListarSeleccionadoCosto.Text = costo;
+                txtListarSeleccionadoPrecio.Text = precio;
 
                 IdSeleccionadaAlListar = id;
 
@@ -102,6 +106,8 @@ namespace Presentacion.App
                 txtActualizarPcd.Text = datosDetalle[3];
                 txtActualizarPcd2.Text = datosDetalle[4];
                 txtActualizarDiseno.Text = datosDetalle[5];
+                txtActualizarCosto.Text = datosDetalle[6];
+                txtActualizarPrecio.Text = datosDetalle[7];
 
             }
             else
@@ -123,6 +129,8 @@ namespace Presentacion.App
                 txtEliminarPcd.Text = datosDetalle[3];
                 txtEliminarPcd2.Text = datosDetalle[4];
                 txtEliminarDiseno.Text = datosDetalle[5];
+                txtEliminarCosto.Text = datosDetalle[6];
+                txtEliminarPrecio.Text = datosDetalle[7];
             }
             else
             {
@@ -145,6 +153,8 @@ namespace Presentacion.App
             string pcd = txtCrearPcd.Text;
             string pcd2 = txtCrearPcd2.Text;
             string diseno = txtCrearDiseno.Text;
+            string costo = txtCrearCosto.Text;
+            string precio = txtCrearPrecio.Text;
             string stockInicial = txtCrearStockInicial.Text;
             if (string.IsNullOrEmpty(pcd2))
             {
@@ -152,9 +162,9 @@ namespace Presentacion.App
             }
 
             //validacion
-            if (!string.IsNullOrEmpty(codigo) && !string.IsNullOrEmpty(medida) && !string.IsNullOrEmpty(pcd) && !string.IsNullOrEmpty(pcd2) && !string.IsNullOrEmpty(diseno) && !string.IsNullOrEmpty(stockInicial))
+            if (!string.IsNullOrEmpty(codigo) && !string.IsNullOrEmpty(medida) && !string.IsNullOrEmpty(pcd) && !string.IsNullOrEmpty(pcd2) && !string.IsNullOrEmpty(diseno) && !string.IsNullOrEmpty(costo) && !string.IsNullOrEmpty(precio) && !string.IsNullOrEmpty(stockInicial))
             {
-                if (detalle.crearDetalle(codigo, medida, pcd, pcd2, diseno, stockInicial))
+                if (detalle.crearDetalle(codigo, medida, pcd, pcd2, diseno,costo, precio, stockInicial))
                 {
                     MessageBox.Show("Detalle creado");
                     actualizarTabla();
@@ -199,6 +209,8 @@ namespace Presentacion.App
                 txtActualizarPcd.Text = datosDetalle[3];
                 txtActualizarPcd2.Text = datosDetalle[4];
                 txtActualizarDiseno.Text = datosDetalle[5];
+                txtActualizarCosto.Text = datosDetalle[6];
+                txtActualizarPrecio.Text = datosDetalle[7];
             }
             else
             {
@@ -216,6 +228,8 @@ namespace Presentacion.App
             string pcd = txtActualizarPcd.Text;
             string pcd2 = txtActualizarPcd2.Text;
             string diseno = txtActualizarDiseno.Text;
+            string costo = txtActualizarCosto.Text;
+            string precio = txtActualizarPrecio.Text;
 
             if (string.IsNullOrEmpty(pcd2))
             {
@@ -223,9 +237,9 @@ namespace Presentacion.App
             }
 
             //validacion
-            if (!string.IsNullOrEmpty(codigo) && !string.IsNullOrEmpty(medida) && !string.IsNullOrEmpty(pcd) && !string.IsNullOrEmpty(pcd2) && !string.IsNullOrEmpty(diseno))
+            if (!string.IsNullOrEmpty(codigo) && !string.IsNullOrEmpty(medida) && !string.IsNullOrEmpty(pcd) && !string.IsNullOrEmpty(pcd2) && !string.IsNullOrEmpty(diseno) && !string.IsNullOrEmpty(costo) && !string.IsNullOrEmpty(precio))
             {
-                if (detalle.actualizarDetalle(id,codigo, medida, pcd, pcd2,diseno))
+                if (detalle.actualizarDetalle(id,codigo, medida, pcd, pcd2,diseno, costo, precio))
                 {
                     MessageBox.Show("Detalle actualizado");
                     actualizarTabla();
@@ -263,6 +277,8 @@ namespace Presentacion.App
                 txtEliminarPcd.Text = datosDetalle[3];
                 txtEliminarPcd2.Text = datosDetalle[4];
                 txtEliminarDiseno.Text = datosDetalle[5];
+                txtEliminarCosto.Text = datosDetalle[6];
+                txtEliminarPrecio.Text = datosDetalle[7];
             }
             else
             {

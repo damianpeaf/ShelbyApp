@@ -29,14 +29,14 @@ namespace Dominio
 
         }
 
-        public bool crearDetalle(string codigo, string medida, string pcd, string pcd2, string diseno, string stockInicial)
+        public bool crearDetalle(string codigo, string medida, string pcd, string pcd2, string diseno, string costo, string precio, string stockInicial)
         {
-            return detalle.crearDetalle(codigo, medida, pcd, pcd2, diseno, stockInicial);
+            return detalle.crearDetalle(codigo, medida, pcd, pcd2, diseno,costo, precio, stockInicial);
         }
 
-        public bool actualizarDetalle(string id, string codigo, string medida, string pcd, string pcd2, string diseno)
+        public bool actualizarDetalle(string id, string codigo, string medida, string pcd, string pcd2, string diseno, string costo, string precio)
         {
-            return detalle.actualizarDetalle(id, codigo, medida, pcd, pcd2, diseno);
+            return detalle.actualizarDetalle(id, codigo, medida, pcd, pcd2, diseno, costo, precio);
         }
 
         public bool eliminarDetalle(string id)
