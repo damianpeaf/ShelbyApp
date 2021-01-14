@@ -153,6 +153,11 @@ namespace Presentacion.App
             AbrirForm2(new ReportesInventario());
         }
 
+        private void button11_Click(object sender, EventArgs e)
+        {
+            AbrirForm2(new Bodegas());
+        }
+
 
         //FIN boton e imagen usuarios
 

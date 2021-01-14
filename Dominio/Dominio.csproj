@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBodega.cs" />
     <Compile Include="ListasReportes\ArosMasEntradas.cs" />
     <Compile Include="ListasReportes\ArosMasSalidas.cs" />
     <Compile Include="Llantas\DDetalleLlanta.cs" />

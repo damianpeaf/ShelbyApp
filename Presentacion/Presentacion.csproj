@@ -151,6 +151,12 @@
     <Compile Include="App\ReportesMovimientos.Designer.cs">
       <DependentUpon>ReportesMovimientos.cs</DependentUpon>
     </Compile>
+    <Compile Include="App\Bodegas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\Bodegas.Designer.cs">
+      <DependentUpon>Bodegas.cs</DependentUpon>
+    </Compile>
     <Compile Include="App\Sucursales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="App\ReportesMovimientos.resx">
       <DependentUpon>ReportesMovimientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\Bodegas.resx">
+      <DependentUpon>Bodegas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="App\Sucursales.resx">
       <DependentUpon>Sucursales.cs</DependentUpon>
