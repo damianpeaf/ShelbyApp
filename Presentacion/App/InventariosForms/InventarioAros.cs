@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dominio;
+using Microsoft.Reporting.WinForms;
 
 namespace Presentacion.App
 {
@@ -36,11 +37,21 @@ namespace Presentacion.App
         private void Reportes_Load(object sender, EventArgs e)
         {
 
-            this.reportViewer1.RefreshReport();
         }
 
-        private void generarReporte(string idSucursal, string idDetalle, string codigo, bool todas)
+        private void generarReporte(string idSucursal, string idDetalle, string codigo, bool todas, bool costoVisible)
         {
+            ReportParameter[] parameters = new ReportParameter[1];
+            if (costoVisible)
+            {
+                parameters[0] = new ReportParameter("columnaCostoVisible", "True");
+            }
+            else
+            {
+                parameters[0] = new ReportParameter("columnaCostoVisible", "False");
+            }
+            this.reportViewer1.LocalReport.SetParameters(parameters);
+
             DReporteAro reporte = new DReporteAro();
             reporte.crearReporteInventario(idSucursal, idDetalle, codigo, todas);
 
@@ -59,7 +70,7 @@ namespace Presentacion.App
 
             bool todas = checkBox1.Checked;
 
-            generarReporte(idSucursal, idDetalle, codigoDetalle, todas);
+            generarReporte(idSucursal, idDetalle, codigoDetalle, todas, costoVisible.Checked);
         }
 
         private void checkBox1_CheckedChanged_1(object sender, EventArgs e)

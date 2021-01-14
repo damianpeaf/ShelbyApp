@@ -46,6 +46,7 @@ namespace Presentacion.App
             this.txtBuscarCodigo1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtBuscarId1 = new System.Windows.Forms.TextBox();
+            this.costoVisible = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.DReporteLlantaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InventarioLlantaListaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DReporteAroBindingSource)).BeginInit();
@@ -87,6 +88,7 @@ namespace Presentacion.App
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.costoVisible);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.checkBox2);
             this.groupBox2.Controls.Add(this.label4);
@@ -183,6 +185,16 @@ namespace Presentacion.App
             this.txtBuscarId1.Size = new System.Drawing.Size(125, 20);
             this.txtBuscarId1.TabIndex = 35;
             // 
+            // costoVisible
+            // 
+            this.costoVisible.AutoSize = true;
+            this.costoVisible.Location = new System.Drawing.Point(19, 93);
+            this.costoVisible.Name = "costoVisible";
+            this.costoVisible.Size = new System.Drawing.Size(85, 17);
+            this.costoVisible.TabIndex = 43;
+            this.costoVisible.Text = "Costo visible";
+            this.costoVisible.UseVisualStyleBackColor = true;
+            // 
             // InventarioLlantas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -219,5 +231,6 @@ namespace Presentacion.App
         private System.Windows.Forms.TextBox txtBuscarCodigo1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtBuscarId1;
+        private System.Windows.Forms.CheckBox costoVisible;
     }
 }

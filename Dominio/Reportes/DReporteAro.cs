@@ -77,7 +77,10 @@ namespace Dominio
                     codigo = filas[2].ToString(),
                     stock = filas[3].ToString(),
                     firma = filas[8].ToString(),
-                    ultimaModificacion = filas[9].ToString()
+                    ultimaModificacion = filas[9].ToString(),
+                    precio = filas[11].ToString(),
+                    costo = filas[12].ToString()
+
 
                 };
 

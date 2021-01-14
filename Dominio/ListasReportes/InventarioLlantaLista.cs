@@ -14,5 +14,8 @@ namespace Dominio
         public string stock { get; set; }
         public string firma { get; set; }
         public string ultimaModificacion { get; set; }
+        public string precio { get; set; }
+        public string costo { get; set; }
+
     }
 }

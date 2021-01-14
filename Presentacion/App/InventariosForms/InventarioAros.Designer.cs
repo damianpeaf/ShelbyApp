@@ -46,6 +46,7 @@ namespace Presentacion.App
             this.txtBuscarCodigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBuscarId = new System.Windows.Forms.TextBox();
+            this.costoVisible = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.DReporteAroBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InventarioAroListaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DReporteLlantaBindingSource)).BeginInit();
@@ -87,6 +88,7 @@ namespace Presentacion.App
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.costoVisible);
             this.groupBox1.Controls.Add(this.btntListarBuscar);
             this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Controls.Add(this.label3);
@@ -183,6 +185,16 @@ namespace Presentacion.App
             this.txtBuscarId.Size = new System.Drawing.Size(125, 20);
             this.txtBuscarId.TabIndex = 35;
             // 
+            // costoVisible
+            // 
+            this.costoVisible.AutoSize = true;
+            this.costoVisible.Location = new System.Drawing.Point(19, 93);
+            this.costoVisible.Name = "costoVisible";
+            this.costoVisible.Size = new System.Drawing.Size(85, 17);
+            this.costoVisible.TabIndex = 43;
+            this.costoVisible.Text = "Costo visible";
+            this.costoVisible.UseVisualStyleBackColor = true;
+            // 
             // InventarioAros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -219,5 +231,6 @@ namespace Presentacion.App
         private System.Windows.Forms.TextBox txtBuscarCodigo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBuscarId;
+        private System.Windows.Forms.CheckBox costoVisible;
     }
 }

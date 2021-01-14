@@ -112,7 +112,7 @@ namespace Datos
             {
                 using (cn = new Conexion().IniciarConexion())
                 {
-                     string  comando = "SELECT S.nombre as 'Sucursal',  D.idDetalleLlanta as 'ID Llanta', D.codigo as 'Codigo', A.cantidad as 'Stock',D.IdMarca, D.medida,  U.nombre as 'Firma',DATE_FORMAT(A.fechaModificacion, '%d/%m/%Y %H:%i')  as 'Ultima modificacion',  A.idLlanta as 'ID específica'  FROM llanta A inner join sucursal S on A.idSucursal = S.idSucursal inner join detalleLlanta D on D.idDetalleLlanta = A.idDetalleLlanta inner join usuario U on A.usuarioModificacion = U.idUsuario";
+                     string  comando = "SELECT S.nombre as 'Sucursal',  D.idDetalleLlanta as 'ID Llanta', D.codigo as 'Codigo', A.cantidad as 'Stock',D.IdMarca, D.medida,  U.nombre as 'Firma',DATE_FORMAT(A.fechaModificacion, '%d/%m/%Y %H:%i')  as 'Ultima modificacion',  A.idLlanta as 'ID específica', D.precio, D.costo  FROM llanta A inner join sucursal S on A.idSucursal = S.idSucursal inner join detalleLlanta D on D.idDetalleLlanta = A.idDetalleLlanta inner join usuario U on A.usuarioModificacion = U.idUsuario";
 
                     MySqlCommand datos = new MySqlCommand(comando, cn);
 
@@ -142,7 +142,7 @@ namespace Datos
             {
                 using (cn = new Conexion().IniciarConexion())
                 {
-                    string comando = $"SELECT S.nombre as 'Sucursal',  D.idDetalleLlanta as 'ID llanta', D.codigo as 'Codigo', A.cantidad as 'Stock',D.IdMarca, D.medida, U.nombre as 'Firma', DATE_FORMAT(A.fechaModificacion, '%d/%m/%Y %H:%i') as 'Ultima modificacion', A.idLlanta as 'ID específica'  FROM llanta A inner join sucursal S on A.idSucursal = S.idSucursal inner join detalleLlanta D on D.idDetalleLlanta = A.idDetalleLlanta inner join usuario U on A.usuarioModificacion = U.idUsuario ";
+                    string comando = $"SELECT S.nombre as 'Sucursal',  D.idDetalleLlanta as 'ID llanta', D.codigo as 'Codigo', A.cantidad as 'Stock',D.IdMarca, D.medida, U.nombre as 'Firma', DATE_FORMAT(A.fechaModificacion, '%d/%m/%Y %H:%i') as 'Ultima modificacion', A.idLlanta as 'ID específica', D.precio, D.costo  FROM llanta A inner join sucursal S on A.idSucursal = S.idSucursal inner join detalleLlanta D on D.idDetalleLlanta = A.idDetalleLlanta inner join usuario U on A.usuarioModificacion = U.idUsuario ";
 
                     if (todas)
                     {

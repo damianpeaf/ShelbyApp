@@ -34,8 +34,6 @@ namespace Presentacion.App
 
         private void Reportes2_Load(object sender, EventArgs e)
         {
-
-            this.reportViewer1.RefreshReport();
         }
 
         private void generarReporte(string idSucursal, string idDetalle, string codigo, bool todas, bool rango, string fechaDesde, string fechaHasta, bool ambos, string idTipoMovimiento)

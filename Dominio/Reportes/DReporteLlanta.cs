@@ -32,7 +32,7 @@ namespace Dominio
         public List<ArosMasSalidas> listaArosMasSalidas { get; set; }
 
 
-        public void crearReporteInventario(string idSucursal, string idDetalle, string codigo, bool todas)
+        public void crearReporteInventario(string idSucursal, string idDetalle, string codigo, bool todas, bool costoVisible)
         {
             FechaReporte = DateTime.Now;
             Llanta llanta = new Llanta();
@@ -60,9 +60,20 @@ namespace Dominio
             DataTable dt = llanta.buscarLlanta(idSucursal, idDetalle, codigo,  todas).Tables[0];
 
             listaLlantas = new List<InventarioLlantaLista>();
+            string costoDato = null;
 
             foreach (System.Data.DataRow filas in dt.Rows)
             {
+
+                if (costoVisible)
+                {
+                    costoDato = filas[9].ToString();
+                }
+                else if(!costoVisible)
+                {
+                    costoDato = null;
+                }
+
                 //se podria usar Convert
                 var filaLista = new InventarioLlantaLista()
                 {
@@ -71,11 +82,11 @@ namespace Dominio
                     codigo = filas[2].ToString(),
                     stock = filas[3].ToString(),
                     firma = filas[6].ToString(),
-                    ultimaModificacion = filas[7].ToString()
+                    ultimaModificacion = filas[7].ToString(),
+                    precio = filas[10].ToString(),
+                    costo = costoDato
 
                 };
-
-                Console.WriteLine("hola");
 
                 listaLlantas.Add(filaLista);
             }

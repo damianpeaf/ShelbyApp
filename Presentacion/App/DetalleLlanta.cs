@@ -78,14 +78,18 @@ namespace Presentacion.App
                 string codigo = dataGridView1.Rows[n].Cells[1].Value.ToString();
                 string medida = dataGridView1.Rows[n].Cells[2].Value.ToString();
                 string marca = dataGridView1.Rows[n].Cells[3].Value.ToString();
-           
+                string precio = dataGridView1.Rows[n].Cells[4].Value.ToString();
+                string costo = dataGridView1.Rows[n].Cells[5].Value.ToString();
 
 
                 txtListarSeleccionadoId.Text = id;
                 txtListarSeleccionadoCodigo.Text = codigo;
                 txtListarSeleccionadoMedida.Text = medida;
                 txtListarSeleccionadoPcd.Text = marca;
-             
+                txtListarSeleccionadoPrecio.Text = precio;
+                txtListarSeleccionadoCosto.Text = costo; 
+
+
 
                 IdSeleccionadaAlListar = id;
 
@@ -102,8 +106,8 @@ namespace Presentacion.App
                 txtActualizarCodigo.Text = datosDetalle[1];
                 txtActualizarMedida.Text = datosDetalle[2];
                 txtListarSeleccionadoPcd.Text = datosDetalle[3];
-           
-
+                txtActualizarPrecio.Text = datosDetalle[4];
+                txtActualizarCosto.Text = datosDetalle[5];
             }
             else
             {
@@ -198,7 +202,8 @@ namespace Presentacion.App
                 txtActualizarCodigo.Text = datosDetalle[1];
                 txtActualizarMedida.Text = datosDetalle[2];
                 txtActualizarMarca.Text = datosDetalle[3];
-       
+                txtActualizarPrecio.Text = datosDetalle[4];
+                txtActualizarCosto.Text = datosDetalle[5];
             }
             else
             {
