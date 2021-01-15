@@ -54,9 +54,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Aro\Aro.cs" />
-    <Compile Include="Bodega.cs" />
+    <Compile Include="Bodega\Bodega.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Aro\DetalleAro.cs" />
+    <Compile Include="InventarioBodega.cs" />
     <Compile Include="Llanta\DetalleLlanta.cs" />
     <Compile Include="Llanta\Llanta.cs" />
     <Compile Include="Login y Recupera\Correo.cs" />

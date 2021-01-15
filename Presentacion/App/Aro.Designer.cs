@@ -104,6 +104,7 @@ namespace Presentacion.App
             this.label16 = new System.Windows.Forms.Label();
             this.txtABuscar = new System.Windows.Forms.TextBox();
             this.btnActualizarBuscar = new System.Windows.Forms.Button();
+            this.buscarBodega = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -171,6 +172,7 @@ namespace Presentacion.App
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.buscarBodega);
             this.groupBox1.Controls.Add(this.label31);
             this.groupBox1.Controls.Add(this.txtIdAro);
             this.groupBox1.Controls.Add(this.checkBox1);
@@ -995,6 +997,16 @@ namespace Presentacion.App
             this.btnActualizarBuscar.UseVisualStyleBackColor = false;
             this.btnActualizarBuscar.Click += new System.EventHandler(this.btnActualizarBuscar_Click);
             // 
+            // buscarBodega
+            // 
+            this.buscarBodega.AutoSize = true;
+            this.buscarBodega.Location = new System.Drawing.Point(137, 77);
+            this.buscarBodega.Name = "buscarBodega";
+            this.buscarBodega.Size = new System.Drawing.Size(113, 17);
+            this.buscarBodega.TabIndex = 37;
+            this.buscarBodega.Text = "Buscar en bodega";
+            this.buscarBodega.UseVisualStyleBackColor = true;
+            // 
             // Aro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1097,5 +1109,6 @@ namespace Presentacion.App
         private System.Windows.Forms.TextBox txtAIdAro;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TextBox txtAIdSucursal;
+        private System.Windows.Forms.CheckBox buscarBodega;
     }
 }

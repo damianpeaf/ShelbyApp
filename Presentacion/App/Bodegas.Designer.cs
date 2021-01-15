@@ -42,6 +42,8 @@ namespace Presentacion.App
             this.label16 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtEliminarNombreS = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.label18 = new System.Windows.Forms.Label();
             this.txtEliminarBuscarId = new System.Windows.Forms.TextBox();
@@ -53,6 +55,8 @@ namespace Presentacion.App
             this.txtEliminarNombreB = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtAsignarSucursal = new System.Windows.Forms.ComboBox();
             this.btmCrear = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.txtCrearNombre = new System.Windows.Forms.TextBox();
@@ -60,6 +64,11 @@ namespace Presentacion.App
             this.btnListarTodo = new System.Windows.Forms.Button();
             this.btnListarLimpiar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtListarSeleccionadoNombreBodega = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtListarBuscarSucursal = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnListarEliminar = new System.Windows.Forms.Button();
             this.txtListarSeleccionadoNombreSucursal = new System.Windows.Forms.TextBox();
@@ -76,6 +85,8 @@ namespace Presentacion.App
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtASucursal = new System.Windows.Forms.ComboBox();
             this.txtABodega = new System.Windows.Forms.TextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -85,17 +96,6 @@ namespace Presentacion.App
             this.txtAID = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtListarBuscarSucursal = new System.Windows.Forms.ComboBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.txtListarSeleccionadoNombreBodega = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtAsignarSucursal = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtEliminarNombreS = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.txtASucursal = new System.Windows.Forms.ComboBox();
             this.tabPage4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -252,6 +252,27 @@ namespace Presentacion.App
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Información Sucursal";
             // 
+            // label15
+            // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.Location = new System.Drawing.Point(195, 229);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(112, 16);
+            this.label15.TabIndex = 27;
+            this.label15.Text = "Nombre Sucursal";
+            // 
+            // txtEliminarNombreS
+            // 
+            this.txtEliminarNombreS.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtEliminarNombreS.Location = new System.Drawing.Point(198, 248);
+            this.txtEliminarNombreS.Name = "txtEliminarNombreS";
+            this.txtEliminarNombreS.ReadOnly = true;
+            this.txtEliminarNombreS.Size = new System.Drawing.Size(298, 20);
+            this.txtEliminarNombreS.TabIndex = 26;
+            // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.label18);
@@ -364,7 +385,7 @@ namespace Presentacion.App
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(678, 520);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Crear Sucursal";
+            this.tabPage2.Text = "Crear bodega";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox2
@@ -378,9 +399,30 @@ namespace Presentacion.App
             this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(672, 514);
-            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Información Sucursal";
+            // 
+            // label12
+            // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(197, 185);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(112, 16);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "Nombre Sucursal";
+            // 
+            // txtAsignarSucursal
+            // 
+            this.txtAsignarSucursal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtAsignarSucursal.FormattingEnabled = true;
+            this.txtAsignarSucursal.Location = new System.Drawing.Point(200, 204);
+            this.txtAsignarSucursal.Name = "txtAsignarSucursal";
+            this.txtAsignarSucursal.Size = new System.Drawing.Size(298, 21);
+            this.txtAsignarSucursal.TabIndex = 19;
             // 
             // btmCrear
             // 
@@ -395,7 +437,7 @@ namespace Presentacion.App
             this.btmCrear.TabIndex = 18;
             this.btmCrear.Text = "Crear Sucursal";
             this.btmCrear.UseVisualStyleBackColor = false;
-            this.btmCrear.Click += new System.EventHandler(this.btmCrear_Click);
+            this.btmCrear.Click += new System.EventHandler(this.btmCrear_Click_1);
             // 
             // label9
             // 
@@ -488,6 +530,58 @@ namespace Presentacion.App
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Acciones";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // txtListarSeleccionadoNombreBodega
+            // 
+            this.txtListarSeleccionadoNombreBodega.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtListarSeleccionadoNombreBodega.Location = new System.Drawing.Point(453, 77);
+            this.txtListarSeleccionadoNombreBodega.Name = "txtListarSeleccionadoNombreBodega";
+            this.txtListarSeleccionadoNombreBodega.ReadOnly = true;
+            this.txtListarSeleccionadoNombreBodega.Size = new System.Drawing.Size(103, 20);
+            this.txtListarSeleccionadoNombreBodega.TabIndex = 37;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(450, 61);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(109, 16);
+            this.label11.TabIndex = 36;
+            this.label11.Text = "Nombre Bodega";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(137, 36);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(174, 17);
+            this.checkBox1.TabIndex = 35;
+            this.checkBox1.Text = "Buscar en todas las Sucursales";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(6, 14);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(60, 16);
+            this.label10.TabIndex = 30;
+            this.label10.Text = "Sucursal";
+            // 
+            // txtListarBuscarSucursal
+            // 
+            this.txtListarBuscarSucursal.FormattingEnabled = true;
+            this.txtListarBuscarSucursal.Location = new System.Drawing.Point(6, 32);
+            this.txtListarBuscarSucursal.Name = "txtListarBuscarSucursal";
+            this.txtListarBuscarSucursal.Size = new System.Drawing.Size(125, 21);
+            this.txtListarBuscarSucursal.TabIndex = 29;
+            this.txtListarBuscarSucursal.SelectedIndexChanged += new System.EventHandler(this.txtListarBuscarSucursal_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -655,7 +749,7 @@ namespace Presentacion.App
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(678, 520);
             this.tabPage3.TabIndex = 4;
-            this.tabPage3.Text = "Actualizar Sucursal";
+            this.tabPage3.Text = "Actualizar bodega";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // groupBox3
@@ -672,9 +766,30 @@ namespace Presentacion.App
             this.groupBox3.Location = new System.Drawing.Point(3, 3);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(672, 514);
-            this.groupBox3.TabIndex = 3;
+            this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Información Sucursal";
+            // 
+            // label20
+            // 
+            this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.Black;
+            this.label20.Location = new System.Drawing.Point(195, 233);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(112, 16);
+            this.label20.TabIndex = 28;
+            this.label20.Text = "Nombre Sucursal";
+            // 
+            // txtASucursal
+            // 
+            this.txtASucursal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtASucursal.FormattingEnabled = true;
+            this.txtASucursal.Location = new System.Drawing.Point(198, 252);
+            this.txtASucursal.Name = "txtASucursal";
+            this.txtASucursal.Size = new System.Drawing.Size(298, 21);
+            this.txtASucursal.TabIndex = 27;
             // 
             // txtABodega
             // 
@@ -729,7 +844,6 @@ namespace Presentacion.App
             this.btnActuBuscar.TabIndex = 21;
             this.btnActuBuscar.Text = "Buscar";
             this.btnActuBuscar.UseVisualStyleBackColor = false;
-            this.btnActuBuscar.Click += new System.EventHandler(this.btnActuBuscar_Click);
             // 
             // label7
             // 
@@ -765,7 +879,6 @@ namespace Presentacion.App
             this.button2.TabIndex = 18;
             this.button2.Text = "Actualizar Sucursal";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label8
             // 
@@ -778,121 +891,6 @@ namespace Presentacion.App
             this.label8.Size = new System.Drawing.Size(109, 16);
             this.label8.TabIndex = 13;
             this.label8.Text = "Nombre Bodega";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(6, 14);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 16);
-            this.label10.TabIndex = 30;
-            this.label10.Text = "Sucursal";
-            // 
-            // txtListarBuscarSucursal
-            // 
-            this.txtListarBuscarSucursal.FormattingEnabled = true;
-            this.txtListarBuscarSucursal.Location = new System.Drawing.Point(6, 32);
-            this.txtListarBuscarSucursal.Name = "txtListarBuscarSucursal";
-            this.txtListarBuscarSucursal.Size = new System.Drawing.Size(125, 21);
-            this.txtListarBuscarSucursal.TabIndex = 29;
-            this.txtListarBuscarSucursal.SelectedIndexChanged += new System.EventHandler(this.txtListarBuscarSucursal_SelectedIndexChanged);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(137, 36);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(174, 17);
-            this.checkBox1.TabIndex = 35;
-            this.checkBox1.Text = "Buscar en todas las Sucursales";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // txtListarSeleccionadoNombreBodega
-            // 
-            this.txtListarSeleccionadoNombreBodega.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtListarSeleccionadoNombreBodega.Location = new System.Drawing.Point(453, 77);
-            this.txtListarSeleccionadoNombreBodega.Name = "txtListarSeleccionadoNombreBodega";
-            this.txtListarSeleccionadoNombreBodega.ReadOnly = true;
-            this.txtListarSeleccionadoNombreBodega.Size = new System.Drawing.Size(103, 20);
-            this.txtListarSeleccionadoNombreBodega.TabIndex = 37;
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(450, 61);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(109, 16);
-            this.label11.TabIndex = 36;
-            this.label11.Text = "Nombre Bodega";
-            // 
-            // txtAsignarSucursal
-            // 
-            this.txtAsignarSucursal.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtAsignarSucursal.FormattingEnabled = true;
-            this.txtAsignarSucursal.Location = new System.Drawing.Point(200, 204);
-            this.txtAsignarSucursal.Name = "txtAsignarSucursal";
-            this.txtAsignarSucursal.Size = new System.Drawing.Size(298, 21);
-            this.txtAsignarSucursal.TabIndex = 19;
-            // 
-            // label12
-            // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(197, 185);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(112, 16);
-            this.label12.TabIndex = 20;
-            this.label12.Text = "Nombre Sucursal";
-            // 
-            // label15
-            // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(195, 229);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(112, 16);
-            this.label15.TabIndex = 27;
-            this.label15.Text = "Nombre Sucursal";
-            // 
-            // txtEliminarNombreS
-            // 
-            this.txtEliminarNombreS.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtEliminarNombreS.Location = new System.Drawing.Point(198, 248);
-            this.txtEliminarNombreS.Name = "txtEliminarNombreS";
-            this.txtEliminarNombreS.ReadOnly = true;
-            this.txtEliminarNombreS.Size = new System.Drawing.Size(298, 20);
-            this.txtEliminarNombreS.TabIndex = 26;
-            // 
-            // label20
-            // 
-            this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(195, 233);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(112, 16);
-            this.label20.TabIndex = 28;
-            this.label20.Text = "Nombre Sucursal";
-            // 
-            // txtASucursal
-            // 
-            this.txtASucursal.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtASucursal.FormattingEnabled = true;
-            this.txtASucursal.Location = new System.Drawing.Point(198, 252);
-            this.txtASucursal.Name = "txtASucursal";
-            this.txtASucursal.Size = new System.Drawing.Size(298, 21);
-            this.txtASucursal.TabIndex = 27;
             // 
             // Bodegas
             // 
@@ -949,10 +947,6 @@ namespace Presentacion.App
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox txtEliminarNombreB;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btmCrear;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtCrearNombre;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button btnListarTodo;
         private System.Windows.Forms.Button btnListarLimpiar;
@@ -971,7 +965,23 @@ namespace Presentacion.App
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox txtListarBuscarSucursal;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox txtListarSeleccionadoNombreBodega;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtEliminarNombreS;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox txtAsignarSucursal;
+        private System.Windows.Forms.Button btmCrear;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtCrearNombre;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ComboBox txtASucursal;
         private System.Windows.Forms.TextBox txtABodega;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Label label3;
@@ -981,17 +991,5 @@ namespace Presentacion.App
         private System.Windows.Forms.TextBox txtAID;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox txtListarBuscarSucursal;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox txtListarSeleccionadoNombreBodega;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox txtAsignarSucursal;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txtEliminarNombreS;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.ComboBox txtASucursal;
     }
 }

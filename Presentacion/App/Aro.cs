@@ -70,7 +70,17 @@ namespace Presentacion.App
 
             }
 
-            DataSet ds = aro.buscarAro(idSucursal, idDetalle, codigoDetalle, disenoDetalle, todas);
+            DataSet ds = null;
+
+            if (buscarBodega.Checked)
+            {
+                ds = aro.buscarBodegaAro(idSucursal, idDetalle, codigoDetalle, disenoDetalle, todas);
+            }
+            else
+            {
+                ds= aro.buscarAro(idSucursal, idDetalle, codigoDetalle, disenoDetalle, todas);
+            }
+            
             dataGridView1.DataSource = ds.Tables[0];
 
         }

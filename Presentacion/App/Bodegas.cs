@@ -142,8 +142,6 @@ namespace Presentacion.App
             string nombreB = txtCrearNombre.Text;
             string nombreS = txtAsignarSucursal.SelectedValue.ToString();
 
-
-
             //validacion
             if (!string.IsNullOrEmpty(nombreB) && !string.IsNullOrEmpty(nombreS))
             {
@@ -318,6 +316,32 @@ namespace Presentacion.App
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
+
+        }
+
+        private void btmCrear_Click_1(object sender, EventArgs e)
+        {
+            string nombreB = txtCrearNombre.Text;
+            string nombreS = txtAsignarSucursal.SelectedValue.ToString();
+
+            //validacion
+            if (!string.IsNullOrEmpty(nombreB) && !string.IsNullOrEmpty(nombreS))
+            {
+                if (bode.crearBodega(nombreB, nombreS))
+                {
+                    MessageBox.Show("Bodega creada");
+                    actualizarTabla();
+                }
+                else
+                {
+                    MessageBox.Show("Hubo un error al crear la bodega");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Los campos no pueden estar vacios");
+
+            }
 
         }
 

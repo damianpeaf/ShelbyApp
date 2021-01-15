@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Comun;
 
 
 namespace Datos
@@ -235,6 +236,8 @@ namespace Datos
                     MySqlCommand comando = new MySqlCommand($"INSERT INTO bodega VALUES(null,'{nombre}','{idSucursal}' )", cn);
                     if (comando.ExecuteNonQuery() > 0)
                     {
+                        InventarioBodega invBodega = new InventarioBodega();
+                        invBodega.crearDisponibilidadDesdeBodega(idSucursal, info_usuario.idUsuario);
                         return true;
                     }
                     else

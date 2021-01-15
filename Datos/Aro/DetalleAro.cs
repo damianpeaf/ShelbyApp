@@ -170,8 +170,11 @@ namespace Datos
                             }
 
                             Aro aro = new Aro();
+                            InventarioBodega invBodega = new InventarioBodega();
 
                             aro.crearDisponibilidadDesdeAro(ultimaId, idUsuario, stockInicial);
+                            invBodega.crearDisponibilidadDesdeAro(ultimaId, idUsuario);
+
                         }
 
                         return true;

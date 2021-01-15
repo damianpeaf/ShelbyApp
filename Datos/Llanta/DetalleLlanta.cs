@@ -166,8 +166,10 @@ namespace Datos
                             }
 
                             Llanta lla = new Llanta();
+                            InventarioBodega invBodega = new InventarioBodega();
 
                             lla.crearDisponibilidadDesdeLlanta(ultimaId, idUsuario, stockInicial);
+                            invBodega.crearDisponibilidadDesdeLlanta(ultimaId, idUsuario);
                         }
 
                         return true;
