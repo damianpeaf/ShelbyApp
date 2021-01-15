@@ -118,7 +118,7 @@ namespace Datos
             {
                 using (cn = new Conexion().IniciarConexion())
                 {
-                    string comando = "SELECT S.nombre as 'Sucursal',  D.idDetalleAro as 'ID aro', D.codigo as 'Codigo', A.cantidad as 'Stock',D.diseno, D.medida, D.pcd, D.pcd2, U.nombre as 'Firma',DATE_FORMAT(A.fechaModificacion, '%d/%m/%Y %H:%i')  as 'Ultima modificacion', A.idAro as 'ID específica', D.precio, D.costo  FROM aro A inner join sucursal S on A.idSucursal = S.idSucursal inner join detalleAro D on D.idDetalleAro = A.idDetalleAro inner join usuario U on A.usuarioModificacion = U.idUsuario where idBodega is null";
+                    string comando = "SELECT S.nombre as 'Sucursal',  D.idDetalleAro as 'ID aro', D.codigo as 'Codigo', A.cantidad as 'Stock',D.diseno, D.medida, D.pcd, D.pcd2, U.nombre as 'Firma',DATE_FORMAT(A.fechaModificacion, '%d/%m/%Y %H:%i')  as 'Ultima modificacion', A.idAro as 'ID específica', D.precio, D.costo  FROM aro A inner join sucursal S on A.idSucursal = S.idSucursal inner join detalleAro D on D.idDetalleAro = A.idDetalleAro inner join usuario U on A.usuarioModificacion = U.idUsuario where idBodega is null ";
 
                     MySqlCommand datos = new MySqlCommand(comando, cn);
 
@@ -152,40 +152,40 @@ namespace Datos
 
                     if (todas)
                     {
-                        comando += $"where S.idSucursal like '%%'  and idBodega is null";
+                        comando += $" where S.idSucursal like '%%'  and idBodega is null ";
 
                         if (!string.IsNullOrEmpty(idDetalle))
                         {
-                            comando += $"and D.idDetalleAro like '{idDetalle}'";
+                            comando += $" and D.idDetalleAro like '{idDetalle}' ";
                         }
 
                         if (!string.IsNullOrEmpty(codigo))
                         {
-                            comando += $"and D.codigo like '{codigo}'";
+                            comando += $" and D.codigo like '{codigo}' ";
                         }
 
                         if (!string.IsNullOrEmpty(diseno))
                         {
-                            comando += $"and D.diseno like '%{diseno}%'";
+                            comando += $" and D.diseno like '%{diseno}%' ";
                         }
                     }
                     else
                     {
-                        comando += $"where S.idSucursal like '{idSucursal}' and idBodega is null";
+                        comando += $" where S.idSucursal like '{idSucursal}' and idBodega is null ";
 
                         if (!string.IsNullOrEmpty(idDetalle))
                         {
-                            comando += $"and D.idDetalleAro like '{idDetalle}'";
+                            comando += $" and D.idDetalleAro like '{idDetalle}' ";
                         }
 
                         if (!string.IsNullOrEmpty(codigo))
                         {
-                            comando += $"and D.codigo like '{codigo}'";
+                            comando += $" and D.codigo like '{codigo}' ";
                         }
 
                         if (!string.IsNullOrEmpty(diseno))
                         {
-                            comando += $"and D.diseno like '%{diseno}%'";
+                            comando += $" and D.diseno like '%{diseno}%' ";
                         }
                     }
 
@@ -228,26 +228,26 @@ namespace Datos
 
                         if (!string.IsNullOrEmpty(idDetalle))
                         {
-                            comando += $"and D.idDetalleAro like '{idDetalle}'";
+                            comando += $" and D.idDetalleAro like '{idDetalle}'";
                         }
 
                         if (!string.IsNullOrEmpty(codigo))
                         {
-                            comando += $"and D.codigo like '{codigo}'";
+                            comando += $" and D.codigo like '{codigo}'";
                         }
 
                         if (!string.IsNullOrEmpty(diseno))
                         {
-                            comando += $"and D.diseno like '%{diseno}%'";
+                            comando += $" and D.diseno like '%{diseno}%'";
                         }
 
                         if (todasBodegas)
                         {
-                            comando += $"and B.idBodega like '%%'";
+                            comando += $" and B.idBodega like '%%'";
                         }
                         else
                         {
-                            comando += $"and B.idBodega like '{idBodega}'";
+                            comando += $" and B.idBodega like '{idBodega}'";
 
                         }
                     }
@@ -257,26 +257,26 @@ namespace Datos
 
                         if (!string.IsNullOrEmpty(idDetalle))
                         {
-                            comando += $"and D.idDetalleAro like '{idDetalle}'";
+                            comando += $" and D.idDetalleAro like '{idDetalle}'";
                         }
 
                         if (!string.IsNullOrEmpty(codigo))
                         {
-                            comando += $"and D.codigo like '{codigo}'";
+                            comando += $" and D.codigo like '{codigo}'";
                         }
 
                         if (!string.IsNullOrEmpty(diseno))
                         {
-                            comando += $"and D.diseno like '%{diseno}%'";
+                            comando += $" and D.diseno like '%{diseno}%'";
                         }
 
                         if (todasBodegas)
                         {
-                            comando += $"and B.idBodega like '%%'";
+                            comando += $" and B.idBodega like '%%'";
                         }
                         else
                         {
-                            comando += $"and B.idBodega like '{idBodega}'";
+                            comando += $" and B.idBodega like '{idBodega}'";
 
                         }
                     }
