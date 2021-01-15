@@ -290,6 +290,7 @@ namespace Datos
             }
 
         }
+
         public bool actualizarSucursal(string id, string nombre)
         {
             try

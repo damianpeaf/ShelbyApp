@@ -34,6 +34,7 @@ namespace Presentacion.App
             this.btnListarTodo = new System.Windows.Forms.Button();
             this.btnListarLimpiar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buscarBodega = new System.Windows.Forms.CheckBox();
             this.label31 = new System.Windows.Forms.Label();
             this.txtIdAro = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -104,7 +105,9 @@ namespace Presentacion.App
             this.label16 = new System.Windows.Forms.Label();
             this.txtABuscar = new System.Windows.Forms.TextBox();
             this.btnActualizarBuscar = new System.Windows.Forms.Button();
-            this.buscarBodega = new System.Windows.Forms.CheckBox();
+            this.comboBodegas = new System.Windows.Forms.ComboBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -113,6 +116,7 @@ namespace Presentacion.App
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -172,6 +176,7 @@ namespace Presentacion.App
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.groupBox5);
             this.groupBox1.Controls.Add(this.buscarBodega);
             this.groupBox1.Controls.Add(this.label31);
             this.groupBox1.Controls.Add(this.txtIdAro);
@@ -211,6 +216,17 @@ namespace Presentacion.App
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Acciones";
+            // 
+            // buscarBodega
+            // 
+            this.buscarBodega.AutoSize = true;
+            this.buscarBodega.Location = new System.Drawing.Point(137, 77);
+            this.buscarBodega.Name = "buscarBodega";
+            this.buscarBodega.Size = new System.Drawing.Size(113, 17);
+            this.buscarBodega.TabIndex = 37;
+            this.buscarBodega.Text = "Buscar en bodega";
+            this.buscarBodega.UseVisualStyleBackColor = true;
+            this.buscarBodega.CheckedChanged += new System.EventHandler(this.buscarBodega_CheckedChanged);
             // 
             // label31
             // 
@@ -316,6 +332,7 @@ namespace Presentacion.App
             this.txtBuscarSucursal.Name = "txtBuscarSucursal";
             this.txtBuscarSucursal.Size = new System.Drawing.Size(125, 21);
             this.txtBuscarSucursal.TabIndex = 21;
+            this.txtBuscarSucursal.SelectedIndexChanged += new System.EventHandler(this.txtBuscarSucursal_SelectedIndexChanged);
             // 
             // txtSeleccionadoDiseno
             // 
@@ -997,15 +1014,37 @@ namespace Presentacion.App
             this.btnActualizarBuscar.UseVisualStyleBackColor = false;
             this.btnActualizarBuscar.Click += new System.EventHandler(this.btnActualizarBuscar_Click);
             // 
-            // buscarBodega
+            // comboBodegas
             // 
-            this.buscarBodega.AutoSize = true;
-            this.buscarBodega.Location = new System.Drawing.Point(137, 77);
-            this.buscarBodega.Name = "buscarBodega";
-            this.buscarBodega.Size = new System.Drawing.Size(113, 17);
-            this.buscarBodega.TabIndex = 37;
-            this.buscarBodega.Text = "Buscar en bodega";
-            this.buscarBodega.UseVisualStyleBackColor = true;
+            this.comboBodegas.FormattingEnabled = true;
+            this.comboBodegas.Location = new System.Drawing.Point(6, 44);
+            this.comboBodegas.Name = "comboBodegas";
+            this.comboBodegas.Size = new System.Drawing.Size(121, 21);
+            this.comboBodegas.TabIndex = 38;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.checkBox2);
+            this.groupBox5.Controls.Add(this.comboBodegas);
+            this.groupBox5.Enabled = false;
+            this.groupBox5.Location = new System.Drawing.Point(137, 100);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(153, 97);
+            this.groupBox5.TabIndex = 39;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Bodegas";
+            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(6, 73);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(116, 17);
+            this.checkBox2.TabIndex = 39;
+            this.checkBox2.Text = "Todas las bodegas";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // Aro
             // 
@@ -1028,6 +1067,8 @@ namespace Presentacion.App
             this.groupBox2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1110,5 +1151,8 @@ namespace Presentacion.App
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TextBox txtAIdSucursal;
         private System.Windows.Forms.CheckBox buscarBodega;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.ComboBox comboBodegas;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }

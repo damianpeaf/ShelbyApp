@@ -23,9 +23,9 @@ namespace Dominio
             return aro.buscarAro(idSucursal, idDetalle, codigo, diseno, todas);
         }
 
-        public DataSet buscarBodegaAro(string idSucursal, string idDetalle, string codigo, string diseno, bool todas)
+        public DataSet buscarBodegaAro(string idSucursal, string idDetalle, string codigo, string diseno, bool todas, string idBodega, bool todasBodegas)
         {
-            return aro.buscarBodegaAro(idSucursal, idDetalle, codigo, diseno, todas);
+            return aro.buscarBodegaAro(idSucursal, idDetalle, codigo, diseno, todas, idBodega, todasBodegas);
         }
 
         public String[] cargarDatosAro(string id)

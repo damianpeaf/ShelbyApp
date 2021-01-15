@@ -17,6 +17,7 @@ namespace Presentacion.App
         DAro aro = new DAro();
         DSucursal sucursal = new DSucursal();
         DMovimiento movimiento = new DMovimiento();
+        DBodega bodega = new DBodega();
 
         public Aro(string IdSeleccionadaAlListar)
         {
@@ -42,6 +43,15 @@ namespace Presentacion.App
             txtBuscarSucursal.DataSource = dt;
         }
 
+        void cargarBodegas(string idSucursal)
+        {
+            DataTable dt = bodega.CrearCombo(idSucursal);
+
+            comboBodegas.ValueMember = "idBodega";
+            comboBodegas.DisplayMember = "nombre";
+            comboBodegas.DataSource = dt;
+        }
+
         void actualizarTabla()
         {
             DataSet ds = aro.listarTodos();
@@ -58,7 +68,12 @@ namespace Presentacion.App
             string idDetalle = txtBuscarId.Text;
             string codigoDetalle = txtBuscarCodigo.Text;
             string disenoDetalle = txtBuscarDiseno.Text;
+
+            string idBodega = comboBodegas.SelectedValue.ToString();
+
             bool todas;
+            bool todasBodegas;
+
 
             if (checkBox1.Checked == true)
             {
@@ -70,11 +85,21 @@ namespace Presentacion.App
 
             }
 
+            if (checkBox2.Checked == true)
+            {
+                todasBodegas = true;
+            }
+            else
+            {
+                todasBodegas = false;
+
+            }
+
             DataSet ds = null;
 
             if (buscarBodega.Checked)
             {
-                ds = aro.buscarBodegaAro(idSucursal, idDetalle, codigoDetalle, disenoDetalle, todas);
+                ds = aro.buscarBodegaAro(idSucursal, idDetalle, codigoDetalle, disenoDetalle, todas, idBodega, todasBodegas);
             }
             else
             {
@@ -193,6 +218,18 @@ namespace Presentacion.App
                 txtBuscarSucursal.Enabled = true;
 
             }
+
+            if (checkBox1.Checked)
+            {
+                cargarBodegas(null);
+            }
+            else
+            {
+                string idSucursal = txtBuscarSucursal.SelectedValue.ToString();
+
+                cargarBodegas(idSucursal);
+            }
+
         }
 
         private void textBox10_KeyPress(object sender, KeyPressEventArgs e)
@@ -375,6 +412,49 @@ namespace Presentacion.App
             {
                 //el resto de teclas pulsadas se desactivan
                 e.Handled = true;
+            }
+        }
+
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buscarBodega_CheckedChanged(object sender, EventArgs e)
+        {
+            if (buscarBodega.Checked)
+            {
+                groupBox5.Enabled = true;
+            }
+            else
+            {
+                groupBox5.Enabled = false;
+            }
+        }
+
+        private void txtBuscarSucursal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                cargarBodegas(null);
+            }
+            else
+            {
+                string idSucursal = txtBuscarSucursal.SelectedValue.ToString();
+
+                cargarBodegas(idSucursal);
+            }
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+            {
+                comboBodegas.Enabled = false;
+            }
+            else
+            {
+                comboBodegas.Enabled = true;
             }
         }
 

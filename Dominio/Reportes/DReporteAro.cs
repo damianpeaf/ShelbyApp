@@ -38,7 +38,7 @@ namespace Dominio
 
 
         //metodo inventario
-        public void crearReporteInventario(string idSucursal, string idDetalle, string codigo, bool todas)
+        public void crearReporteInventario(string idSucursal, string idDetalle, string codigo, bool todas, bool reporteBodegas, bool todaBodegas, string idBodega)
         {
             FechaReporte = DateTime.Now;
             Aro aro = new Aro();
@@ -63,7 +63,17 @@ namespace Dominio
                 codigoAroInventario = "Todos los aros";
             }
 
-            DataTable dt = aro.buscarAro(idSucursal, idDetalle, codigo, null, todas).Tables[0];
+            DataTable dt = null;
+
+            if (reporteBodegas)
+            {
+                dt = aro.buscarBodegaAro(idSucursal, idDetalle, codigo, null, todas,idBodega, todaBodegas).Tables[0];
+            }
+            else
+            {
+                dt = aro.buscarAro(idSucursal, idDetalle, codigo, null, todas).Tables[0];
+
+            }
 
             listaAros = new List<InventarioAroLista>();
 

@@ -45,7 +45,6 @@ namespace Datos
             }
 
         }
-
         public DataSet buscarBodega(string id, string nombre, string idSucursal, bool todas)
         {
 
@@ -226,7 +225,6 @@ namespace Datos
                 cn.Close();
             }
         }
-
         public bool crearBodega(string nombre, string idSucursal)
         {
             try
@@ -257,9 +255,6 @@ namespace Datos
                 cn.Close();
             }
         }
-
-
-
         public bool eliminarBodega(string id)
         {
             try
@@ -289,7 +284,6 @@ namespace Datos
                 cn.Close();
             }
         }
-
         public bool actualizarBodega(string id,string nombre, string idSucursal)
         {
             try
@@ -319,5 +313,41 @@ namespace Datos
                 cn.Close();
             }
         }
+        public DataTable CrearCombo(string idSucursal)
+        {
+
+            try
+            {
+                using (cn = new Conexion().IniciarConexion())
+                {
+                    string sql = "SELECT idBodega, nombre FROM bodega";
+                    
+                    if (!String.IsNullOrEmpty(idSucursal))
+                    {
+                        sql += $" where idSucursal = {idSucursal}";
+                    }
+
+                    MySqlCommand cmd = new MySqlCommand(sql, cn);
+
+                    MySqlDataAdapter mysqldt = new MySqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    mysqldt.Fill(dt);
+
+                    return dt;
+
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("" + ex);
+                return null;
+            }
+            finally
+            {
+                cn.Close();
+            }
+
+        }
+
     }
 }

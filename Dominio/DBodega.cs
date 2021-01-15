@@ -43,5 +43,10 @@ namespace Dominio
         {
             return bode.actualizarBodega(id, nombre, idSucursal);
         }
+
+        public DataTable CrearCombo(string idSucursal)
+        {
+            return bode.CrearCombo(idSucursal);
+        }
     }
 }

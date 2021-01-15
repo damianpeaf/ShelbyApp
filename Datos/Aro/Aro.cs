@@ -214,7 +214,7 @@ namespace Datos
         }
 
 
-        public DataSet buscarBodegaAro(string idSucursal, string idDetalle, string codigo, string diseno, bool todas)
+        public DataSet buscarBodegaAro(string idSucursal, string idDetalle, string codigo, string diseno, bool todas, string idBodega, bool todasBodegas)
         {
             try
             {
@@ -240,6 +240,16 @@ namespace Datos
                         {
                             comando += $"and D.diseno like '%{diseno}%'";
                         }
+
+                        if (todasBodegas)
+                        {
+                            comando += $"and B.idBodega like '%%'";
+                        }
+                        else
+                        {
+                            comando += $"and B.idBodega like '{idBodega}'";
+
+                        }
                     }
                     else
                     {
@@ -258,6 +268,16 @@ namespace Datos
                         if (!string.IsNullOrEmpty(diseno))
                         {
                             comando += $"and D.diseno like '%{diseno}%'";
+                        }
+
+                        if (todasBodegas)
+                        {
+                            comando += $"and B.idBodega like '%%'";
+                        }
+                        else
+                        {
+                            comando += $"and B.idBodega like '{idBodega}'";
+
                         }
                     }
 
