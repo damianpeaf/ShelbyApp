@@ -23,6 +23,21 @@ namespace Presentacion.App
             string nombreUsuario = info_usuario.nombre;
 
             lblNombre.Text = nombreUsuario;
+
+
+            if (info_usuario.idRol == "2")
+            {
+                button1.Enabled = false;
+                pictureBox2.Enabled = false;
+
+                button2.Enabled = false;
+                pictureBox4.Enabled = false;
+
+                button11.Enabled = false;
+                pictureBox13.Enabled = false;
+
+                //mas adelante hacer un metodo para buscar nombre de la sucursal que tenga la id que esta registrada en usuario
+            }
         }
 
         public void AbrirForm2(object hijo)
@@ -46,6 +61,12 @@ namespace Presentacion.App
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            info_usuario.idUsuario = "";
+            info_usuario.idRol = "";
+            info_usuario.idSucursal= "";
+            info_usuario.nombre = "";
+            info_usuario.email = "";
+
             login frm = new login();
             frm.Show();
             this.Hide();

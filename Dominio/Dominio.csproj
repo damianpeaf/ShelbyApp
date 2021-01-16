@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBodega.cs" />
+    <Compile Include="DRol.cs" />
     <Compile Include="ListasReportes\ArosMasEntradas.cs" />
     <Compile Include="ListasReportes\ArosMasSalidas.cs" />
     <Compile Include="Llantas\DDetalleLlanta.cs" />

@@ -30,6 +30,8 @@ namespace Presentacion.App
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.button11 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.button10 = new System.Windows.Forms.Button();
@@ -58,9 +60,9 @@ namespace Presentacion.App
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelFuncion = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.button11 = new System.Windows.Forms.Button();
+            this.txtSucursalUsuario = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -70,11 +72,11 @@ namespace Presentacion.App
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -106,6 +108,38 @@ namespace Presentacion.App
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(236, 425);
             this.panel3.TabIndex = 2;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox13.Image = global::Presentacion.Properties.Resources.bodega;
+            this.pictureBox13.Location = new System.Drawing.Point(0, 370);
+            this.pictureBox13.Margin = new System.Windows.Forms.Padding(5);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Padding = new System.Windows.Forms.Padding(5);
+            this.pictureBox13.Size = new System.Drawing.Size(46, 27);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox13.TabIndex = 28;
+            this.pictureBox13.TabStop = false;
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(59)))));
+            this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.ForeColor = System.Drawing.Color.White;
+            this.button11.Location = new System.Drawing.Point(0, 371);
+            this.button11.Name = "button11";
+            this.button11.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
+            this.button11.Size = new System.Drawing.Size(236, 38);
+            this.button11.TabIndex = 27;
+            this.button11.Text = "Bodegas";
+            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // pictureBox2
             // 
@@ -404,6 +438,7 @@ namespace Presentacion.App
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.txtSucursalUsuario);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
@@ -518,37 +553,15 @@ namespace Presentacion.App
             this.pictureBox6.TabIndex = 16;
             this.pictureBox6.TabStop = false;
             // 
-            // pictureBox13
+            // txtSucursalUsuario
             // 
-            this.pictureBox13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox13.Image = global::Presentacion.Properties.Resources.movmientosReporte;
-            this.pictureBox13.Location = new System.Drawing.Point(0, 370);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(5);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Padding = new System.Windows.Forms.Padding(5);
-            this.pictureBox13.Size = new System.Drawing.Size(46, 27);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox13.TabIndex = 28;
-            this.pictureBox13.TabStop = false;
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(59)))));
-            this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(0, 371);
-            this.button11.Name = "button11";
-            this.button11.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.button11.Size = new System.Drawing.Size(236, 38);
-            this.button11.TabIndex = 27;
-            this.button11.Text = "Bodegas";
-            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.txtSucursalUsuario.AutoSize = true;
+            this.txtSucursalUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSucursalUsuario.ForeColor = System.Drawing.Color.White;
+            this.txtSucursalUsuario.Location = new System.Drawing.Point(12, 5);
+            this.txtSucursalUsuario.Name = "txtSucursalUsuario";
+            this.txtSucursalUsuario.Size = new System.Drawing.Size(0, 20);
+            this.txtSucursalUsuario.TabIndex = 5;
             // 
             // Menu
             // 
@@ -566,6 +579,7 @@ namespace Presentacion.App
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Menu_Load);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
@@ -575,12 +589,13 @@ namespace Presentacion.App
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -618,5 +633,6 @@ namespace Presentacion.App
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Label txtSucursalUsuario;
     }
 }

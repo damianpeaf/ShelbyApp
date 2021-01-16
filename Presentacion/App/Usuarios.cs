@@ -14,6 +14,8 @@ namespace Presentacion.App
     public partial class Usuarios : Form
     {
         DUsuario usuario = new DUsuario();
+        DSucursal sucursal = new DSucursal();
+        DRol roles = new DRol();
 
         public Usuarios()
         {
@@ -22,6 +24,27 @@ namespace Presentacion.App
 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
 
+            cargarSucursales();
+            cargarRoles();
+
+        }
+
+        void cargarSucursales()
+        {
+            DataTable dt = sucursal.CrearCombo();
+
+            txtBuscarSucursal.ValueMember = "idSucursal";
+            txtBuscarSucursal.DisplayMember = "nombre";
+            txtBuscarSucursal.DataSource = dt;
+        }
+
+        void cargarRoles()
+        {
+            DataTable dt = roles.CrearCombo();
+
+            comboRol.ValueMember = "idRol";
+            comboRol.DisplayMember = "nombre";
+            comboRol.DataSource = dt;
         }
 
         void actualizarTabla()
@@ -128,15 +151,22 @@ namespace Presentacion.App
             string contra = txtCrearContra.Text;
             string confi = txtCrearConfi.Text;
 
+            string idSucursal = txtBuscarSucursal.SelectedValue.ToString();
+            string idRol = comboRol.SelectedValue.ToString();
+
+            if (idRol == "1")
+            {
+                idSucursal = null;
+            }
 
             //validacion
-            if (!string.IsNullOrEmpty(nombre) && !string.IsNullOrEmpty(correo) && !string.IsNullOrEmpty(contra) && !string.IsNullOrEmpty(confi))
+            if (!string.IsNullOrEmpty(nombre) && !string.IsNullOrEmpty(correo) && !string.IsNullOrEmpty(contra) && !string.IsNullOrEmpty(confi) && !string.IsNullOrEmpty(idRol))
             {
 
                 if (contra == confi)
                 {
 
-                    if (usuario.crearUsuario(nombre, correo, contra))
+                    if (usuario.crearUsuario(nombre, correo, contra, idSucursal, idRol))
                     {
                         MessageBox.Show("Usuario creado");
                         actualizarTabla();
@@ -259,6 +289,36 @@ namespace Presentacion.App
             else
             {
                 MessageBox.Show("Los campos no pueden estar vacios");
+
+            }
+        }
+
+        private void comboRol_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string idRol = comboRol.SelectedValue.ToString();
+
+            if (idRol == "1")
+            {
+                txtBuscarSucursal.Enabled = false;
+            }
+            else
+            {
+                txtBuscarSucursal.Enabled = true;
+
+            }
+        }
+
+        private void Usuarios_Load(object sender, EventArgs e)
+        {
+            string idRol = comboRol.SelectedValue.ToString();
+
+            if (idRol == "1")
+            {
+                txtBuscarSucursal.Enabled = false;
+            }
+            else
+            {
+                txtBuscarSucursal.Enabled = true;
 
             }
         }

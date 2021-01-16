@@ -21,7 +21,7 @@ namespace Datos
             {
                 using (cn = new Conexion().IniciarConexion())
                 {
-                    string comando = "SELECT idUsuario, nombre, correo FROM usuario";
+                    string comando = "SELECT U.idUsuario, U.nombre, U.correo, R.nombre as 'Rol', S.nombre as 'Sucursal asociada', E.nombre  as 'Estado' FROM usuario U left join sucursal S on U.idSucursal = S.idSucursal inner join estado E on E.idEstado = U.idEstado inner join rol R on R.idRol = U.idRol  ";
 
                     MySqlCommand datos = new MySqlCommand(comando, cn);
 
@@ -52,7 +52,7 @@ namespace Datos
             {
                 using (cn = new Conexion().IniciarConexion())
                 {
-                    string comando = $"SELECT idUsuario, nombre, correo FROM usuario where idUsuario like '{id}'";
+                    string comando = $"SELECT U.idUsuario, U.nombre, U.correo, R.nombre as 'Rol', S.nombre as 'Sucursal asociada', E.nombre  as 'Estado' FROM usuario U left join sucursal S on U.idSucursal = S.idSucursal inner join estado E on E.idEstado = U.idEstado inner join rol R on R.idRol = U.idRol where idUsuario like '{id}'";
 
                     if (!string.IsNullOrEmpty(nombre))
                     {
@@ -135,13 +135,13 @@ namespace Datos
             }
         }
 
-        public bool crearUsuario(string nombre, string correo, string contrasena)
+        public bool crearUsuario(string nombre, string correo, string contrasena, string idSucursal, string idRol)
         {
             try
             {
                 using (cn = new Conexion().IniciarConexion())
                 {
-                    MySqlCommand comando = new MySqlCommand($"INSERT INTO usuario VALUES(null,'{nombre}' , '{correo}', '{contrasena}')", cn);
+                    MySqlCommand comando = new MySqlCommand($"INSERT INTO usuario VALUES(null,'{nombre}' , '{correo}', '{contrasena}', {idSucursal}, {idRol}, 1)", cn);
                     if (comando.ExecuteNonQuery() > 0)
                     {
                         return true;
@@ -200,7 +200,7 @@ namespace Datos
             {
                 using (cn = new Conexion().IniciarConexion())
                 {
-                    MySqlCommand comando = new MySqlCommand($"DELETE FROM usuario WHERE idUsuario ={id}", cn);
+                    MySqlCommand comando = new MySqlCommand($"UPDATE usuario SET idEstado = 2 WHERE idUsuario ={id}", cn);
 
                     if (comando.ExecuteNonQuery() > 0)
                     {

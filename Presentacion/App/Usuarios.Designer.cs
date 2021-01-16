@@ -53,6 +53,10 @@ namespace Presentacion.App
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.comboRol = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtBuscarSucursal = new System.Windows.Forms.ComboBox();
             this.btmCrear = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.txtCrearConfi = new System.Windows.Forms.TextBox();
@@ -382,6 +386,10 @@ namespace Presentacion.App
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Controls.Add(this.comboRol);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.txtBuscarSucursal);
             this.groupBox2.Controls.Add(this.btmCrear);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.txtCrearConfi);
@@ -399,6 +407,49 @@ namespace Presentacion.App
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Información Usuario";
             // 
+            // label15
+            // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.Location = new System.Drawing.Point(197, 273);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(29, 16);
+            this.label15.TabIndex = 34;
+            this.label15.Text = "Rol";
+            // 
+            // comboRol
+            // 
+            this.comboRol.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboRol.FormattingEnabled = true;
+            this.comboRol.Location = new System.Drawing.Point(200, 291);
+            this.comboRol.Name = "comboRol";
+            this.comboRol.Size = new System.Drawing.Size(298, 21);
+            this.comboRol.TabIndex = 33;
+            this.comboRol.SelectedIndexChanged += new System.EventHandler(this.comboRol_SelectedIndexChanged);
+            // 
+            // label12
+            // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(197, 315);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(60, 16);
+            this.label12.TabIndex = 30;
+            this.label12.Text = "Sucursal";
+            // 
+            // txtBuscarSucursal
+            // 
+            this.txtBuscarSucursal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtBuscarSucursal.FormattingEnabled = true;
+            this.txtBuscarSucursal.Location = new System.Drawing.Point(200, 333);
+            this.txtBuscarSucursal.Name = "txtBuscarSucursal";
+            this.txtBuscarSucursal.Size = new System.Drawing.Size(298, 21);
+            this.txtBuscarSucursal.TabIndex = 29;
+            // 
             // btmCrear
             // 
             this.btmCrear.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -406,7 +457,7 @@ namespace Presentacion.App
             this.btmCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btmCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btmCrear.ForeColor = System.Drawing.Color.White;
-            this.btmCrear.Location = new System.Drawing.Point(200, 276);
+            this.btmCrear.Location = new System.Drawing.Point(200, 368);
             this.btmCrear.Name = "btmCrear";
             this.btmCrear.Size = new System.Drawing.Size(298, 34);
             this.btmCrear.TabIndex = 18;
@@ -809,6 +860,7 @@ namespace Presentacion.App
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Usuarios";
             this.Text = "Usuarios";
+            this.Load += new System.EventHandler(this.Usuarios_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -892,5 +944,9 @@ namespace Presentacion.App
         private System.Windows.Forms.TextBox txtEliminarNombre;
         private System.Windows.Forms.Button btnListarLimpiar;
         private System.Windows.Forms.Button btnListarTodo;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox comboRol;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox txtBuscarSucursal;
     }
 }

@@ -118,8 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cerrarSesion2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cerrarSesion2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="inventario2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inventario2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aro1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cerrarSesion3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cerrarSesion3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -127,40 +130,40 @@
   <data name="sucursal3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sucursal3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="usuario2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\usuario2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="usuario3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\usuario3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="cerrarSesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cerrarSesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sucursal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sucursal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="aro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\aro1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="inventario1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\inventario11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="inventario2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\inventario2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="inventarioReporte" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\inventarioReporte.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="movimientos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\movimientos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="llanta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\llanta1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="movimientos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\movimientos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="movmientosReporte" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\movmientosReporte.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="usuario3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usuario3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inventarioReporte" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inventarioReporte.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inventario1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inventario11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cerrarSesion2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cerrarSesion2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="usuario2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usuario2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bodega" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bodega.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

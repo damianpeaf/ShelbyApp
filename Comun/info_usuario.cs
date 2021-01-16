@@ -13,5 +13,9 @@ namespace Comun
         public static string nombre;
         public static string email;
 
+        //informacion adicional
+        public static string idRol;
+        public static string idSucursal;
+
     }
 }

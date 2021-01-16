@@ -29,9 +29,9 @@ namespace Dominio
 
         }
 
-        public bool crearUsuario(string nombre, string correo, string contrasena)
+        public bool crearUsuario(string nombre, string correo, string contrasena, string idSucursal, string idRol)
         {
-            return user.crearUsuario(nombre, correo, contrasena);
+            return user.crearUsuario(nombre, correo, contrasena, idSucursal, idRol);
         }
 
         public bool actualizarUsuario(string id, string nombre, string correo)
