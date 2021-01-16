@@ -15,6 +15,7 @@ namespace Presentacion.App
     public partial class InventarioLlantas : Form
     {
         DSucursal sucursal = new DSucursal();
+        DBodega bodega = new DBodega();
 
 
         public InventarioLlantas()
@@ -32,6 +33,14 @@ namespace Presentacion.App
             txtBuscarSucursal1.ValueMember = "idSucursal";
             txtBuscarSucursal1.DisplayMember = "nombre";
             txtBuscarSucursal1.DataSource = dt;
+        }
+        void cargarBodegas(string idSucursal)
+        {
+            DataTable dt = bodega.CrearCombo(idSucursal);
+
+            comboBodegas.ValueMember = "idBodega";
+            comboBodegas.DisplayMember = "nombre";
+            comboBodegas.DataSource = dt;
         }
 
         private void Reportes_Load(object sender, EventArgs e)
@@ -53,7 +62,29 @@ namespace Presentacion.App
             this.reportViewer2.LocalReport.SetParameters(parameters);
 
             DReporteLlanta reporte = new DReporteLlanta();
-            reporte.crearReporteInventario(idSucursal, idDetalle, codigo, todas, costoVisible);
+            reporte.crearReporteInventario(idSucursal, idDetalle, codigo, todas, false, false, null);
+
+            DReporteLlantaBindingSource.DataSource = reporte;
+            InventarioLlantaListaBindingSource.DataSource = reporte.listaLlantas;
+
+            this.reportViewer2.RefreshReport();
+
+        }
+        private void generarReporteBodega(string idSucursal, string idDetalle, string codigo, bool todas, bool costoVisible, bool todasBodegas, string idBodega)
+        {
+            ReportParameter[] parameters = new ReportParameter[1];
+            if (costoVisible)
+            {
+                parameters[0] = new ReportParameter("columnaCostoVisible", "True");
+            }
+            else
+            {
+                parameters[0] = new ReportParameter("columnaCostoVisible", "False");
+            }
+            this.reportViewer2.LocalReport.SetParameters(parameters);
+
+            DReporteLlanta reporte = new DReporteLlanta();
+            reporte.crearReporteInventario(idSucursal, idDetalle, codigo, todas, true, todasBodegas, idBodega);
 
             DReporteLlantaBindingSource.DataSource = reporte;
             InventarioLlantaListaBindingSource.DataSource = reporte.listaLlantas;
@@ -68,10 +99,29 @@ namespace Presentacion.App
             string idSucursal = txtBuscarSucursal1.SelectedValue.ToString();
             string idDetalle = txtBuscarId1.Text;
             string codigoDetalle = txtBuscarCodigo1.Text;
+            string idBodega = comboBodegas.SelectedValue.ToString();
 
             bool todas = checkBox2.Checked;
+            bool todasBodegas;
 
-            generarReporte1(idSucursal, idDetalle, codigoDetalle, todas, costoVisible.Checked);
+            if (checkBox1.Checked == true)
+            {
+                todasBodegas = true;
+            }
+            else
+            {
+                todasBodegas = false;
+
+            }
+
+            if (buscarBodega.Checked)
+            {
+                generarReporteBodega(idSucursal, idDetalle, codigoDetalle, todas, costoVisible.Checked, todasBodegas, idBodega);
+            }
+            else
+            {
+                generarReporte1(idSucursal, idDetalle, codigoDetalle, todas, costoVisible.Checked);
+            }
         }
 
         private void checkBox2_CheckedChanged_1(object sender, EventArgs e)
@@ -84,6 +134,55 @@ namespace Presentacion.App
             {
                 txtBuscarSucursal1.Enabled = true;
 
+            }
+
+            if (checkBox2.Checked)
+            {
+                cargarBodegas(null);
+            }
+            else
+            {
+                string idSucursal = txtBuscarSucursal1.SelectedValue.ToString();
+
+                cargarBodegas(idSucursal);
+            }
+        }
+
+        private void buscarBodega_CheckedChanged(object sender, EventArgs e)
+        {
+            if (buscarBodega.Checked)
+            {
+                groupBox5.Enabled = true;
+            }
+            else
+            {
+                groupBox5.Enabled = false;
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                comboBodegas.Enabled = false;
+            }
+            else
+            {
+                comboBodegas.Enabled = true;
+            }
+        }
+
+        private void txtBuscarSucursal1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+            {
+                cargarBodegas(null);
+            }
+            else
+            {
+                string idSucursal = txtBuscarSucursal1.SelectedValue.ToString();
+
+                cargarBodegas(idSucursal);
             }
         }
     }

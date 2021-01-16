@@ -17,6 +17,7 @@ namespace Presentacion.App
         DLlanta llanta = new DLlanta();
         DSucursal sucursal = new DSucursal();
         DMovimiento movimiento = new DMovimiento();
+        DBodega bodega = new DBodega();
 
         public Llantas(string IdSeleccionadaAlListar)
         {
@@ -41,7 +42,14 @@ namespace Presentacion.App
             txtBuscarSucursal.DisplayMember = "nombre";
             txtBuscarSucursal.DataSource = dt;
         }
+        void cargarBodegas(string idSucursal)
+        {
+            DataTable dt = bodega.CrearCombo(idSucursal);
 
+            comboBodegas.ValueMember = "idBodega";
+            comboBodegas.DisplayMember = "nombre";
+            comboBodegas.DataSource = dt;
+        }
         void actualizarTabla()
         {
             DataSet ds = llanta.listarTodos();
@@ -54,10 +62,16 @@ namespace Presentacion.App
 
         private void btntListarBuscar_Click(object sender, EventArgs e)
         {
+           
             string idSucursal = txtBuscarSucursal.SelectedValue.ToString();
             string idDetalle = txtBuscarId.Text;
             string codigoDetalle = txtBuscarCodigo.Text;
+
+            string idBodega = comboBodegas.SelectedValue.ToString();
+
             bool todas;
+            bool todasBodegas;
+
 
             if (checkBox1.Checked == true)
             {
@@ -69,7 +83,27 @@ namespace Presentacion.App
 
             }
 
-            DataSet ds = llanta.buscarLlanta(idSucursal, idDetalle, codigoDetalle,  todas);
+            if (checkBox2.Checked == true)
+            {
+                todasBodegas = true;
+            }
+            else
+            {
+                todasBodegas = false;
+
+            }
+
+            DataSet ds = null;
+
+            if (buscarBodega.Checked)
+            {
+                ds = llanta.buscarBodegaLlanta(idSucursal, idDetalle, codigoDetalle, todas, idBodega, todasBodegas);
+            }
+            else
+            {
+                ds = llanta.buscarLlanta(idSucursal, idDetalle, codigoDetalle,  todas);
+            }
+
             dataGridView1.DataSource = ds.Tables[0];
 
         }
@@ -174,6 +208,17 @@ namespace Presentacion.App
             {
                 txtBuscarSucursal.Enabled = true;
 
+            }
+
+            if (checkBox1.Checked)
+            {
+                cargarBodegas(null);
+            }
+            else
+            {
+                string idSucursal = txtBuscarSucursal.SelectedValue.ToString();
+
+                cargarBodegas(idSucursal);
             }
         }
 
@@ -352,6 +397,30 @@ namespace Presentacion.App
             {
                 //el resto de teclas pulsadas se desactivan
                 e.Handled = true;
+            }
+        }
+
+        private void buscarBodega_CheckedChanged(object sender, EventArgs e)
+        {
+            if (buscarBodega.Checked)
+            {
+                groupBox5.Enabled = true;
+            }
+            else
+            {
+                groupBox5.Enabled = false;
+            }
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+            {
+                comboBodegas.Enabled = false;
+            }
+            else
+            {
+                comboBodegas.Enabled = true;
             }
         }
 

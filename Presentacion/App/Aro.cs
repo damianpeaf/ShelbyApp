@@ -24,6 +24,7 @@ namespace Presentacion.App
             InitializeComponent();
             actualizarTabla();
             cargarSucursales();
+            cargarBodegas(null);
 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             if (!string.IsNullOrEmpty(IdSeleccionadaAlListar))

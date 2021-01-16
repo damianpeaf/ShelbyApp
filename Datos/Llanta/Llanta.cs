@@ -112,7 +112,7 @@ namespace Datos
             {
                 using (cn = new Conexion().IniciarConexion())
                 {
-                     string  comando = "SELECT S.nombre as 'Sucursal',  D.idDetalleLlanta as 'ID Llanta', D.codigo as 'Codigo', A.cantidad as 'Stock',D.IdMarca, D.medida,  U.nombre as 'Firma',DATE_FORMAT(A.fechaModificacion, '%d/%m/%Y %H:%i')  as 'Ultima modificacion',  A.idLlanta as 'ID específica', D.precio, D.costo  FROM llanta A inner join sucursal S on A.idSucursal = S.idSucursal inner join detalleLlanta D on D.idDetalleLlanta = A.idDetalleLlanta inner join usuario U on A.usuarioModificacion = U.idUsuario";
+                     string  comando = "SELECT S.nombre as 'Sucursal',  D.idDetalleLlanta as 'ID Llanta', D.codigo as 'Codigo', A.cantidad as 'Stock',D.IdMarca, D.medida,  U.nombre as 'Firma',DATE_FORMAT(A.fechaModificacion, '%d/%m/%Y %H:%i')  as 'Ultima modificacion',  A.idLlanta as 'ID específica', D.precio, D.costo  FROM llanta A inner join sucursal S on A.idSucursal = S.idSucursal inner join detalleLlanta D on D.idDetalleLlanta = A.idDetalleLlanta inner join usuario U on A.usuarioModificacion = U.idUsuario where idBodega is null";
 
                     MySqlCommand datos = new MySqlCommand(comando, cn);
 
@@ -142,7 +142,7 @@ namespace Datos
             {
                 using (cn = new Conexion().IniciarConexion())
                 {
-                    string comando = $"SELECT S.nombre as 'Sucursal',  D.idDetalleLlanta as 'ID llanta', D.codigo as 'Codigo', A.cantidad as 'Stock',D.IdMarca, D.medida, U.nombre as 'Firma', DATE_FORMAT(A.fechaModificacion, '%d/%m/%Y %H:%i') as 'Ultima modificacion', A.idLlanta as 'ID específica', D.precio, D.costo  FROM llanta A inner join sucursal S on A.idSucursal = S.idSucursal inner join detalleLlanta D on D.idDetalleLlanta = A.idDetalleLlanta inner join usuario U on A.usuarioModificacion = U.idUsuario ";
+                    string comando = $"SELECT S.nombre as 'Sucursal',  D.idDetalleLlanta as 'ID llanta', D.codigo as 'Codigo', A.cantidad as 'Stock',D.IdMarca, D.medida, U.nombre as 'Firma', DATE_FORMAT(A.fechaModificacion, '%d/%m/%Y %H:%i') as 'Ultima modificacion', A.idLlanta as 'ID específica', D.precio, D.costo  FROM llanta A inner join sucursal S on A.idSucursal = S.idSucursal inner join detalleLlanta D on D.idDetalleLlanta = A.idDetalleLlanta inner join usuario U on A.usuarioModificacion = U.idUsuario  ";
 
                     if (todas)
                     {
@@ -278,6 +278,90 @@ namespace Datos
             {
                 cn.Close();
             }
+        }
+        public DataSet buscarBodegaLlanta(string idSucursal, string idDetalle, string codigo,  bool todas, string idBodega, bool todasBodegas)
+        {
+            try
+            {
+                using (cn = new Conexion().IniciarConexion())
+                {
+                    string comando = $"SELECT CONCAT('Sucursal: ', S.nombre, ' Bodega: ', B.nombre) as 'Info Bodega',  D.idDetalleLlanta as 'ID Llanta', D.codigo as 'Codigo', A.cantidad as 'Stock',D.idMarca, D.medida,  U.nombre as 'Firma', DATE_FORMAT(A.fechaModificacion, '%d/%m/%Y %H:%i') as 'Ultima modificacion', A.idLlanta as 'ID específica', D.precio, D.costo  FROM llanta A inner join sucursal S on A.idSucursal = S.idSucursal inner join detalleLlanta D on D.idDetalleLlanta = A.idDetalleLlanta inner join usuario U on A.usuarioModificacion = U.idUsuario inner join bodega B on B.idBodega = A.idBodega";
+
+                    if (todas)
+                    {
+                        comando += $" where S.idSucursal like '%%'";
+
+                        if (!string.IsNullOrEmpty(idDetalle))
+                        {
+                            comando += $" and D.idDetalleLlanta like '{idDetalle}'";
+                        }
+
+                        if (!string.IsNullOrEmpty(codigo))
+                        {
+                            comando += $" and D.codigo like '{codigo}'";
+                        }
+
+                     
+
+                        if (todasBodegas)
+                        {
+                            comando += $" and B.idBodega like '%%'";
+                        }
+                        else
+                        {
+                            comando += $" and B.idBodega like '{idBodega}'";
+
+                        }
+                    }
+                    else
+                    {
+                        comando += $" where S.idSucursal like '{idSucursal}' ";
+
+                        if (!string.IsNullOrEmpty(idDetalle))
+                        {
+                            comando += $" and D.idDetalleLlanta like '{idDetalle}'";
+                        }
+
+                        if (!string.IsNullOrEmpty(codigo))
+                        {
+                            comando += $" and D.codigo like '{codigo}'";
+                        }
+
+                        
+
+                        if (todasBodegas)
+                        {
+                            comando += $" and B.idBodega like '%%'";
+                        }
+                        else
+                        {
+                            comando += $" and B.idBodega like '{idBodega}'";
+
+                        }
+                    }
+
+                    Console.WriteLine(comando);
+
+                    MySqlCommand datos = new MySqlCommand(comando, cn);
+
+                    MySqlDataAdapter m_datos = new MySqlDataAdapter(datos);
+                    ds = new DataSet();
+                    m_datos.Fill(ds);
+
+                    return ds;
+
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("" + ex);
+                return null;
+            }
+            finally
+            {
+                cn.Close();
+            }
+
         }
     }
 }

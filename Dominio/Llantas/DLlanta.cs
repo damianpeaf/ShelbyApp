@@ -31,5 +31,9 @@ namespace Dominio
         {
             return llanta.actualizarInventario(idEspecifico, cantidad, fecha, idUsuario);
         }
+        public DataSet buscarBodegaLlanta(string idSucursal, string idDetalle, string codigo, bool todas, string idBodega, bool todasBodegas)
+        {
+            return llanta.buscarBodegaLlanta(idSucursal, idDetalle, codigo, todas, idBodega, todasBodegas);
+        }
     }
 }
