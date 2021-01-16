@@ -327,7 +327,22 @@ namespace Datos
                         sql += $" where idSucursal = {idSucursal}";
                     }
 
-                    MySqlCommand cmd = new MySqlCommand(sql, cn);
+                    MySqlCommand cmd;
+
+                    MySqlCommand cmd2 = new MySqlCommand(sql, cn);
+                    MySqlDataReader reader = cmd2.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        cn.Close();
+                        cn = new Conexion().IniciarConexion();
+                        cmd = new MySqlCommand(sql, cn);
+                    }
+                    else
+                    {
+                        cn.Close();
+                        cn = new Conexion().IniciarConexion();
+                        cmd = new MySqlCommand("SELECT idBodega, nombre FROM bodega", cn);
+                    }
 
                     MySqlDataAdapter mysqldt = new MySqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
