@@ -146,7 +146,7 @@ namespace Datos
 
                     if (todas)
                     {
-                        comando += $"where S.idSucursal like '%%'";
+                        comando += $"where S.idSucursal like '%%' and idBodega is null ";
 
                         if (!string.IsNullOrEmpty(idDetalle))
                         {
@@ -162,7 +162,7 @@ namespace Datos
                     }
                     else
                     {
-                        comando += $"where S.idSucursal like '{idSucursal}'";
+                        comando += $"where S.idSucursal like '{idSucursal}' and idBodega is null ";
 
                         if (!string.IsNullOrEmpty(idDetalle))
                         {

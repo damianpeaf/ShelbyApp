@@ -24,6 +24,7 @@ namespace Presentacion.App
             InitializeComponent();
             actualizarTabla();
             cargarSucursales();
+            cargarBodegas(null);
 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             if (!string.IsNullOrEmpty(IdSeleccionadaAlListar))
@@ -421,6 +422,20 @@ namespace Presentacion.App
             else
             {
                 comboBodegas.Enabled = true;
+            }
+        }
+
+        private void txtBuscarSucursal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                cargarBodegas(null);
+            }
+            else
+            {
+                string idSucursal = txtBuscarSucursal.SelectedValue.ToString();
+
+                cargarBodegas(idSucursal);
             }
         }
 
