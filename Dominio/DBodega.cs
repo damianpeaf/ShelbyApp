@@ -48,5 +48,10 @@ namespace Dominio
         {
             return bode.CrearCombo(idSucursal);
         }
+
+        public bool hayBodegas()
+        {
+            return bode.hayBodegas();
+        }
     }
 }

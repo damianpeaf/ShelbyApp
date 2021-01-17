@@ -68,7 +68,12 @@ namespace Presentacion.App
             string idDetalle = txtBuscarId.Text;
             string codigoDetalle = txtBuscarCodigo.Text;
 
-            string idBodega = comboBodegas.SelectedValue.ToString();
+            string idBodega = "";
+
+            if (bodega.hayBodegas())
+            {
+                idBodega = comboBodegas.SelectedValue.ToString();
+            }
 
             bool todas;
             bool todasBodegas;

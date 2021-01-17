@@ -364,5 +364,37 @@ namespace Datos
 
         }
 
+        public bool hayBodegas()
+        {
+            try
+            {
+                using (cn = new Conexion().IniciarConexion())
+                {
+                    MySqlCommand comando = new MySqlCommand($"SELECT * FROM bodega", cn);
+                    MySqlDataReader reader = comando.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("" + ex);
+                return false;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+
     }
 }

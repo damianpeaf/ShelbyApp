@@ -100,7 +100,13 @@ namespace Presentacion.App
             string idSucursal = txtBuscarSucursal.SelectedValue.ToString();
             string idDetalle = txtBuscarId.Text;
             string codigoDetalle = txtBuscarCodigo.Text;
-            string idBodega = comboBodegas.SelectedValue.ToString();
+
+            string idBodega = "";
+
+            if (bodega.hayBodegas())
+            {
+                idBodega = comboBodegas.SelectedValue.ToString();
+            }
 
             bool todas = checkBox1.Checked;
             bool todasBodegas;
