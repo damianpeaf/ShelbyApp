@@ -35,5 +35,10 @@ namespace Dominio
         {
             return llanta.buscarBodegaLlanta(idSucursal, idDetalle, codigo, todas, idBodega, todasBodegas);
         }
+
+        public String idSucursalAsociada(string id)
+        {
+            return llanta.idSucursalAsociada(id);
+        }
     }
 }

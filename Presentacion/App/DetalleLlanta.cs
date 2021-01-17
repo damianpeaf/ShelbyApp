@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dominio;
+using Comun;
 
 namespace Presentacion.App
 {
@@ -337,6 +338,12 @@ namespace Presentacion.App
 
         private void DetalleLlanta_Load(object sender, EventArgs e)
         {
+            if (info_usuario.idRol == "2")
+            {
+                txtCrearStockInicial.Text = "0";
+                txtCrearStockInicial.Enabled = false;
+            }
+
             DataTable dt = detalle.ComboMarca();
             txtListarBuscarMarcas.ValueMember = "idMarca";
             txtListarBuscarMarcas.DisplayMember = "nombre";

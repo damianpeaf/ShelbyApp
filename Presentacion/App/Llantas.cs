@@ -186,7 +186,13 @@ namespace Presentacion.App
 
             calcularTotal();
 
-
+            if (info_usuario.idRol != "1")
+            {
+                if (llanta.idSucursalAsociada(IdSeleccionadaAlListar) != info_usuario.idSucursal)
+                {
+                    MessageBox.Show("No estás autorizado para modificar la disponibilidad en esta sucursal");
+                }
+            }
 
         }
 
@@ -275,6 +281,13 @@ namespace Presentacion.App
             }
             calcularTotal();
 
+            if (info_usuario.idRol != "1")
+            {
+                if (llanta.idSucursalAsociada(txtABuscar.Text) != info_usuario.idSucursal)
+                {
+                    MessageBox.Show("No estás autorizado para modificar la disponibilidad en esta sucursal");
+                }
+            }
         }
 
         int entrada=3;
@@ -352,36 +365,74 @@ namespace Presentacion.App
 
             string idUsuario = info_usuario.idUsuario;
 
-            //validacion
-            if (noVacio(idEspecifica) &&  noVacio(cantidadAnterior) && noVacio(cantidadEntrante) && noVacio(cantidadNueva) && (tipoMovimiento.SelectedIndex == 0 || tipoMovimiento.SelectedIndex == 1) && noVacio(fecha) && noVacio(idUsuario))
+            if (info_usuario.idRol != "1")
             {
-                if (int.Parse(cantidadNueva)>=0)
+                if (llanta.idSucursalAsociada(idEspecifica) != info_usuario.idSucursal)
                 {
-                    //todo bien capo
-                    if (llanta.actualizarInventario(idEspecifica,cantidadNueva, formatForMySql, idUsuario))
-                    {
-                        if (movimiento.crearMovimientoLlanta(idDetalleLlanta, idSucursal, cantidadEntrante, formatForMySql, idTipoMovimiento))
-                        {
-                            MessageBox.Show("Actualizado correctamente");
-
-                            actualizarTabla();
-                        }
-                    }
+                    MessageBox.Show("No estás autorizado para modificar la disponibilidad en esta sucursal");
                 }
                 else
                 {
-                    MessageBox.Show("no es posible tener stock negativo");
+                    //validacion
+                    if (noVacio(idEspecifica) && noVacio(cantidadAnterior) && noVacio(cantidadEntrante) && noVacio(cantidadNueva) && (tipoMovimiento.SelectedIndex == 0 || tipoMovimiento.SelectedIndex == 1) && noVacio(fecha) && noVacio(idUsuario))
+                    {
+                        if (int.Parse(cantidadNueva) >= 0)
+                        {
+                            //todo bien capo
+                            if (llanta.actualizarInventario(idEspecifica, cantidadNueva, formatForMySql, idUsuario))
+                            {
+                                if (movimiento.crearMovimientoLlanta(idDetalleLlanta, idSucursal, cantidadEntrante, formatForMySql, idTipoMovimiento))
+                                {
+                                    MessageBox.Show("Actualizado correctamente");
+
+                                    actualizarTabla();
+                                }
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("no es posible tener stock negativo");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se deben completar todos los campos");
+                    }
+
                 }
             }
             else
             {
-                MessageBox.Show("Se deben completar todos los campos");
+                //validacion
+                if (noVacio(idEspecifica) && noVacio(cantidadAnterior) && noVacio(cantidadEntrante) && noVacio(cantidadNueva) && (tipoMovimiento.SelectedIndex == 0 || tipoMovimiento.SelectedIndex == 1) && noVacio(fecha) && noVacio(idUsuario))
+                {
+                    if (int.Parse(cantidadNueva) >= 0)
+                    {
+                        //todo bien capo
+                        if (llanta.actualizarInventario(idEspecifica, cantidadNueva, formatForMySql, idUsuario))
+                        {
+                            if (movimiento.crearMovimientoLlanta(idDetalleLlanta, idSucursal, cantidadEntrante, formatForMySql, idTipoMovimiento))
+                            {
+                                MessageBox.Show("Actualizado correctamente");
+
+                                actualizarTabla();
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("no es posible tener stock negativo");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Se deben completar todos los campos");
+                }
+
             }
 
-            
-
         }
-
+        
         private void txtAModificar_KeyPress(object sender, KeyPressEventArgs e)
         {
             //Para obligar a que sólo se introduzcan números

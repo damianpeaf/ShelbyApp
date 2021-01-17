@@ -250,6 +250,49 @@ namespace Datos
             }
         }
 
+        public String idSucursalAsociada(string id)
+        {
+            try
+            {
+                using (cn = new Conexion().IniciarConexion())
+                {
+                    String datosUsuario = "";
+                    string comando = $"SELECT idSucursal FROM llanta WHERE idLlanta = {id}";
+
+                    MySqlCommand datos = new MySqlCommand(comando, cn);
+
+                    MySqlDataReader reader = datos.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+
+                        while (reader.Read())
+                        {
+
+                            datosUsuario = reader.GetString(0);
+
+
+                        }
+                        return datosUsuario;
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("" + ex);
+                return null;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+
         public bool actualizarInventario(string idEspecifico, string cantidad, string fecha, string idUsuario)
         {
             try

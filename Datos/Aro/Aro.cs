@@ -214,6 +214,48 @@ namespace Datos
         }
 
 
+        public String idSucursalAsociada(string id)
+        {
+            try
+            {
+                using (cn = new Conexion().IniciarConexion())
+                {
+                    String datosUsuario = "";
+                    string comando = $"SELECT idSucursal FROM aro WHERE idAro = {id}";
+
+                    MySqlCommand datos = new MySqlCommand(comando, cn);
+
+                    MySqlDataReader reader = datos.ExecuteReader();
+
+                    if (reader.HasRows)
+                    {
+
+                        while (reader.Read())
+                        {
+
+                            datosUsuario = reader.GetString(0);
+
+
+                        }
+                        return datosUsuario;
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine("" + ex);
+                return null;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
         public DataSet buscarBodegaAro(string idSucursal, string idDetalle, string codigo, string diseno, bool todas, string idBodega, bool todasBodegas)
         {
             try

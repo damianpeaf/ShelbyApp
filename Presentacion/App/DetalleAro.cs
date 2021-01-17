@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Comun;
 using Dominio;
 
 namespace Presentacion.App
@@ -352,6 +353,15 @@ namespace Presentacion.App
             {
                 //el resto de teclas pulsadas se desactivan
                 e.Handled = true;
+            }
+        }
+
+        private void DetalleAro_Load(object sender, EventArgs e)
+        {
+            if (info_usuario.idRol == "2")
+            {
+                txtCrearStockInicial.Text = "0";
+                txtCrearStockInicial.Enabled = false;
             }
         }
 

@@ -18,6 +18,11 @@ namespace Dominio
             return aro.ListarTodos();
         }
 
+        public String idSucursalAsociada(string id)
+        {
+            return aro.idSucursalAsociada(id);
+        }
+
         public DataSet buscarAro(string idSucursal, string idDetalle, string codigo, string diseno, bool todas)
         {
             return aro.buscarAro(idSucursal, idDetalle, codigo, diseno, todas);

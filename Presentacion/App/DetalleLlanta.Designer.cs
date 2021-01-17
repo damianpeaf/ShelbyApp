@@ -34,6 +34,10 @@ namespace Presentacion.App
             this.btnListarTodo = new System.Windows.Forms.Button();
             this.btnListarLimpiar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtListarSeleccionadoPrecio = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.txtListarSeleccionadoCosto = new System.Windows.Forms.TextBox();
             this.txtListarBuscarMarcas = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.txtListarSeleccionadoPcd = new System.Windows.Forms.TextBox();
@@ -58,6 +62,10 @@ namespace Presentacion.App
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtCrearPrecio = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtCrearCosto = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.txtCrearStockInicial = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -71,6 +79,10 @@ namespace Presentacion.App
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtActualizarPrecio = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtActualizarCosto = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.txtActualizarMarca = new System.Windows.Forms.ComboBox();
@@ -88,6 +100,10 @@ namespace Presentacion.App
             this.btnActualizar = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtEliminarCosto = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.txtEliminarPrecio = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.txtEliminarMedida = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
@@ -101,22 +117,6 @@ namespace Presentacion.App
             this.label19 = new System.Windows.Forms.Label();
             this.txtEliminarId = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtCrearPrecio = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtCrearCosto = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtActualizarPrecio = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.txtActualizarCosto = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.txtEliminarCosto = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.txtEliminarPrecio = new System.Windows.Forms.TextBox();
-            this.txtListarSeleccionadoPrecio = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.txtListarSeleccionadoCosto = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -222,6 +222,48 @@ namespace Presentacion.App
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Acciones";
+            // 
+            // txtListarSeleccionadoPrecio
+            // 
+            this.txtListarSeleccionadoPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtListarSeleccionadoPrecio.Location = new System.Drawing.Point(633, 89);
+            this.txtListarSeleccionadoPrecio.Name = "txtListarSeleccionadoPrecio";
+            this.txtListarSeleccionadoPrecio.ReadOnly = true;
+            this.txtListarSeleccionadoPrecio.Size = new System.Drawing.Size(91, 20);
+            this.txtListarSeleccionadoPrecio.TabIndex = 30;
+            // 
+            // label23
+            // 
+            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.Black;
+            this.label23.Location = new System.Drawing.Point(630, 73);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(47, 16);
+            this.label23.TabIndex = 29;
+            this.label23.Text = "Precio";
+            // 
+            // label24
+            // 
+            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.Black;
+            this.label24.Location = new System.Drawing.Point(537, 73);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(43, 16);
+            this.label24.TabIndex = 28;
+            this.label24.Text = "Costo";
+            // 
+            // txtListarSeleccionadoCosto
+            // 
+            this.txtListarSeleccionadoCosto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtListarSeleccionadoCosto.Location = new System.Drawing.Point(540, 89);
+            this.txtListarSeleccionadoCosto.Name = "txtListarSeleccionadoCosto";
+            this.txtListarSeleccionadoCosto.ReadOnly = true;
+            this.txtListarSeleccionadoCosto.Size = new System.Drawing.Size(87, 20);
+            this.txtListarSeleccionadoCosto.TabIndex = 27;
             // 
             // txtListarBuscarMarcas
             // 
@@ -498,6 +540,46 @@ namespace Presentacion.App
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Información Usuario";
             // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(256, 316);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(47, 16);
+            this.label11.TabIndex = 35;
+            this.label11.Text = "Precio";
+            // 
+            // txtCrearPrecio
+            // 
+            this.txtCrearPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCrearPrecio.Location = new System.Drawing.Point(259, 335);
+            this.txtCrearPrecio.Name = "txtCrearPrecio";
+            this.txtCrearPrecio.Size = new System.Drawing.Size(298, 20);
+            this.txtCrearPrecio.TabIndex = 33;
+            // 
+            // label13
+            // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(256, 274);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(43, 16);
+            this.label13.TabIndex = 34;
+            this.label13.Text = "Costo";
+            // 
+            // txtCrearCosto
+            // 
+            this.txtCrearCosto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtCrearCosto.Location = new System.Drawing.Point(259, 293);
+            this.txtCrearCosto.Name = "txtCrearCosto";
+            this.txtCrearCosto.Size = new System.Drawing.Size(298, 20);
+            this.txtCrearCosto.TabIndex = 32;
+            // 
             // label31
             // 
             this.label31.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -662,6 +744,46 @@ namespace Presentacion.App
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Información Usuario";
+            // 
+            // label14
+            // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(280, 343);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(47, 16);
+            this.label14.TabIndex = 38;
+            this.label14.Text = "Precio";
+            // 
+            // txtActualizarPrecio
+            // 
+            this.txtActualizarPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtActualizarPrecio.Location = new System.Drawing.Point(283, 362);
+            this.txtActualizarPrecio.Name = "txtActualizarPrecio";
+            this.txtActualizarPrecio.Size = new System.Drawing.Size(298, 20);
+            this.txtActualizarPrecio.TabIndex = 37;
+            // 
+            // label20
+            // 
+            this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.Black;
+            this.label20.Location = new System.Drawing.Point(280, 301);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(43, 16);
+            this.label20.TabIndex = 36;
+            this.label20.Text = "Costo";
+            // 
+            // txtActualizarCosto
+            // 
+            this.txtActualizarCosto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtActualizarCosto.Location = new System.Drawing.Point(283, 320);
+            this.txtActualizarCosto.Name = "txtActualizarCosto";
+            this.txtActualizarCosto.Size = new System.Drawing.Size(298, 20);
+            this.txtActualizarCosto.TabIndex = 35;
             // 
             // button5
             // 
@@ -870,6 +992,48 @@ namespace Presentacion.App
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Información Usuario";
             // 
+            // label21
+            // 
+            this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.Black;
+            this.label21.Location = new System.Drawing.Point(283, 292);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(43, 16);
+            this.label21.TabIndex = 45;
+            this.label21.Text = "Costo";
+            // 
+            // txtEliminarCosto
+            // 
+            this.txtEliminarCosto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtEliminarCosto.Location = new System.Drawing.Point(286, 311);
+            this.txtEliminarCosto.Name = "txtEliminarCosto";
+            this.txtEliminarCosto.ReadOnly = true;
+            this.txtEliminarCosto.Size = new System.Drawing.Size(298, 20);
+            this.txtEliminarCosto.TabIndex = 44;
+            // 
+            // label22
+            // 
+            this.label22.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.Black;
+            this.label22.Location = new System.Drawing.Point(283, 334);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(47, 16);
+            this.label22.TabIndex = 43;
+            this.label22.Text = "Precio";
+            // 
+            // txtEliminarPrecio
+            // 
+            this.txtEliminarPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtEliminarPrecio.Location = new System.Drawing.Point(286, 353);
+            this.txtEliminarPrecio.Name = "txtEliminarPrecio";
+            this.txtEliminarPrecio.ReadOnly = true;
+            this.txtEliminarPrecio.Size = new System.Drawing.Size(298, 20);
+            this.txtEliminarPrecio.TabIndex = 42;
+            // 
             // label28
             // 
             this.label28.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -1013,170 +1177,6 @@ namespace Presentacion.App
             this.btnEliminar.Text = "Eliminar ";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(256, 316);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(47, 16);
-            this.label11.TabIndex = 35;
-            this.label11.Text = "Precio";
-            // 
-            // txtCrearPrecio
-            // 
-            this.txtCrearPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCrearPrecio.Location = new System.Drawing.Point(259, 335);
-            this.txtCrearPrecio.Name = "txtCrearPrecio";
-            this.txtCrearPrecio.Size = new System.Drawing.Size(298, 20);
-            this.txtCrearPrecio.TabIndex = 33;
-            // 
-            // label13
-            // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(256, 274);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(43, 16);
-            this.label13.TabIndex = 34;
-            this.label13.Text = "Costo";
-            // 
-            // txtCrearCosto
-            // 
-            this.txtCrearCosto.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCrearCosto.Location = new System.Drawing.Point(259, 293);
-            this.txtCrearCosto.Name = "txtCrearCosto";
-            this.txtCrearCosto.Size = new System.Drawing.Size(298, 20);
-            this.txtCrearCosto.TabIndex = 32;
-            // 
-            // label14
-            // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(280, 343);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(47, 16);
-            this.label14.TabIndex = 38;
-            this.label14.Text = "Precio";
-            // 
-            // txtActualizarPrecio
-            // 
-            this.txtActualizarPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtActualizarPrecio.Location = new System.Drawing.Point(283, 362);
-            this.txtActualizarPrecio.Name = "txtActualizarPrecio";
-            this.txtActualizarPrecio.Size = new System.Drawing.Size(298, 20);
-            this.txtActualizarPrecio.TabIndex = 37;
-            // 
-            // label20
-            // 
-            this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(280, 301);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(43, 16);
-            this.label20.TabIndex = 36;
-            this.label20.Text = "Costo";
-            // 
-            // txtActualizarCosto
-            // 
-            this.txtActualizarCosto.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtActualizarCosto.Location = new System.Drawing.Point(283, 320);
-            this.txtActualizarCosto.Name = "txtActualizarCosto";
-            this.txtActualizarCosto.Size = new System.Drawing.Size(298, 20);
-            this.txtActualizarCosto.TabIndex = 35;
-            // 
-            // label21
-            // 
-            this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.Black;
-            this.label21.Location = new System.Drawing.Point(283, 292);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(43, 16);
-            this.label21.TabIndex = 45;
-            this.label21.Text = "Costo";
-            // 
-            // txtEliminarCosto
-            // 
-            this.txtEliminarCosto.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtEliminarCosto.Location = new System.Drawing.Point(286, 311);
-            this.txtEliminarCosto.Name = "txtEliminarCosto";
-            this.txtEliminarCosto.ReadOnly = true;
-            this.txtEliminarCosto.Size = new System.Drawing.Size(298, 20);
-            this.txtEliminarCosto.TabIndex = 44;
-            // 
-            // label22
-            // 
-            this.label22.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.Black;
-            this.label22.Location = new System.Drawing.Point(283, 334);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(47, 16);
-            this.label22.TabIndex = 43;
-            this.label22.Text = "Precio";
-            // 
-            // txtEliminarPrecio
-            // 
-            this.txtEliminarPrecio.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtEliminarPrecio.Location = new System.Drawing.Point(286, 353);
-            this.txtEliminarPrecio.Name = "txtEliminarPrecio";
-            this.txtEliminarPrecio.ReadOnly = true;
-            this.txtEliminarPrecio.Size = new System.Drawing.Size(298, 20);
-            this.txtEliminarPrecio.TabIndex = 42;
-            // 
-            // txtListarSeleccionadoPrecio
-            // 
-            this.txtListarSeleccionadoPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtListarSeleccionadoPrecio.Location = new System.Drawing.Point(633, 89);
-            this.txtListarSeleccionadoPrecio.Name = "txtListarSeleccionadoPrecio";
-            this.txtListarSeleccionadoPrecio.ReadOnly = true;
-            this.txtListarSeleccionadoPrecio.Size = new System.Drawing.Size(91, 20);
-            this.txtListarSeleccionadoPrecio.TabIndex = 30;
-            // 
-            // label23
-            // 
-            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(630, 73);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(47, 16);
-            this.label23.TabIndex = 29;
-            this.label23.Text = "Precio";
-            // 
-            // label24
-            // 
-            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(537, 73);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(43, 16);
-            this.label24.TabIndex = 28;
-            this.label24.Text = "Costo";
-            // 
-            // txtListarSeleccionadoCosto
-            // 
-            this.txtListarSeleccionadoCosto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtListarSeleccionadoCosto.Location = new System.Drawing.Point(540, 89);
-            this.txtListarSeleccionadoCosto.Name = "txtListarSeleccionadoCosto";
-            this.txtListarSeleccionadoCosto.ReadOnly = true;
-            this.txtListarSeleccionadoCosto.Size = new System.Drawing.Size(87, 20);
-            this.txtListarSeleccionadoCosto.TabIndex = 27;
             // 
             // DetalleLlanta
             // 
