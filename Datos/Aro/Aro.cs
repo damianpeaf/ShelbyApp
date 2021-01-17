@@ -15,6 +15,7 @@ namespace Datos
 
         public bool crearDisponibilidadDesdeAro(string idDetalle, string idUsuario, string stockInicial)
         {
+            //de ahuevo el sol
             try
             {
                 string cantidad = stockInicial;
