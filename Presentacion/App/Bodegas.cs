@@ -217,6 +217,9 @@ namespace Presentacion.App
                 {
                     MessageBox.Show("Bodega eliminada");
                     actualizarTabla();
+                    txtEliminarId.Text = "";
+                    txtEliminarNombreB.Text = "";
+                    txtEliminarNombreS.Text = "";
                 }
                 else
                 {
@@ -331,6 +334,8 @@ namespace Presentacion.App
                 {
                     MessageBox.Show("Bodega creada");
                     actualizarTabla();
+                    txtCrearNombre.Text = "";
+                    
                 }
                 else
                 {
@@ -343,6 +348,39 @@ namespace Presentacion.App
 
             }
 
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            string id = txtAID.Text;
+            string nombreS = txtASucursal.SelectedValue.ToString();
+            string nombreB = txtABodega.Text;
+
+
+
+
+            //validacion
+            if (!string.IsNullOrEmpty(nombreB) && !string.IsNullOrEmpty(nombreS))
+            {     
+                if (bode.actualizarBodega(id, nombreB, nombreS))
+                {
+                    MessageBox.Show("Bodega actualizada");
+                    actualizarTabla();
+                    txtAID.Text = "";
+                    txtABodega.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Hubo un error al actualizar la bodega");
+
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Los campos no pueden estar vacios");
+
+            }
         }
 
 

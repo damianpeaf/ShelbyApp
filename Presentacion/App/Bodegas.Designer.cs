@@ -250,7 +250,7 @@ namespace Presentacion.App
             this.groupBox5.Size = new System.Drawing.Size(672, 514);
             this.groupBox5.TabIndex = 2;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Información Sucursal";
+            this.groupBox5.Text = "Información Bodega";
             // 
             // label15
             // 
@@ -294,9 +294,9 @@ namespace Presentacion.App
             this.label18.ForeColor = System.Drawing.Color.Black;
             this.label18.Location = new System.Drawing.Point(20, 28);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(76, 16);
+            this.label18.Size = new System.Drawing.Size(73, 16);
             this.label18.TabIndex = 20;
-            this.label18.Text = "ID Sucursal";
+            this.label18.Text = "ID Bodega";
             // 
             // txtEliminarBuscarId
             // 
@@ -352,7 +352,7 @@ namespace Presentacion.App
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(298, 34);
             this.btnEliminar.TabIndex = 18;
-            this.btnEliminar.Text = "Eliminar Sucursal";
+            this.btnEliminar.Text = "Eliminar Bodega";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
@@ -401,7 +401,7 @@ namespace Presentacion.App
             this.groupBox2.Size = new System.Drawing.Size(672, 514);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Información Sucursal";
+            this.groupBox2.Text = "Información Bodega";
             // 
             // label12
             // 
@@ -435,7 +435,7 @@ namespace Presentacion.App
             this.btmCrear.Name = "btmCrear";
             this.btmCrear.Size = new System.Drawing.Size(298, 34);
             this.btmCrear.TabIndex = 18;
-            this.btmCrear.Text = "Crear Sucursal";
+            this.btmCrear.Text = "Crear Bodega";
             this.btmCrear.UseVisualStyleBackColor = false;
             this.btmCrear.Click += new System.EventHandler(this.btmCrear_Click_1);
             // 
@@ -447,9 +447,9 @@ namespace Presentacion.App
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(197, 140);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(112, 16);
+            this.label9.Size = new System.Drawing.Size(109, 16);
             this.label9.TabIndex = 13;
-            this.label9.Text = "Nombre Sucursal";
+            this.label9.Text = "Nombre Bodega";
             // 
             // txtCrearNombre
             // 
@@ -654,9 +654,9 @@ namespace Presentacion.App
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(450, 16);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(147, 16);
+            this.label4.Size = new System.Drawing.Size(144, 16);
             this.label4.TabIndex = 11;
-            this.label4.Text = "Sucursal Seleccionada";
+            this.label4.Text = "Bodega Seleccionada";
             // 
             // txtListarSeleccionadoId
             // 
@@ -768,7 +768,7 @@ namespace Presentacion.App
             this.groupBox3.Size = new System.Drawing.Size(672, 514);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Información Sucursal";
+            this.groupBox3.Text = "Información Bodega";
             // 
             // label20
             // 
@@ -820,9 +820,9 @@ namespace Presentacion.App
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(20, 28);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 16);
+            this.label3.Size = new System.Drawing.Size(73, 16);
             this.label3.TabIndex = 20;
-            this.label3.Text = "ID Sucursal";
+            this.label3.Text = "ID Bodega";
             // 
             // txtActBuscarId
             // 
@@ -853,9 +853,9 @@ namespace Presentacion.App
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(195, 139);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 16);
+            this.label7.Size = new System.Drawing.Size(73, 16);
             this.label7.TabIndex = 23;
-            this.label7.Text = "ID Sucursal";
+            this.label7.Text = "ID Bodega";
             // 
             // txtAID
             // 
@@ -877,8 +877,9 @@ namespace Presentacion.App
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(298, 34);
             this.button2.TabIndex = 18;
-            this.button2.Text = "Actualizar Sucursal";
+            this.button2.Text = "Actualizar Bodega";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // label8
             // 

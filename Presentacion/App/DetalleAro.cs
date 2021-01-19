@@ -168,6 +168,13 @@ namespace Presentacion.App
                 {
                     MessageBox.Show("Detalle creado");
                     actualizarTabla();
+                    txtCrearCodigo.Text = "" ;
+                    txtCrearMedida.Text="";
+                    txtCrearPcd.Text="";
+                    txtCrearPcd2.Text="";
+                    txtCrearDiseno.Text="";
+                    txtCrearCosto.Text="";
+                    txtCrearPrecio.Text="";
                 }
                 else
                 {
@@ -243,6 +250,14 @@ namespace Presentacion.App
                 {
                     MessageBox.Show("Detalle actualizado");
                     actualizarTabla();
+                    txtActualizarId.Text="";
+                    txtActualizarCodigo.Text="";
+                    txtActualizarMedida.Text="";
+                    txtActualizarPcd.Text="";
+                    txtActualizarPcd2.Text="";
+                    txtActualizarDiseno.Text="";
+                    txtActualizarCosto.Text="";
+                    txtActualizarPrecio.Text="";
                 }
                 else
                 {
@@ -300,6 +315,14 @@ namespace Presentacion.App
                     {
                         MessageBox.Show("Detalle eliminado");
                         actualizarTabla();
+                        txtEliminarId.Text = "";
+                        txtEliminarCodigo.Text = "";
+                        txtEliminarMedida.Text = "";
+                        txtEliminarPcd.Text = "";
+                        txtEliminarPcd2.Text = "";
+                        txtEliminarDiseno.Text = "";
+                        txtEliminarCosto.Text = "";
+                        txtEliminarPrecio.Text = "";
                     }
                     else
                     {

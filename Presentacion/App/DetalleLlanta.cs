@@ -126,7 +126,9 @@ namespace Presentacion.App
                 txtEliminarCodigo.Text = datosDetalle[1];
                 txtEliminarMedida.Text = datosDetalle[2];
                 txtEliminarPcd.Text = datosDetalle[3];
-            
+                txtEliminarPrecio.Text = datosDetalle[4];
+                txtEliminarCosto.Text = datosDetalle[5];
+
             }
             else
             {
@@ -163,6 +165,11 @@ namespace Presentacion.App
                 {
                     MessageBox.Show("Detalle creado");
                     actualizarTabla();
+                   txtCrearCodigo.Text="";
+                    txtCrearMedida.Text="";
+                    txtCrearCosto.Text="";
+                    txtCrearPrecio.Text="";
+                    txtCrearStockInicial.Text="";
                 }
                 else
                 {
@@ -230,6 +237,11 @@ namespace Presentacion.App
                 {
                     MessageBox.Show("Detalle actualizado");
                     actualizarTabla();
+                    txtActualizarId.Text="";
+                   txtActualizarCodigo.Text="";
+                     txtActualizarMedida.Text="";
+                     txtActualizarCosto.Text="";
+                    txtActualizarPrecio.Text="";
                 }
                 else
                 {
@@ -284,6 +296,12 @@ namespace Presentacion.App
                     {
                         MessageBox.Show("Detalle eliminado");
                         actualizarTabla();
+                        txtEliminarId.Text="";
+                        txtEliminarCodigo.Text = "";
+                        txtEliminarMedida.Text = "";
+                        txtEliminarPcd.Text = "";
+                        txtEliminarCosto.Text = "";
+                        txtEliminarPrecio.Text = "";
                     }
                     else
                     {

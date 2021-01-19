@@ -121,6 +121,7 @@ namespace Presentacion.App
                     {
                         MessageBox.Show("Sucursal creada");
                         actualizarTabla();
+                    txtCrearNombre.Text = "";
                     }
                     else
                     {
@@ -188,6 +189,8 @@ namespace Presentacion.App
                     {
                         MessageBox.Show("Sucursal eliminada");
                         actualizarTabla();
+                        txtEliminarId.Text = "";
+                        txtEliminarNombre.Text = "";
                     }
                     else
                     {
@@ -257,6 +260,8 @@ namespace Presentacion.App
                 {
                     MessageBox.Show("Sucursal actualizada");
                     actualizarTabla();
+                    txtAID.Text = "";
+                    txtASucursal.Text = "";
                 }
                 else
                 {

@@ -140,6 +140,11 @@ namespace Presentacion.App
                     {
                         MessageBox.Show("Usuario creado");
                         actualizarTabla();
+                         txtCrearNombre.Text="";
+                        txtCrearCorreo.Text="";
+                       txtCrearContra.Text="";
+                        txtCrearConfi.Text="";
+
                     }
                     else
                     {
@@ -199,6 +204,9 @@ namespace Presentacion.App
                 {
                     MessageBox.Show("Usuario actualizado");
                     actualizarTabla();
+                    txtActualizarId.Text="";
+                    txtActualizarNombre.Text="";
+                    txtActualizarCorreo.Text="";
                 }
                 else
                 {
@@ -248,6 +256,9 @@ namespace Presentacion.App
                 {
                     MessageBox.Show("Usuario eliminado");
                     actualizarTabla();
+                    txtEliminarId.Text="";
+                    txtEliminarNombre.Text = "";
+                    txtEliminarCorreo.Text = "";
                 }
                 else
                 {
